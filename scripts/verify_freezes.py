@@ -4,8 +4,8 @@ Run from the repository root:  python scripts/verify_freezes.py
 
 Each freeze record lists `path` -> sha256 for the files that were frozen before a confirmatory run.
 Files that are not shipped in this repository (raw data, upstream code, large prediction arrays) are
-reported as "absent"; every file that is present must match its recorded hash. A superseded record
-(PREREG_RTGCN_FREEZE_v0.1_superseded.md) is reported but not required to match.
+reported as "absent"; every file that is present must match its recorded hash. A record whose name
+contains "superseded" is reported but not required to match.
 """
 import hashlib
 import json

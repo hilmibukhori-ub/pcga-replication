@@ -58,12 +58,13 @@ python scripts/verify_freezes.py
 ```
 
 Every frozen file that is shipped here must match its recorded hash. Files that are not shipped (upstream
-data and code, prediction arrays) are reported as absent. `PREREG_RTGCN_FREEZE_v0.1_superseded.md` is
-a superseded record, kept for transparency, and is expected not to match (see `DEVIATIONS.md`).
+data and code, prediction arrays) are reported as absent.
 
-`PREREG_RSR.md` refers to an earlier benchmark protocol, `BENCHMARK_FREEZE.md`, written for a
-CRSP/Compustat track that was not pursued. It is not part of this paper and is not included here; it
-is available on request, and its hash is recorded in `PREREG_RSR.md` and `PREREG_FREEZE.md`.
+Two records referred to by the shipped documents are not included here and are available on request:
+`PREREG_RTGCN_FREEZE_v0.1_superseded.md`, the first RT-GCN freeze, replaced before launch by
+`PREREG_RTGCN_FREEZE.md` (see `DEVIATIONS.md`, RT1); and `BENCHMARK_FREEZE.md`, an earlier benchmark
+protocol for a CRSP/Compustat track that was not pursued (its hash is recorded in `PREREG_RSR.md` and
+`PREREG_FREEZE.md`). Development and pilot runs that are not reported in the paper are also omitted.
 
 ## Setup
 

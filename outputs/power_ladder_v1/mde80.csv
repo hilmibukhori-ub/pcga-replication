@@ -1,5 +1,0 @@
-cell,D1,degree,density,edge,industry
-crsp_like,5e-05,,,5e-05,0.0002
-rsr_nasdaq,0.0002,,,0.0002,
-rsr_nyse,0.0002,,,0.0001,0.002
-rsr_pooled,5e-05,,,5e-05,0.001
