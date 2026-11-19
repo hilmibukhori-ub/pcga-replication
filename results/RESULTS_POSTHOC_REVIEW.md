@@ -150,6 +150,9 @@ Reading:
 - **Four of six reject a matched gain as large as the published one:** RSR in both markets, and RT-GCN
   NASDAQ-U and NASDAQ-T.
 - **The NYSE RT-GCN cells reject neither,** because they are uninformative.
+- **Holm adjustment over the six cells (added 19 November 2026, post hoc).** Sorted p: <0.0001, <0.0001,
+  0.0014, 0.027, 0.12, 0.82; adjusted: <0.0006, <0.0005, 0.0056, 0.081, 0.24, 0.82. Three of six reject
+  after adjustment (RSR NASDAQ, RSR NYSE, RT-GCN NASDAQ-T); RT-GCN NASDAQ-U (0.027 -> 0.081) does not.
 
 ## 5. Audit: what is known about the 24 papers without full text
 
