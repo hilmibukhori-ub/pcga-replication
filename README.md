@@ -21,14 +21,18 @@ hashes **before** the test period was read. `DEVIATIONS.md` logs every departure
 
 ## Repository layout
 
-The layout is the same as the working project, so that the freeze records verify byte for byte.
+The layout is the same as the working project, so that the freeze records verify byte for byte. The
+one exception is `results/`: the results files were written after the freezes, are not hashed, and
+sit at the project root in the original layout. Frozen documents and `dapilot/rev1_report.py`
+therefore refer to them as `RESULTS_*.md` without the folder, and rerunning that report writes
+`RESULTS_REV1.md` to the repository root.
 
 | Path | Contents |
 |---|---|
 | `PREREG_*.md` | Pre-registrations (RSR ladder, RSR re-test, RT-GCN, RT-GCN extension, PCGA-L cross-model, Revision 1) |
 | `*FREEZE*.md`, `PCGA_L_MULTIMODEL_FREEZE.json` | SHA-256 freeze records of the code and configs used by each confirmatory run |
 | `DEVIATIONS.md` | Deviation log |
-| `RESULTS_*.md` | Confirmatory and post hoc results, as reported in the paper |
+| `results/` | Confirmatory and post hoc results (`RESULTS_*.md`), as reported in the paper |
 | `dapilot/` | Library: placebo graphs, PCGA-L ladder, statistics, RSR port, RT-GCN harness, Rev1 size-bin placebos |
 | `scripts/` | Runners, report builders, systematic-search scripts, paper figures; `scripts/hyperion/` holds the SLURM files actually used |
 | `configs/` | Machine-readable experiment specifications |
@@ -41,14 +45,14 @@ The layout is the same as the working project, so that the freeze records verify
 | Paper section | Pre-registration / freeze | Results | Runner |
 |---|---|---|---|
 | Construct check (§3.6) | `configs/pilot.yaml` | `outputs/da_synthetic_pilot_validity_v2/report.md` | `scripts/run_pilot.py` |
-| PCGA-L cross-model recovery (§3.6) | `PREREG_PCGA_L_MULTIMODEL.md`, `PCGA_L_MULTIMODEL_FREEZE.json` | `RESULTS_PCGA_L_MULTIMODEL.md` | `scripts/run_pcga_l_multimodel.py` |
-| RSR re-test (§4) | `PREREG_RSR_REPLICATION.md`, `PREREG_REPLICATION_FREEZE.md` | `RESULTS_RSR_REPLICATION.md`, `outputs/rsr_replica_v1/` | `scripts/run_rsr_replica.py` |
-| RT-GCN re-test (§5) | `PREREG_RTGCN.md`, `PREREG_RTGCN_FREEZE.md` | `RESULTS_RTGCN.md`, `outputs/rtgcn_v1/` | `scripts/run_rtgcn_replica.py` |
-| RT-GCN extension (§5) | `PREREG_RTGCN_EXT.md`, `PREREG_RTGCN_EXT_FREEZE.md` | `RESULTS_RTGCN_EXT.md`, `outputs/rtgcn_ext_v1/` | `scripts/run_rtgcn_ext.py` |
-| Literature audit (§6) | `literature/SYSTEMATIC_SEARCH_PROTOCOL.md` | `literature/SYSTEMATIC_SEARCH_RESULTS.md`, `RESULTS_RQ2_INTERCODER.md` | `scripts/syssearch_*.py`, `scripts/rq2_intercoder_reliability.py` |
-| PCGA-L with a ridge expert (§7, Suppl. S1) | `PREREG_RSR.md`, `PREREG_FREEZE.md` | `RESULTS_RSR.md`, `outputs/power_ladder_v2/` | `scripts/run_power_ladder_v2.py` |
-| Size-matched placebos, RT-GCN K=99 (§8.2) | `PREREG_REV1.md`, `PREREG_REV1_FREEZE.md` | `RESULTS_REV1.md`, `outputs/rev1_results.json` | `scripts/run_rev1_rsr_sizebin.py`, `scripts/hyperion/rev1_*.sbatch`, `dapilot/rev1_report.py` |
-| Power, sub-periods, day 89 (§8.3, Suppl. S3) | — (post hoc, labelled as such) | `RESULTS_POSTHOC_REVIEW.md` | `scripts/power_posthoc.py`, `scripts/posthoc_subperiods_equivalence.py`, `scripts/rtgcn_day89_check.py` |
+| PCGA-L cross-model recovery (§3.6) | `PREREG_PCGA_L_MULTIMODEL.md`, `PCGA_L_MULTIMODEL_FREEZE.json` | `results/RESULTS_PCGA_L_MULTIMODEL.md` | `scripts/run_pcga_l_multimodel.py` |
+| RSR re-test (§4) | `PREREG_RSR_REPLICATION.md`, `PREREG_REPLICATION_FREEZE.md` | `results/RESULTS_RSR_REPLICATION.md`, `outputs/rsr_replica_v1/` | `scripts/run_rsr_replica.py` |
+| RT-GCN re-test (§5) | `PREREG_RTGCN.md`, `PREREG_RTGCN_FREEZE.md` | `results/RESULTS_RTGCN.md`, `outputs/rtgcn_v1/` | `scripts/run_rtgcn_replica.py` |
+| RT-GCN extension (§5) | `PREREG_RTGCN_EXT.md`, `PREREG_RTGCN_EXT_FREEZE.md` | `results/RESULTS_RTGCN_EXT.md`, `outputs/rtgcn_ext_v1/` | `scripts/run_rtgcn_ext.py` |
+| Literature audit (§6) | `literature/SYSTEMATIC_SEARCH_PROTOCOL.md` | `literature/SYSTEMATIC_SEARCH_RESULTS.md`, `results/RESULTS_RQ2_INTERCODER.md` | `scripts/syssearch_*.py`, `scripts/rq2_intercoder_reliability.py` |
+| PCGA-L with a ridge expert (§7, Suppl. S1) | `PREREG_RSR.md`, `PREREG_FREEZE.md` | `results/RESULTS_RSR.md`, `outputs/power_ladder_v2/` | `scripts/run_power_ladder_v2.py` |
+| Size-matched placebos, RT-GCN K=99 (§8.2) | `PREREG_REV1.md`, `PREREG_REV1_FREEZE.md` | `results/RESULTS_REV1.md`, `outputs/rev1_results.json` | `scripts/run_rev1_rsr_sizebin.py`, `scripts/hyperion/rev1_*.sbatch`, `dapilot/rev1_report.py` |
+| Power, sub-periods, day 89 (§8.3, Suppl. S3) | — (post hoc, labelled as such) | `results/RESULTS_POSTHOC_REVIEW.md` | `scripts/power_posthoc.py`, `scripts/posthoc_subperiods_equivalence.py`, `scripts/rtgcn_day89_check.py` |
 | Figures | — | — | `scripts/paper_figures.py` |
 
 ## Verifying the freeze records
@@ -65,7 +69,7 @@ Two records referred to by the shipped documents are not included here and are a
 `PREREG_RTGCN_FREEZE.md` (see `DEVIATIONS.md`, RT1); and `BENCHMARK_FREEZE.md`, an earlier benchmark
 protocol for a CRSP/Compustat track that was not pursued (its hash is recorded in `PREREG_RSR.md` and
 `PREREG_FREEZE.md`). Development and pilot runs that are not reported in the paper are also omitted, as are the
-machine-generated `REPORT.md` summaries that the `RESULTS_*.md` files cite; each is rebuilt by the
+machine-generated `REPORT.md` summaries that the `results/RESULTS_*.md` files cite; each is rebuilt by the
 corresponding `--summarise` / report command from the prediction arrays.
 
 ## Setup
