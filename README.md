@@ -64,7 +64,9 @@ Two records referred to by the shipped documents are not included here and are a
 `PREREG_RTGCN_FREEZE_v0.1_superseded.md`, the first RT-GCN freeze, replaced before launch by
 `PREREG_RTGCN_FREEZE.md` (see `DEVIATIONS.md`, RT1); and `BENCHMARK_FREEZE.md`, an earlier benchmark
 protocol for a CRSP/Compustat track that was not pursued (its hash is recorded in `PREREG_RSR.md` and
-`PREREG_FREEZE.md`). Development and pilot runs that are not reported in the paper are also omitted.
+`PREREG_FREEZE.md`). Development and pilot runs that are not reported in the paper are also omitted, as are the
+machine-generated `REPORT.md` summaries that the `RESULTS_*.md` files cite; each is rebuilt by the
+corresponding `--summarise` / report command from the prediction arrays.
 
 ## Setup
 
