@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.pytest_cache/
+# upstream code and data (see data/README.md)
+data/raw/
+# raw per-model prediction arrays and checkpoints (archived separately)
+*.npz
+*.pt
+*.pth
+*.pkl
+*.out

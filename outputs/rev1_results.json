@@ -1,0 +1,139 @@
+{
+ "study_S": {
+  "NASDAQ": {
+   "complete": true,
+   "determinism": {
+    "parent_T_real": -0.38981847499962896,
+    "rerun_T_real": -0.38981847499962896,
+    "abs_diff": 0.0,
+    "reproduced": true
+   },
+   "H-S": {
+    "T_real": -0.38981847499962896,
+    "placebo_mean": -0.45359208830338293,
+    "placebo_sd": 0.16834466812164817,
+    "n_at_least_real": 29,
+    "rank_of_real": 30,
+    "n_graphs": 100,
+    "p_rank": 0.3,
+    "p_holm": 0.42,
+    "verdict": "not detected"
+   },
+   "parent_edge_same_Treal": {
+    "T_real": -0.38981847499962896,
+    "placebo_mean": -0.48353896949882974,
+    "placebo_sd": 0.2113821124351108,
+    "n_at_least_real": 16,
+    "rank_of_real": 17,
+    "n_graphs": 100,
+    "p_rank": 0.17
+   }
+  },
+  "NYSE": {
+   "complete": true,
+   "determinism": {
+    "parent_T_real": 2.2236191439442337,
+    "rerun_T_real": 2.2236191439442337,
+    "abs_diff": 0.0,
+    "reproduced": true
+   },
+   "H-S": {
+    "T_real": 2.2236191439442337,
+    "placebo_mean": 1.9466876461140996,
+    "placebo_sd": 0.4438425676612678,
+    "n_at_least_real": 20,
+    "rank_of_real": 21,
+    "n_graphs": 100,
+    "p_rank": 0.21,
+    "p_holm": 0.42,
+    "verdict": "not detected"
+   },
+   "parent_edge_same_Treal": {
+    "T_real": 2.2236191439442337,
+    "placebo_mean": 2.012851737369243,
+    "placebo_sd": 0.3953409076188795,
+    "n_at_least_real": 25,
+    "rank_of_real": 26,
+    "n_graphs": 100,
+    "p_rank": 0.26
+   }
+  }
+ },
+ "study_K": {
+  "NASDAQ_U": {
+   "complete": true,
+   "H-C99": {
+    "T_real": 0.8686487106606364,
+    "placebo_mean": 0.8300078658885651,
+    "placebo_sd": 0.5982365547788157,
+    "n_at_least_real": 30,
+    "rank_of_real": 31,
+    "n_graphs": 100,
+    "p_rank": 0.31,
+    "p_holm": 0.62,
+    "verdict": "not detected"
+   },
+   "H-C19_recomputed": {
+    "T_real": 0.8686487106606364,
+    "placebo_mean": 0.9321401242494559,
+    "placebo_sd": 0.6538468136337069,
+    "n_at_least_real": 8,
+    "rank_of_real": 9,
+    "n_graphs": 20,
+    "p_rank": 0.45
+   },
+   "detectable_80": {
+    "alpha_0.05": {
+     "shift_sd": 2.5622877962887287,
+     "shift_irr1": 1.532854223603573
+    },
+    "alpha_0.025": {
+     "shift_sd": 3.035891108214855,
+     "shift_irr1": 1.8161810372620957
+    }
+   }
+  },
+  "NYSE_U": {
+   "complete": true,
+   "H-C99": {
+    "T_real": -0.0060659447917714715,
+    "placebo_mean": 0.5320763151288371,
+    "placebo_sd": 3.5515963526435743,
+    "n_at_least_real": 69,
+    "rank_of_real": 70,
+    "n_graphs": 100,
+    "p_rank": 0.7,
+    "p_holm": 0.7,
+    "verdict": "not detected"
+   },
+   "H-C19_recomputed": {
+    "T_real": -0.0060659447917714715,
+    "placebo_mean": 0.21207782829572497,
+    "placebo_sd": 0.31489198664641516,
+    "n_at_least_real": 15,
+    "rank_of_real": 16,
+    "n_graphs": 20,
+    "p_rank": 0.8
+   },
+   "detectable_80": {
+    "alpha_0.05": {
+     "shift_sd": 2.5622877962887287,
+     "shift_irr1": 9.10021199172219
+    },
+    "alpha_0.025": {
+     "shift_sd": 3.035891108214855,
+     "shift_irr1": 10.782259786958939
+    }
+   },
+   "excl_day89_descriptive": {
+    "T_real": 0.041931116371415555,
+    "placebo_mean": 0.2441421515999757,
+    "placebo_sd": 0.6009389723284456,
+    "n_at_least_real": 69,
+    "rank_of_real": 70,
+    "n_graphs": 100,
+    "p_rank": 0.7
+   }
+  }
+ }
+}

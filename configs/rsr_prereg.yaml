@@ -1,0 +1,85 @@
+# RSR open-track graph-value ladder — machine-readable pre-registration (see PREREG_RSR.md v0.2).
+# Written 2026-11-09, before any RSR data were downloaded or inspected.
+# Deviation D-K: K_L3 = 99 (validated K = 19 gives min p = 0.05, so Holm could never reject).
+# Amendment A1 to BENCHMARK_FREEZE.md: Wiki relations are the confirmatory track-O graph.
+
+prereg:
+  version: "0.2"
+  status: frozen  # 2026-11-09, see PREREG_FREEZE.md
+  document: PREREG_RSR.md
+  upstream_sha256:
+    BENCHMARK_FREEZE.md: 5f8a5a465954895684c3f219c9c1f7c31834b779adc5764de8988551dd7c6846
+    configs/benchmark_freeze.yaml: b1e804cd7b1839455eeee7c56e75ea12ba7ddcda1f28801e38b7dfe7072942e7
+    configs/power_ladder_v2_1.yaml: cf691a8c776ac32611b7f1f40c8e59a0f6b3ce37406c61b282a5a81392b772d7
+    outputs/power_ladder_v2/size_and_selection.csv: 76bb8dbbc8ad541fbcf8b97777245d16b4907b351054a3c3abfe62b801e0d9f6
+
+experiment:
+  name: rsr_ladder_v1
+  output_dir: outputs/rsr_ladder_v1
+  seed: 20261111
+
+data:
+  source: https://github.com/fulifeng/Temporal_Relational_Stock_Ranking
+  markets: {NASDAQ: {expected_stocks: 1026}, NYSE: {expected_stocks: 1737}}
+  split:
+    train: ["2013-01-02", "2015-12-31"]
+    val: ["2016-01-04", "2016-12-30"]
+    test: ["2017-01-03", "2017-12-08"]
+  purge_last_day_of: [train, val]
+  hard_stop_on_mismatch: [stock_count, date_range]
+
+task:
+  target: next_day_return_minus_equal_weight_cross_sectional_mean
+  winsorise_quantiles_from_train: [0.005, 0.995]
+  primary_loss: daily_cross_sectional_mse_winsorised
+  secondary: [mse_raw, mae, pearson_ic, rank_ic]
+  features: [ret_1d, ret_5d, ret_20d, realised_vol_20d]   # z-scored per day
+  min_lookback_days: 20
+  missing: {loss_mask: close_t_and_close_t1_observed, feature_impute: daily_cross_sectional_median}
+
+graphs:
+  industry_labels: rsr_industry_relation   # not point-in-time
+  L4_confirmatory: wiki_all_types_binary_undirected
+  L4_secondary:
+    id: train_period_correlation
+    construction: mutual_topk_abs_shrinkage_correlation
+    estimation_window: train
+    k_grid: [5, 10, 20]
+    k_selected_on: val
+  placebos: {L1_er: 3, L2_degree: 3, L3_industry: 99}
+  swaps_per_edge: 10
+  implementation: dapilot/power.py  # er_edges, degree_edges, industry_edges
+
+experts:
+  primary:
+    type: ridge
+    features: graph_features   # [x, neighbour mean, neighbour sum / mean degree]
+    alpha_grid: [1.0, 100.0, 10000.0, 1000000.0]
+    alpha_selected_on: val_per_model_and_placebo
+  secondary:
+    type: [gcn_matched, mlp_matched]
+    seeds: 3
+    L3_placebos: 19
+    status: descriptive
+
+inference:
+  D1: {method: circular_block_bootstrap, block_length: 20, repetitions: 1000, one_sided_level: 0.05,
+       sensitivity_block_lengths: [40, 60]}
+  edge: {method: placebo_rank, K: 99, p: "(1 + #{k: loss_L3_k <= loss_L4}) / (K + 1)",
+         descriptive_interval: circular_block_bootstrap_L20}
+  multiplicity: {method: holm, alpha: 0.05}
+
+confirmatory:
+  - {id: R1, market: NASDAQ, quantity: D1, direction: greater}
+  - {id: R2, market: NYSE, quantity: D1, direction: greater}
+  - {id: R3, market: NASDAQ, quantity: edge, direction: greater}
+  - {id: R4, market: NYSE, quantity: edge, direction: greater}
+
+secondary:
+  - full_ladder_decomposition
+  - pooled_market
+  - L4_secondary_correlation_graph
+  - gcn_mlp_robustness
+  - secondary_losses
+  - conditional_terciles_market_vol_and_dispersion
+  - bootstrap_block_length_sensitivity

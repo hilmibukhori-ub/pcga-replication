@@ -1,0 +1,6 @@
+{
+ "status": "not_run_no_family_passed_oracle_screen",
+ "passed_families": [],
+ "holdout_opened": false,
+ "reason": "Independent realised-supervision evaluation is gated on a family passing the Holm-corrected oracle decision-risk screen."
+}

@@ -1,0 +1,115 @@
+freeze:
+  version: "0.1"
+  date: "2026-11-08"
+  direction: conditional_graph_value_benchmark
+  proposed_method: null
+  large_experiments_allowed: false
+  reason: primary_data_access_not_cleared
+
+local_inventory:
+  real_datasets_present: false
+  synthetic_v2_locked: true
+
+tracks:
+  open_legacy:
+    datasets: [rsr_nasdaq, rsr_nyse]
+    status: retrievable_not_local
+    role: replication_only
+    split:
+      train: ["2013-01-02", "2015-12-31"]
+      validation: ["2016-01-04", "2016-12-30"]
+      test: ["2017-01-03", "2017-12-08"]
+    claim_limit: fixed_universe_historical_results
+  licensed_confirmatory:
+    datasets: [crsp_daily_stock, compustat_point_in_time, ccm]
+    status: blocked_pending_entitlement_and_handling_clearance
+    role: primary
+    universe:
+      security_types: [10, 11]
+      exchanges: [nyse, nyse_american, nasdaq]
+      min_lagged_price_usd: 5.0
+      min_trading_coverage_252: 0.80
+      top_lagged_market_cap: 500
+      rebalance: annual_using_prior_year_end
+      include_delisting_returns: true
+    folds:
+      scheme: expanding_yearly
+      min_training_years: 5
+      validation_years: 1
+      test_years: 1
+
+task:
+  frequency: daily
+  decision_cutoff: market_close_t
+  horizons: [next_session]
+  targets:
+    primary: next_session_market_excess_total_return
+    secondary: next_session_total_return
+  losses: [mse, mae]
+  secondary_metrics: [pearson_ic, rank_ic]
+  purge_unmatured_labels: true
+
+graphs:
+  controls:
+    - no_graph
+    - cross_asset_no_adjacency
+  core:
+    - id: industry
+      sources: [historical_sic, rsr_supplied_industry]
+      causal_timestamp_required: true
+    - id: return_dependence
+      windows: [60, 126, 252]
+      edge_rule: mutual_top_k_absolute_shrinkage_correlation
+      signed_edge_attribute: true
+    - id: factor_exposure_similarity
+      factors: [market, size, value, profitability, investment, momentum]
+      edge_rule: mutual_top_k_cosine_similarity
+  extensions:
+    - id: institutional_ownership_overlap
+      source: sec_13f
+      available_from: public_filing_timestamp
+  placebos:
+    node_permutations: 3
+    degree_preserving_rewire: 1
+    retrain_each_expert: true
+
+baselines:
+  prediction_required:
+    - zero_or_market_mean
+    - ridge_or_elastic_net
+    - lightgbm
+    - temporal_mlp_or_gru
+    - cross_asset_non_graph
+    - matched_gcn
+    - matched_gat
+    - rsr_on_open_track
+  routing_secondary:
+    - always_non_graph
+    - always_graph
+    - constant_convex_mixture
+    - generic_soft_gate
+    - conditional_risk
+    - exact_hard_oracle_ceiling
+    - exact_convex_oracle_ceiling
+  not_required_until_core_complete: [hats, hist, hypergraph_models]
+
+estimands:
+  d1: loss_matched_non_graph_minus_loss_real_graph
+  d2: mean_loss_retrained_placebos_minus_loss_real_graph
+
+statistics:
+  pairing_unit: asset_date
+  confidence_intervals: date_clustered_moving_block_bootstrap
+  model_seeds_are_independent_samples: false
+  multiple_comparison_correction: holm
+  equivalence_requires_dedicated_margin_test: true
+
+execution_gates:
+  - primary_entitlement_and_tool_handling_clearance
+  - minimal_schema_and_field_audit
+  - rsr_provenance_and_redistribution_record
+  - immutable_snapshot_hashes
+  - timestamp_and_leakage_tests
+  - tiny_fold_full_matrix_smoke_test
+  - runtime_and_storage_approval
+

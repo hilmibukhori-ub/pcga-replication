@@ -1,0 +1,11 @@
+# Versions used for the paper (macOS arm64 / Linux x86_64 cluster). Newer minor versions should work.
+numpy>=1.26,<2.1
+scipy==1.13.1
+pandas>=2.2
+scikit-learn==1.5.1
+torch>=2.1,<2.9
+pyyaml>=6.0
+matplotlib>=3.9
+pytest>=8.0
+# Optional: only for scripts/run_rsr_original_dev.py (runs the authors' original TF1 code)
+# tensorflow==2.15.1

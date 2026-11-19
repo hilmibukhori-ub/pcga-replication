@@ -1,0 +1,54 @@
+# Power analysis v2 — inference validity for the ladder `edge` step.
+#
+# Pre-registration (written 2026-11-09, after v1, before any v2 result; no RSR data touched):
+#   v1 found edge-step false-positive rates above nominal at R^2 = 0 (crsp_like 5/40).
+#   Two candidate explanations, fixed in advance:
+#     (a) time dependence not captured by 20-day blocks -> longer blocks restore size;
+#     (b) training-estimation luck: the time bootstrap conditions on fitted models, so a real
+#         graph that is merely a different draw can look "better" on a long test period.
+#         Only a test that compares the real graph with retrained null graphs from the same
+#         class restores size: placebo-rank randomisation test with K L3 placebos,
+#         p = (1 + #{k : loss_L3_k <= loss_real}) / (K + 1).
+#   All methods are compared at one-sided level 5% (bootstrap: lower bound of 90% CI > 0).
+#   Selection rule for the RSR analysis:
+#     valid  = size at R^2 = 0, pooled over all cells' replicates, has 95% Wilson upper bound
+#              <= 0.08 and point estimate <= 0.06;
+#     choose = among valid methods, the highest mean power at R^2 = 1e-4 over the three RSR cells.
+#   If (b) holds, the rank test is the primary inference for D2-type contrasts in the RSR
+#   pre-registration, and block bootstrap is reported only as a descriptive interval.
+#   L3 edge overlap (~25%) is below the chance level of a same-density random graph inside a
+#   10-stock industry (~33%); it is part of the definition of the `industry` step and is not
+#   corrected.
+
+experiment:
+  name: power_ladder_v2
+  output_dir: outputs/power_ladder_v2
+  seed: 20261110
+  reps: {rsr_nasdaq: 40, rsr_nyse: 40, rsr_pooled: 40, crsp_like: 20}
+  placebos_by_level: {L1_er: 3, L2_degree: 3, L3_industry: 19}
+
+cells:
+  rsr_nasdaq:  {n: 1026, train: 756,  val: 252, test: 252}
+  rsr_nyse:    {n: 1737, train: 756,  val: 252, test: 252}
+  rsr_pooled:  {n: 2763, train: 756,  val: 252, test: 252}
+  crsp_like:   {n: 3000, train: 1260, val: 252, test: 1260}
+
+effects_r2: [0.0, 0.00005, 0.0001, 0.0002, 0.0005]
+
+world:
+  block_size: 10
+  intra_degree: 3.0
+  inter_degree: 3.0
+  own_r2: 0.001
+  sector_shock_share: 0.15
+  vol_ar: 0.95
+  vol_sd: 0.30
+  t_df: 4
+
+model:
+  ridge_alpha_grid: [1.0, 100.0, 10000.0, 1000000.0]
+
+inference:
+  level: 0.05
+  block_lengths: [20, 40, 60]
+  repetitions: 1000

@@ -1,0 +1,29 @@
+{
+ "NASDAQ": {
+  "label_is_next_day_return": true,
+  "split_like_events_in_test": [],
+  "top3_labels": [
+   1.149999976158142,
+   0.9259999990463257,
+   0.7799999713897705
+  ]
+ },
+ "NYSE": {
+  "label_is_next_day_return": true,
+  "split_like_events_in_test": [
+   {
+    "test_day_of_label": 89,
+    "stock": 1367,
+    "jump": 34.20919418334961,
+    "persistent_ratio": 23.746089935302734,
+    "label": 33.20919418334961,
+    "level_before_vs_sample_max": 0.005371999926865101
+   }
+  ],
+  "top3_labels": [
+   33.209,
+   1.522,
+   1.114
+  ]
+ }
+}

@@ -1,0 +1,59 @@
+# Power analysis v2.1 — DOCUMENTED DEVIATION from configs/power_ladder_v2.yaml
+# (original sha256 554acbb1d3b808510545bfbac242234392d4b7e43f3482846ba1811caf6caf89, left unchanged).
+#
+# Written 2026-11-09, AFTER the v2 result at n = 140 (archived in
+# outputs/power_ladder_v2/archive_v2_n140/), still before any RSR data has been touched.
+#
+# What v2 showed: under the v2 rule no method was valid for `edge`. placebo_rank had size
+# 8/140 = 0.057 (meets <= 0.06) but a Wilson upper bound of 0.109 (fails <= 0.08).
+# Why we deviate: the rank test is exact by construction (size = 1/(K+1) = 0.05 under
+# exchangeability), and at n = 140 the Wilson <= 0.08 criterion rejects even a perfectly
+# calibrated 5% test most of the time. The binding constraint was the number of replicates,
+# not the test. Raising K would not help.
+#
+# The one and only change: reps go from 140 to 400 in total (100 per cell). Existing reps
+# 0..39 (crsp 0..19) are reused unchanged. New reps are independent, seeded by
+# (seed, cell, rep) exactly as in v2.
+# Unchanged: the DGP, effects, K = 19, block lengths, level, and the validity and selection
+# rules, applied to all methods equally.
+#
+# Binding commitments, to avoid optional stopping:
+#   1. This is the FINAL extension. The decision at n = 400 is binding, whatever it shows.
+#   2. If no `edge` method is valid at n = 400, then in the RSR pre-registration `edge`/D2
+#      is reported only as a descriptive effect size with intervals, and no confirmatory
+#      claim is made about it. D1 keeps the v2 selection (bootstrap_L20) unless it becomes
+#      invalid at n = 400, in which case the same rule applies to D1.
+#   3. Per-cell size at R^2 = 0 (in particular crsp_like) is reported as a secondary,
+#      descriptive check. It does not change the selection.
+experiment:
+  name: power_ladder_v2_1
+  output_dir: outputs/power_ladder_v2
+  seed: 20261110
+  reps: {rsr_nasdaq: 100, rsr_nyse: 100, rsr_pooled: 100, crsp_like: 100}
+  placebos_by_level: {L1_er: 3, L2_degree: 3, L3_industry: 19}
+
+cells:
+  rsr_nasdaq:  {n: 1026, train: 756,  val: 252, test: 252}
+  rsr_nyse:    {n: 1737, train: 756,  val: 252, test: 252}
+  rsr_pooled:  {n: 2763, train: 756,  val: 252, test: 252}
+  crsp_like:   {n: 3000, train: 1260, val: 252, test: 1260}
+
+effects_r2: [0.0, 0.00005, 0.0001, 0.0002, 0.0005]
+
+world:
+  block_size: 10
+  intra_degree: 3.0
+  inter_degree: 3.0
+  own_r2: 0.001
+  sector_shock_share: 0.15
+  vol_ar: 0.95
+  vol_sd: 0.30
+  t_df: 4
+
+model:
+  ridge_alpha_grid: [1.0, 100.0, 10000.0, 1000000.0]
+
+inference:
+  level: 0.05
+  block_lengths: [20, 40, 60]
+  repetitions: 1000

@@ -1,0 +1,13 @@
+{
+  "experiment": "pcga_l_multimodel_v1",
+  "created_before_confirmatory_run": true,
+  "files": {
+    "PREREG_PCGA_L_MULTIMODEL.md": "5555a1223dff28857e80d0fe1a67f6f26fe68e1c4face6945e4c3bc7c945f744",
+    "configs/pcga_l_multimodel_v1.yaml": "78bf02666f64a348e3ab0cc69e905e687b5cb80cc85650f168a8c40b70df0c62",
+    "dapilot/pcga_l.py": "da6ad808803c26abc34b4763264a88d6999106034548fa2058aef82038451397",
+    "dapilot/pcga_l_multimodel.py": "831fe118c3c5c522470eb86ab2b47ef4411f495d848608553f00e21a85634c9d",
+    "scripts/run_pcga_l_multimodel.py": "fccd1add9d4b5ec3128c6f0a52970350830e373de78d3ba8a8c17c2fbca29d8f",
+    "tests/test_pcga_l.py": "f06ce5ce2127a40fc348e0221e6812b96a528e52ab0d007efca26c6c1004c8b3",
+    "tests/test_pcga_l_multimodel.py": "5c42d397817d916ef3f856209131f0368df8e51dedca3ccf86de974d54b0f2e6"
+  }
+}

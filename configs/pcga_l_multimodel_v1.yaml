@@ -1,0 +1,52 @@
+# Prospective PCGA-L cross-model construct-recovery experiment.
+# Confirmatory seeds must not be run until PREREG_PCGA_L_MULTIMODEL.md and the
+# freeze manifest have been created. Development seeds are disjoint and excluded.
+
+experiment:
+  name: pcga_l_multimodel_v1
+  development_seeds: [9000, 9001]
+  confirmatory_seeds: [100, 101, 102, 103, 104, 105, 106, 107, 108, 109,
+                      110, 111, 112, 113, 114, 115, 116, 117, 118, 119]
+  scenarios: [edge, block, degree, "null"]
+  families: [ridge, mlp, gcn]
+  placebos_per_level: 3
+  graph_seed: 20261116
+  model_seed: 314159
+  development_output_dir: outputs/pcga_l_multimodel_dev
+  confirmatory_output_dir: outputs/pcga_l_multimodel_v1
+  freeze_manifest: PCGA_L_MULTIMODEL_FREEZE.json
+
+world:
+  n_sectors: 4
+  per_sector: 15
+  T: 2000
+  p_intra: 0.30
+  p_inter: 0.02
+  own_coef: 0.15
+  noise_sd: 1.0
+  rel_coef: {edge: 0.30, block: 0.50, degree: 0.30, "null": 0.0}
+
+splits:
+  train: [0, 1000]
+  val: [1000, 1300]
+  test: [1300, 1999]
+
+models:
+  ridge:
+    alpha_grid: [0.1, 1.0, 10.0, 100.0, 1000.0]
+  mlp: &neural
+    hidden: 16
+    lr: 0.003
+    weight_decay: 0.0001
+    batch_days: 128
+    max_epochs: 100
+    patience: 12
+    min_delta: 0.000001
+  gcn:
+    <<: *neural
+
+hypotheses:
+  alpha: 0.05
+  attribution_share: 0.70
+  attribution_seed_frac: 0.80
+  expected_steps: {edge: edge, block: block, degree: degree}

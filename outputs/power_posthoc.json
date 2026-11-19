@@ -1,0 +1,139 @@
+{
+ "d1": [
+  {
+   "test": "RSR NASDAQ D1",
+   "estimate": 0.11913207575271371,
+   "sd_diff": 0.3161219626458717,
+   "n": 20,
+   "upper95_one_sided": 0.2413593209782136,
+   "mde80_alpha05": 0.18308527378963432,
+   "mde80_holm_first_step": 0.2328706648841485,
+   "holm_family_size": 4
+  },
+  {
+   "test": "RSR NYSE D1",
+   "estimate": -0.06989747788429668,
+   "sd_diff": 0.3903334332035159,
+   "n": 20,
+   "upper95_one_sided": 0.08102332451918182,
+   "mde80_alpha05": 0.22606560736613504,
+   "mde80_holm_first_step": 0.2875384087705434,
+   "holm_family_size": 4
+  },
+  {
+   "test": "RT-GCN NASDAQ-U D1",
+   "estimate": -0.4729913835035404,
+   "sd_diff": 1.252293353682993,
+   "n": 20,
+   "upper95_one_sided": 0.011202645768451869,
+   "mde80_alpha05": 0.7252785273284912,
+   "mde80_holm_first_step": 0.8271758286440427,
+   "holm_family_size": 2
+  },
+  {
+   "test": "RT-GCN NYSE_U D1",
+   "estimate": -1.790622307942249,
+   "sd_diff": 7.745910053522935,
+   "n": 20,
+   "upper95_one_sided": 1.2043016754546279,
+   "mde80_alpha05": 4.486123175465004,
+   "mde80_holm_first_step": 6.03798276246448,
+   "holm_family_size": 6
+  },
+  {
+   "test": "RT-GCN NYSE_U D1 (excl. day 89, exploratory)",
+   "estimate": -0.1283118630060926,
+   "sd_diff": 1.19152276112289,
+   "n": 20,
+   "upper95_one_sided": 0.33238546879770287,
+   "mde80_alpha05": 0.6900826159653549,
+   "mde80_holm_first_step": 0.9287990491797661,
+   "holm_family_size": 6
+  },
+  {
+   "test": "RT-GCN NASDAQ_T D1",
+   "estimate": -0.15515751343918965,
+   "sd_diff": 0.46510995008318873,
+   "n": 10,
+   "upper95_one_sided": 0.11445798406838259,
+   "mde80_alpha05": 0.3995471383173014,
+   "mde80_holm_first_step": 0.5613669437580466,
+   "holm_family_size": 6
+  },
+  {
+   "test": "RT-GCN NASDAQ_T D1 (excl. day 89, exploratory)",
+   "estimate": -0.1656166172469966,
+   "sd_diff": 0.4724988209659186,
+   "n": 10,
+   "upper95_one_sided": 0.10828206985630484,
+   "mde80_alpha05": 0.40589445945300867,
+   "mde80_holm_first_step": 0.5702849810189546,
+   "holm_family_size": 6
+  },
+  {
+   "test": "RT-GCN NYSE_T D1",
+   "estimate": 3.8638644046499393,
+   "sd_diff": 10.695028091358955,
+   "n": 10,
+   "upper95_one_sided": 10.063571203426143,
+   "mde80_alpha05": 9.187435932861314,
+   "mde80_holm_first_step": 12.908421400098614,
+   "holm_family_size": 6
+  },
+  {
+   "test": "RT-GCN NYSE_T D1 (excl. day 89, exploratory)",
+   "estimate": 0.5429449863149785,
+   "sd_diff": 1.321518366778633,
+   "n": 10,
+   "upper95_one_sided": 1.309004348968235,
+   "mde80_alpha05": 1.135234543113339,
+   "mde80_holm_first_step": 1.5950136662222758,
+   "holm_family_size": 6
+  }
+ ],
+ "edge": [
+  {
+   "test": "RSR NASDAQ edge",
+   "K": 99,
+   "placebo_sd": 0.2113821124351108,
+   "shift80_in_placebo_sd": 2.5370407104492188,
+   "shift80_irr": 0.5362850247086302
+  },
+  {
+   "test": "RSR NYSE edge",
+   "K": 99,
+   "placebo_sd": 0.3953409076188795,
+   "shift80_in_placebo_sd": 2.5370407104492188,
+   "shift80_irr": 1.002995977135041
+  },
+  {
+   "test": "RT-GCN NASDAQ-U edge",
+   "K": 19,
+   "placebo_sd": 0.6538468136337069,
+   "shift80_in_placebo_sd": 2.7903068717569113,
+   "shift80_irr": 1.824433257158493
+  },
+  {
+   "test": "RT-GCN NYSE_U edge",
+   "K": 19,
+   "placebo_sd": 0.31489198664641516,
+   "shift80_in_placebo_sd": 2.7903068717569113,
+   "shift80_irr": 0.8786452742006777
+  },
+  {
+   "test": "RT-GCN NASDAQ_T edge",
+   "K": 19,
+   "placebo_sd": 0.5063124533012575,
+   "shift80_in_placebo_sd": 2.7903068717569113,
+   "shift80_irr": 1.412767117702599
+  },
+  {
+   "test": "RT-GCN NYSE_T edge",
+   "K": 19,
+   "placebo_sd": 0.43071800904713087,
+   "shift80_in_placebo_sd": 2.7903068717569113,
+   "shift80_irr": 1.2018354204336648
+  }
+ ],
+ "note": "Post hoc sensitivity (review request): what effects could the confirmatory tests have detected?\nNot 'observed power'. For each D1 test: the one-sided 95% upper confidence bound, and the gain detectable\nwith 80% power by a one-sided paired t-test at alpha = 0.05 (unadjusted) and at the Holm first-step level\nalpha/m, using the observed SD of the per-seed differences. For each edge rank test: the shift of the real\ngraph, in placebo SDs and in IRR units, that gives 80% power, assuming real and placebo outcomes share the\nplacebo spread (normal; simulation)."
+}

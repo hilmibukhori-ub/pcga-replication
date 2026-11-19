@@ -1,0 +1,16 @@
+{
+ "NASDAQ": {
+  "n_real_edges": 1937,
+  "overlap_mean": 0.057409406402695005,
+  "overlap_min": 0.028910686628807435,
+  "overlap_max": 0.11770779556014456,
+  "typed_overlap_mean": 0.0499366405406674
+ },
+ "NYSE": {
+  "n_real_edges": 8468,
+  "overlap_mean": 0.050896303612411306,
+  "overlap_min": 0.031412376003778934,
+  "overlap_max": 0.08467170524326878,
+  "typed_overlap_mean": 0.04085612859821646
+ }
+}

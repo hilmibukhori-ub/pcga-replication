@@ -1,0 +1,68 @@
+{
+  "experiment": {
+    "name": "power_ladder_v1",
+    "output_dir": "outputs/power_ladder_v1",
+    "reps": 40,
+    "placebos_per_level": 3,
+    "seed": 20261109
+  },
+  "cells": {
+    "rsr_nasdaq": {
+      "n": 1026,
+      "train": 756,
+      "val": 252,
+      "test": 252
+    },
+    "rsr_nyse": {
+      "n": 1737,
+      "train": 756,
+      "val": 252,
+      "test": 252
+    },
+    "rsr_pooled": {
+      "n": 2763,
+      "train": 756,
+      "val": 252,
+      "test": 252
+    },
+    "crsp_like": {
+      "n": 3000,
+      "train": 1260,
+      "val": 252,
+      "test": 1260
+    }
+  },
+  "effects_r2": [
+    0.0,
+    5e-05,
+    0.0001,
+    0.0002,
+    0.0005,
+    0.001,
+    0.002
+  ],
+  "world": {
+    "block_size": 10,
+    "intra_degree": 3.0,
+    "inter_degree": 3.0,
+    "own_r2": 0.001,
+    "sector_shock_share": 0.15,
+    "vol_ar": 0.95,
+    "vol_sd": 0.3,
+    "t_df": 4
+  },
+  "model": {
+    "ridge_alpha_grid": [
+      1.0,
+      100.0,
+      10000.0,
+      1000000.0
+    ]
+  },
+  "inference": {
+    "block_length_days": 20,
+    "repetitions": 1000,
+    "ci": 0.95,
+    "power_target": 0.8
+  }
+}

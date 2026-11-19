@@ -1,0 +1,160 @@
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 19 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 20 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 21 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 22 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 23 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 24 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 25 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 26 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 27 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 28 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 29 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 30 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 31 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 32 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 33 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 34 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 35 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 36 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 37 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 38 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 39 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 40 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 41 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 42 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 43 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 44 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 45 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 46 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 47 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 48 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 49 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 50 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 51 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 52 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 53 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 54 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 55 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 56 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 57 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 58 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 59 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 60 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 61 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 62 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 63 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 64 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 65 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 66 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 67 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 68 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 69 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 70 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 71 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 72 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 73 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 74 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 75 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 76 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 77 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 78 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 79 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 80 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 81 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 82 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 83 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 84 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 85 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 86 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 87 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 88 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 89 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 90 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 91 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 92 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 93 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 94 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 95 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 96 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 97 --seeds 0
+NASDAQ_U scripts/run_rtgcn_replica.py --mode val --cfg paper --graph perm --k 98 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 19 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 20 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 21 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 22 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 23 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 24 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 25 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 26 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 27 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 28 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 29 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 30 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 31 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 32 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 33 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 34 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 35 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 36 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 37 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 38 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 39 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 40 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 41 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 42 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 43 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 44 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 45 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 46 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 47 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 48 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 49 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 50 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 51 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 52 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 53 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 54 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 55 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 56 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 57 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 58 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 59 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 60 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 61 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 62 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 63 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 64 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 65 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 66 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 67 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 68 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 69 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 70 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 71 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 72 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 73 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 74 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 75 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 76 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 77 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 78 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 79 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 80 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 81 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 82 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 83 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 84 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 85 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 86 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 87 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 88 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 89 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 90 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 91 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 92 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 93 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 94 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 95 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 96 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 97 --seeds 0
+NYSE_U scripts/run_rtgcn_ext.py --market NYSE --variant U --mode val --graph perm --k 98 --seeds 0

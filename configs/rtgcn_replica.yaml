@@ -1,0 +1,15 @@
+# RT-GCN (Zheng et al., ICDE 2023) re-test — machine-readable spec for PREREG_RTGCN.md.
+market: NASDAQ
+variant: Uniform            # the released config (config/rt_gcn/NASDAQ/train.yaml); paper's RT-GCN (U)
+seed0: 20261111             # model seed = seed0 + s; same s for every graph (common random numbers)
+epochs: 100
+batch_size: 64
+configs:
+  paper:    {lr: 0.001, wd: 0.0001}   # PRIMARY: paper §V-B4 "Adam ... learning rate of 0.001"; wd not stated -> code default 1e-4
+  released: {lr: 0.1,   wd: 0.1}      # SENSITIVITY: released train.yaml (base_lr 0.1, weight_decay 0.1)
+seeds: 20                   # val arm, real and none (primary config)
+placebos: 19                # within-industry node permutations, seed 0, val arm
+seeds_ind: 5                # industry-only relations (descriptive)
+seeds_pub: 10               # published protocol arm (train on all 1295, epoch by test loss)
+seeds_released: 10          # released-config sensitivity arm (val arm, real and none)
+alpha: 0.05

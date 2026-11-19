@@ -1,0 +1,174 @@
+{
+ "AlwaysN": {},
+ "AlwaysG": {},
+ "FixedEnsemble": {
+  "w": 0.7432436573512756
+ },
+ "Gate": {
+  "weight_decay": 0.01,
+  "val_mix_mse": 9.379598617553711
+ },
+ "CondRisk": {
+  "weight_decay": 0.01,
+  "val_mse_std": 1.3957979679107666,
+  "calib": [
+   [
+    -0.46034512187372095,
+    1.0765394053883095,
+    "affine"
+   ],
+   [
+    1.3022843747817212,
+    0.8949262772394634,
+    "affine"
+   ]
+  ]
+ },
+ "A1": {
+  "features": [
+   "E_benefit_w5",
+   "E_benefit_w20",
+   "E_benefit_w60",
+   "E_d2_w20",
+   "E_logloss_G_w20",
+   "E_logloss_N_w20",
+   "E_retvar_w20",
+   "Q_mad_GN",
+   "Q_rms_GN",
+   "Q_rms_GP",
+   "M_factor0",
+   "M_factor1",
+   "M_feature_dispersion"
+  ],
+  "alpha": 1000.0,
+  "val_mse_std": 0.6424248634846008,
+  "calib_a": -0.03374470494275212,
+  "calib_c": 1.4695727927653066,
+  "calib_mode": "affine"
+ },
+ "A2a": {
+  "features": [
+   "S_density",
+   "S_intra_sector_frac",
+   "S_jaccard_prev",
+   "S_jaccard_lag10",
+   "S_jaccard_consensus",
+   "S_feature_homophily",
+   "S_degree_cv",
+   "E_benefit_w5",
+   "E_benefit_w20",
+   "E_benefit_w60",
+   "E_d2_w20",
+   "E_logloss_G_w20",
+   "E_logloss_N_w20",
+   "E_retvar_w20",
+   "Q_mad_GN",
+   "Q_rms_GN",
+   "Q_rms_GP",
+   "M_factor0",
+   "M_factor1",
+   "M_feature_dispersion"
+  ],
+  "weight_decay": 0.01,
+  "aux_weight": 0.5,
+  "val_mse_std": 0.6397262215614319,
+  "calib_a": -0.030487295871072632,
+  "calib_c": 1.3871490109358648,
+  "calib_mode": "affine"
+ },
+ "A2a_noStruct": {
+  "features": [
+   "E_benefit_w5",
+   "E_benefit_w20",
+   "E_benefit_w60",
+   "E_d2_w20",
+   "E_logloss_G_w20",
+   "E_logloss_N_w20",
+   "E_retvar_w20",
+   "Q_mad_GN",
+   "Q_rms_GN",
+   "Q_rms_GP",
+   "M_factor0",
+   "M_factor1",
+   "M_feature_dispersion"
+  ],
+  "weight_decay": 0.001,
+  "aux_weight": 1.0,
+  "val_mse_std": 0.6183996200561523,
+  "calib_a": -0.009069528857001763,
+  "calib_c": 1.1258062904588555,
+  "calib_mode": "affine"
+ },
+ "A2a_noAux": {
+  "features": [
+   "S_density",
+   "S_intra_sector_frac",
+   "S_jaccard_prev",
+   "S_jaccard_lag10",
+   "S_jaccard_consensus",
+   "S_feature_homophily",
+   "S_degree_cv",
+   "E_benefit_w5",
+   "E_benefit_w20",
+   "E_benefit_w60",
+   "E_d2_w20",
+   "E_logloss_G_w20",
+   "E_logloss_N_w20",
+   "E_retvar_w20",
+   "Q_mad_GN",
+   "Q_rms_GN",
+   "Q_rms_GP",
+   "M_factor0",
+   "M_factor1",
+   "M_feature_dispersion"
+  ],
+  "weight_decay": 0.01,
+  "aux_weight": 0.0,
+  "val_mse_std": 0.6405455470085144,
+  "calib_a": -0.011323405078561012,
+  "calib_c": 1.2250850614874178,
+  "calib_mode": "affine"
+ },
+ "A2b": {
+  "struct": {
+   "features": [
+    "S_density",
+    "S_intra_sector_frac",
+    "S_jaccard_prev",
+    "S_jaccard_lag10",
+    "S_jaccard_consensus",
+    "S_feature_homophily",
+    "S_degree_cv"
+   ],
+   "weight_decay": 0.001,
+   "aux_weight": 0.0,
+   "val_mse_std": 0.6492657661437988,
+   "calib_a": 0.004992771382840908,
+   "calib_c": 1.59655720072861,
+   "calib_mode": "affine"
+  },
+  "evidence": {
+   "features": [
+    "E_benefit_w5",
+    "E_benefit_w20",
+    "E_benefit_w60",
+    "E_d2_w20",
+    "E_logloss_G_w20",
+    "E_logloss_N_w20",
+    "E_retvar_w20",
+    "Q_mad_GN",
+    "Q_rms_GN",
+    "Q_rms_GP",
+    "M_factor0",
+    "M_factor1",
+    "M_feature_dispersion"
+   ],
+   "weight_decay": 0.001,
+   "aux_weight": 0.0,
+   "val_mse_std": 0.6185701489448547,
+   "calib_a": 0.013379593101278712,
+   "calib_c": 0.9183474581712842,
+   "calib_mode": "affine"
+  }
+ }
+}

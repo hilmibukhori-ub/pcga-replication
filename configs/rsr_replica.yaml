@@ -1,0 +1,22 @@
+# Re-test of the published RSR claim (Feng et al. 2019, TOIS, Table 7). See PREREG_RSR_REPLICATION.md.
+experiment:
+  python: ~/.venvs/rsr_arm (native arm64, Python 3.9.6, torch 2.8.0, numpy 2.0.2)
+  name: rsr_replica_v1
+  output_dir: outputs/rsr_replica_v1
+  dev_output_dir: outputs/rsr_replica_dev
+  seed: 20261110
+markets:
+  NASDAQ: {emb: NASDAQ_rank_lstm_seq-16_unit-64_2.csv.npy, seq: 16, unit: 64, alpha: 0.1}   # README command
+  NYSE:   {emb: NYSE_rank_lstm_seq-8_unit-32_0.csv.npy,   seq: 8,  unit: 32, alpha: 10.0}  # README command (stated for industry; see prereg §3)
+training: {epochs: 50, lr: 0.001, steps: 1}   # relation_rank_lstm.py defaults
+relation_primary: wikidata
+relation_secondary: sector_industry
+seeds_d1: 20         # real and no-relation baseline: seeds 0-19 (paper: 5 runs; seeds 0-4 also reported)
+seeds_edge: 1        # every graph in the edge test (real included): seed 0 (common random numbers)
+seeds_industry: 5    # secondary: RSR_I with industry relations, seeds 0-4
+placebos: {type: within_industry_node_permutation, na_pooled: true, K: 99}
+inference:
+  D1: {method: paired_t_on_per_seed_IRR, alternative: greater,   # A/A-calibrated in the dev rehearsal (PREREG §10)
+       secondary: {twoway_seed_day_bootstrap: {block_length: 20, repetitions: 2000}}}
+  edge: {method: placebo_rank, p: "(1 + #{k: metric(P_k) >= metric(real)}) / (K + 1)"}
+  multiplicity: {method: holm, alpha: 0.05}

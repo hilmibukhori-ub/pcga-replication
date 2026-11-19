@@ -1,0 +1,29 @@
+[     0.5s] data generated; regime coverage per split {'expert_train': [316, 260, 223], 'expert_val': [67, 47, 85], 'meta_train': [305, 214, 180], 'selector_val': [15, 93, 41], 'calibration': [42, 0, 107], 'test': [276, 357, 366]}
+[     0.6s] expert ridge: alpha=0.1 val_mse=9.4116
+[     8.6s] expert mlp: wd=0.001 val_mse=9.3269 epoch=56
+[    13.0s] expert cross_mlp: wd=0.0001 val_mse=9.2851 epoch=11
+[    22.8s] expert gcn: wd=0.001 val_mse=9.2490 epoch=30
+[    31.6s] expert placebo_0: wd=0.001 val_mse=9.3225 epoch=8
+[    39.7s] expert placebo_1: wd=0.001 val_mse=9.3209 epoch=8
+[    50.2s] expert placebo_2: wd=0.001 val_mse=9.3266 epoch=11
+[    51.2s] [real] selector AlwaysN fitted in 0.0s
+[    51.2s] [real] selector AlwaysG fitted in 0.0s
+[    51.2s] [real] selector FixedEnsemble fitted in 0.0s
+[    55.6s] [real] selector Gate fitted in 4.4s
+[    56.2s] [real] selector CondRisk fitted in 0.6s
+[    56.2s] [real] selector A1 fitted in 0.0s
+[    60.4s] [real] selector A2a fitted in 4.2s
+[    64.1s] [real] selector A2a_noStruct fitted in 3.6s
+[    65.9s] [real] selector A2a_noAux fitted in 1.9s
+[    68.1s] [real] selector A2b fitted in 2.1s
+[    68.3s] [placebo] selector AlwaysN fitted in 0.0s
+[    68.3s] [placebo] selector AlwaysG fitted in 0.0s
+[    68.3s] [placebo] selector FixedEnsemble fitted in 0.0s
+[    70.6s] [placebo] selector Gate fitted in 2.3s
+[    71.4s] [placebo] selector CondRisk fitted in 0.8s
+[    71.4s] [placebo] selector A1 fitted in 0.0s
+[    72.8s] [placebo] selector A2a fitted in 1.4s
+[    73.9s] [placebo] selector A2a_noStruct fitted in 1.2s
+[    74.5s] [placebo] selector A2a_noAux fitted in 0.6s
+[    76.2s] [placebo] selector A2b fitted in 1.7s
+[    76.3s] done

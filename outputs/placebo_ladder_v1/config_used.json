@@ -1,0 +1,73 @@
+{
+  "experiment": {
+    "name": "placebo_ladder_v1",
+    "output_dir": "outputs/placebo_ladder_v1",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "placebos_per_level": 10
+  },
+  "world": {
+    "n_sectors": 4,
+    "per_sector": 15,
+    "T": 2000,
+    "p_intra": 0.3,
+    "p_inter": 0.02,
+    "own_coef": 0.15,
+    "noise_sd": 1.0,
+    "rel_coef": {
+      "edge": 0.3,
+      "block": 0.5,
+      "degree": 0.3,
+      "null": 0.0
+    }
+  },
+  "splits": {
+    "train": [
+      0,
+      1000
+    ],
+    "val": [
+      1000,
+      1300
+    ],
+    "test": [
+      1300,
+      1999
+    ]
+  },
+  "model": {
+    "ridge_alpha_grid": [
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "target": "excess"
+  },
+  "hypotheses": {
+    "attribution_share": 0.7,
+    "attribution_seed_frac": 0.8,
+    "alpha": 0.05
+  }
+}

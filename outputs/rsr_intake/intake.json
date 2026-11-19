@@ -1,0 +1,180 @@
+{
+ "repo": "https://github.com/fulifeng/Temporal_Relational_Stock_Ranking",
+ "commit": "cfbb01bdf194b81bc5893a1b37aff1c0d0d2a82d",
+ "license": "AGPL-3.0 (code); data rights not separately stated",
+ "markets": {
+  "NASDAQ": {
+   "stocks": 1026,
+   "expected_stocks": 1026,
+   "processed_days": 1245,
+   "first_date": "2013-01-02",
+   "last_date": "2017-12-08",
+   "train_rows": [
+    0,
+    755
+   ],
+   "train_days": 756,
+   "train_dates": [
+    "2013-01-02",
+    "2015-12-31"
+   ],
+   "train_missing_close_rate": 0.0013536928741607105,
+   "train_loss_mask_rate": 0.9981873407799333,
+   "train_stocks_all_missing": 0,
+   "val_rows": [
+    756,
+    1007
+   ],
+   "val_days": 252,
+   "val_dates": [
+    "2016-01-04",
+    "2016-12-30"
+   ],
+   "val_missing_close_rate": 0.002177511680435657,
+   "val_loss_mask_rate": 0.997346761966645,
+   "val_stocks_all_missing": 0,
+   "test_rows": [
+    1008,
+    1244
+   ],
+   "test_days": 237,
+   "test_dates": [
+    "2017-01-03",
+    "2017-12-08"
+   ],
+   "test_missing_close_rate": 0.00047293573831437476,
+   "test_loss_mask_rate": 0.9994383321769584,
+   "test_stocks_all_missing": 0,
+   "rows_outside_splits": 0,
+   "industry": {
+    "groups_with_members": 113,
+    "stocks_labelled": 1026,
+    "stocks_multi_label": 0,
+    "stocks_unlabelled": 0,
+    "size_max": 156,
+    "size_median": 4.0,
+    "size_quantiles_10_50_90": [
+     1.0,
+     4.0,
+     17.0
+    ],
+    "singleton_groups": 17,
+    "npy_shape": [
+     1026,
+     1026,
+     97
+    ],
+    "npy_diag_nonzero": 1026
+   },
+   "wiki": {
+    "npy_shape": [
+     1026,
+     1026,
+     43
+    ],
+    "relation_channels": 43,
+    "diag_nonzero_before_removal": 1026,
+    "symmetric_as_given": false,
+    "edges_undirected": 970,
+    "isolated_nodes": 891,
+    "isolated_share": 0.868421052631579,
+    "degree_mean": 1.8908382066276803,
+    "degree_max": 54,
+    "degree_quantiles_50_90_99": [
+     0.0,
+     3.0,
+     37.75
+    ],
+    "share_edges_same_industry": 0.13195876288659794
+   }
+  },
+  "NYSE": {
+   "stocks": 1737,
+   "expected_stocks": 1737,
+   "processed_days": 1245,
+   "first_date": "2013-01-02",
+   "last_date": "2017-12-08",
+   "train_rows": [
+    0,
+    755
+   ],
+   "train_days": 756,
+   "train_dates": [
+    "2013-01-02",
+    "2015-12-31"
+   ],
+   "train_missing_close_rate": 0.0007577072919617536,
+   "train_loss_mask_rate": 0.9991227348740302,
+   "train_stocks_all_missing": 0,
+   "val_rows": [
+    756,
+    1007
+   ],
+   "val_days": 252,
+   "val_dates": [
+    "2016-01-04",
+    "2016-12-30"
+   ],
+   "val_missing_close_rate": 0.0003815189480129031,
+   "val_loss_mask_rate": 0.9994562783854667,
+   "val_stocks_all_missing": 0,
+   "test_rows": [
+    1008,
+    1244
+   ],
+   "test_days": 237,
+   "test_dates": [
+    "2017-01-03",
+    "2017-12-08"
+   ],
+   "test_missing_close_rate": 0.0005514138786257892,
+   "test_loss_mask_rate": 0.999238898158719,
+   "test_stocks_all_missing": 0,
+   "rows_outside_splits": 0,
+   "industry": {
+    "groups_with_members": 130,
+    "stocks_labelled": 1737,
+    "stocks_multi_label": 0,
+    "stocks_unlabelled": 0,
+    "size_max": 500,
+    "size_median": 6.0,
+    "size_quantiles_10_50_90": [
+     1.0,
+     6.0,
+     20.10000000000001
+    ],
+    "singleton_groups": 23,
+    "npy_shape": [
+     1737,
+     1737,
+     108
+    ],
+    "npy_diag_nonzero": 1737
+   },
+   "wiki": {
+    "npy_shape": [
+     1737,
+     1737,
+     33
+    ],
+    "relation_channels": 33,
+    "diag_nonzero_before_removal": 1737,
+    "symmetric_as_given": false,
+    "edges_undirected": 4246,
+    "isolated_nodes": 1471,
+    "isolated_share": 0.8468624064478987,
+    "degree_mean": 4.888888888888889,
+    "degree_max": 113,
+    "degree_quantiles_50_90_99": [
+     0.0,
+     10.0,
+     84.63999999999987
+    ],
+    "share_edges_same_industry": 0.10598210080075365
+   }
+  }
+ },
+ "hard_stops": [],
+ "manifest_sha256_of_manifest": "a2bfd23079bd339373bb750bea5ee07dbcc4f4597d67f19211c9901704b179b4",
+ "n_files_hashed": 2775
+}

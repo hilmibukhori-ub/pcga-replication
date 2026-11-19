@@ -1,0 +1,21 @@
+# PCGA-L construct-recovery report.
+#
+# This configuration was created after placebo_ladder_v1 had been run.  It does not
+# define a new confirmatory experiment and must not be described as preregistered.
+# It only formalises and verifies the hierarchical attribution already fixed in
+# configs/placebo_ladder.yaml and reported in outputs/placebo_ladder_v1/.
+
+analysis:
+  name: pcga_l_recovery_from_preregistered_v1
+  status: posthoc_method_packaging_of_preregistered_experiment
+  source_config: configs/placebo_ladder.yaml
+  source_results: outputs/placebo_ladder_v1/per_seed.csv
+  source_hypotheses: outputs/placebo_ladder_v1/hypotheses.csv
+  output_dir: outputs/pcga_l_recovery_v1
+
+recovery:
+  expected_steps: {edge: edge, block: block, degree: degree}
+  # Inherited from the old preregistration; not selected from the new report.
+  attribution_share: 0.70
+  attribution_seed_frac: 0.80
+

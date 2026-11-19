@@ -1,0 +1,13 @@
+# RSR secondary expert robustness (PREREG_RSR.md §5 / §9.4). EXPLORATORY, descriptive only.
+# Written 2026-11-10 AFTER the confirmatory test read; documented in DEVIATIONS.md (G1).
+prereg_config: configs/rsr_prereg.yaml
+output_dir: outputs/rsr_gnn_v1
+seeds: 3              # prereg §5
+k_l3: 19              # prereg §5 (first 19 of the 99 confirmatory L3 placebos)
+experts:              # = configs/pilot.yaml experts (the dapilot/experts.py budget)
+  hidden: 32
+  lr: 0.001
+  batch_size: 32      # days per batch
+  max_epochs: 150
+  patience: 20
+  weight_decay_grid: [1.0e-4, 1.0e-3]

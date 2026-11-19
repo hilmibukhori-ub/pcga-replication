@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this code or these materials, please cite the paper below."
+title: "Placebo-Calibrated Graph Attribution (PCGA): replication package"
+type: software
+license: MIT
+authors:
+  - given-names: Hilmi Aziz
+    family-names: Bukhori
+    affiliation: Universitas Brawijaya
+    orcid: "https://orcid.org/0009-0000-9907-2132"
+  - given-names: Jing Rong
+    family-names: Goh
+    affiliation: Singapore Management University
+    orcid: "https://orcid.org/0000-0003-4192-072X"
+  - given-names: Saiful
+    family-names: Bukhori
+    affiliation: Universitas Jember
+    orcid: "https://orcid.org/0000-0002-2527-1080"
+  - given-names: Syaiful
+    family-names: Anam
+    affiliation: Universitas Brawijaya
+    orcid: "https://orcid.org/0000-0002-6627-0084"
+preferred-citation:
+  type: article
+  title: "Placebo-calibrated graph attribution for stock prediction: pre-registered re-tests of two published graph neural networks"
+  authors:
+    - given-names: Hilmi Aziz
+      family-names: Bukhori
+    - given-names: Jing Rong
+      family-names: Goh
+    - given-names: Saiful
+      family-names: Bukhori
+    - given-names: Syaiful
+      family-names: Anam
+  journal: "Expert Systems with Applications"
+  status: submitted
+  year: 2026

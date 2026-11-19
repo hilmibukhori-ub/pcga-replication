@@ -1,0 +1,123 @@
+experiment:
+  name: da_synthetic_pilot
+  seeds:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  output_dir: outputs
+  n_jobs: 5
+data:
+  n_assets: 60
+  n_sectors: 4
+  n_steps: 3000
+  n_features: 4
+  n_factors: 2
+  burn_in: 200
+  graph:
+    p_intra: 0.3
+    p_inter: 0.03
+  features:
+    rho_own: 0.6
+    rho_graph: 0.3
+  factors:
+    rho: 0.9
+  regimes:
+    names:
+    - informative
+    - no_signal
+    - corrupted
+    segment_len_min: 40
+    segment_len_max: 150
+  observation:
+    edge_drop: 0.05
+    edge_add_frac: 0.05
+  corruption:
+    min: 0.4
+    max: 0.9
+  signal:
+    own_std: 0.6
+    own_nonlinear_share: 0.5
+    factor_std: 0.4
+    relational_std: 0.7
+    idio_noise_std: 2.8
+    common_noise_std: 1.0
+  relational_gain:
+    informative: 1.0
+    no_signal: 0.0
+    corrupted: 1.0
+splits:
+  horizon: 1
+  expert_train:
+  - 1
+  - 800
+  expert_val:
+  - 801
+  - 1000
+  meta_train:
+  - 1001
+  - 1700
+  selector_val:
+  - 1701
+  - 1850
+  calibration:
+  - 1851
+  - 2000
+  test:
+  - 2001
+  - 3000
+experts:
+  hidden: 32
+  lr: 0.001
+  batch_size: 32
+  max_epochs: 150
+  patience: 20
+  weight_decay_grid:
+  - 0.0001
+  - 0.001
+  ridge_alpha_grid:
+  - 0.1
+  - 1.0
+  - 10.0
+  - 100.0
+  - 1000.0
+  n_placebo: 3
+selectors:
+  graph_expert: gcn
+  nongraph_expert: mlp
+  evidence_windows:
+  - 5
+  - 20
+  - 60
+  aux_window: 20
+  ridge_alpha_grid:
+  - 0.1
+  - 1.0
+  - 10.0
+  - 100.0
+  - 1000.0
+  aux_weight_grid:
+  - 0.5
+  - 1.0
+  calibration: affine
+  mlp:
+    hidden: 32
+    dropout: 0.1
+    lr: 0.003
+    max_epochs: 400
+    patience: 40
+    weight_decay_grid:
+    - 0.001
+    - 0.01
+    n_init: 5
+evaluation:
+  ci_level: 0.95
+  alpha: 0.05
+  bootstrap_resamples: 10000
+  calibration_bins: 10

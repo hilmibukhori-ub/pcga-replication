@@ -1,0 +1,823 @@
+{
+ "retrieved": "2026-11-10T20:38:20",
+ "query": "(abs:stock OR abs:equity OR abs:\"financial market\" OR abs:portfolio) AND (abs:\"graph neural network\" OR abs:GNN OR abs:\"graph convolutional\" OR abs:relational OR abs:hypergraph OR abs:\"stock relation\") AND (abs:\"random graph\" OR abs:shuffled OR abs:permuted OR abs:permutation OR abs:placebo OR abs:\"null model\" OR abs:\"without graph\" OR abs:reproducibility OR abs:replication OR abs:\"re-evaluation\")",
+ "total": 82,
+ "results": [
+  {
+   "id": "http://arxiv.org/abs/2610.12537v1",
+   "title": "Market Impact Estimation via Causal Foundation Models",
+   "abstract": "When a trader executes a large order, the relevant question is not \\emph{what will the price be?} but \\emph{what would the price have been had I not traded?} Market impact is thus a causal quantity, yet classical models (Almgren--Chriss, propagators) regress price on flow, which is biased whenever informed flow moves prices through information as well as trading. We present a proof-of-concept \\emph{Causal Market Simulator}: a continuous-time causal prior-data fitted network (PFN) trained on a synthetic market prior in which a hidden informational flow confounds the flow--price relation by construction, with confounding strength an exact per-episode knob. On this prior, the naive estimator's bias follows a closed form we confirm empirically (up to 68\\% overestimation), while the PFN tracks the unbiased true-parameter oracle at high confounding. Its \\emph{do-ablated twin}, the same model with the intervention inputs removed, collapses onto the pre-window mean. Zero-shot, the model responds at the ground-truth scale to metaorders in an ABIDES limit-order book ($+0.38$ pre-onset standard deviations against seed-replay counterfactuals), and its intervention response replicates on about 2,300 detected flow bursts in BTC/ETH/SOL perpetuals and 3,800 on Nasdaq equities, evidence consistent with, though not proof of, causal transfer. Off-prior the response degrades gracefully, and split-conformal recalibration repairs interval calibration. Transfer hinges on encoding the metaorder as added flow rather than a clamped price level, not on more training. A recurrent state-space variant closes the remaining shape gap: its impact accrues over execution duration where the transformer's stays flat, raising the correlation with measured metaorder impact from $+0.68$ to between $+0.92$ and $+0.96$, at the cost of weaker on-prior deconfounding that traces to the training recipe rather than to recurrence.",
+   "published": "2026-10-08",
+   "categories": [
+    "cs.LG",
+    "cs.CE",
+    "q-fin.TR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2609.35088v1",
+   "title": "When Valid Tool Calls Change Meaning: Formation-Consistent Dispatch for LLM Agents",
+   "abstract": "Tool-enabled agents form calls from model-visible interfaces, while hosts later select their implementation. Standard dispatch omits the descriptor-handler relation. An unchanged and schema-valid call can therefore acquire a different security effect during rollout, reconnect, or delayed approval. We call this failure schema-epoch drift. We present formation-consistent dispatch (FCD), which connects implementation analysis to execution authority. Reviewed profiles produce provenance-bound over-approximations of declared in-scope effects from official source. Under a closed-target approval policy, a verifier applies each formed call to a summary and captures a successor only when its effects fit the call's security contract. Atomic admission and a final-hop fence preserve this decision to the effect. The exact source retains priority, and the captured successor becomes eligible only after source retirement. Stock releases and deployment changes reproduced the failure. Four profiles covered 32 official releases: 29 required no release-specific change and three escalated. A frozen 16-release expansion matched a separate source oracle. In a preregistered stock comparison, FCD completed all three pending calls whose effect remained private and blocked all three whose omission became public. Exact pinning and release-wide denial stopped all six calls, while release-wide approval completed all six but produced three public effects. A separate lifecycle experiment carried a formation-captured certificate across source retirement. The same safe certificate installed later governed new formations without expanding the pending call's authority.",
+   "published": "2026-09-28",
+   "categories": [
+    "cs.AI",
+    "cs.CR",
+    "cs.SE"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2609.34828v1",
+   "title": "Simulating Respondents, Not Single Questions: Coherent Survey Generation with Large Language Models",
+   "abstract": "Large language models are increasingly used to simulate response distributions in social surveys. Prior work has achieved accurate population-level simulation for individual questions. Real questionnaires, however, ask each respondent a sequence of related questions. A simulated respondent should show coherent preferences across the whole questionnaire, not merely accurate distributions for isolated items. Existing single-item methods cannot accurately reproduce how the same person answers a complete survey. We propose FullRespondent-LLM (FR-LLM), which fine-tunes two specialized LLMs: a marginal model for each item's response distribution and a respondent-level autoregressive model for dependencies across answers. Marginal-Constrained Joint Projection (MCJP) then projects the autoregressive joint distribution onto the set satisfying the item-level marginals learned by the first model. This yields complete questionnaires with realistic cross-item relationships while retaining strong item-level accuracy. On two real-world social survey datasets, FR-LLM more accurately reproduces multi-question response patterns, maintains competitive single-item accuracy, and generalizes better to unseen populations and questions. In a small commercial-survey dataset, we use simulated responses to make pricing and stocking decisions; FR-LLM achieves the highest realized profit.",
+   "published": "2026-09-28",
+   "categories": [
+    "cs.AI"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2608.30999v2",
+   "title": "Metaorder modelling and identification from public data",
+   "abstract": "Market-order flow in financial markets exhibits long-range correlations. This is a widely known stylised fact of financial markets. A popular hypothesis for this stylised fact comes from the Lillo-Mike-Farmer (LMF) order-splitting theory. However, quantitative tests of this theory have historically relied on proprietary datasets with trader identifiers, limiting reproducibility and cross-market validation. We investigate whether it can be recovered from anonymous public data using synthetic metaorder reconstruction. Using transaction and quote data for the largest 239 stocks by market capitalisation on the JSE as of 13 March 2026 with the data range being 1 January 2023 until 31 December 2025, we conduct a grid search over reconstruction parameters and evaluate each configuration against established metaorder stylised facts and the LMF relation. Configurations selected to minimise errors across the metaorder impact stylised facts reproduce the targeted aggregate properties but yield a poor LMF relation. Configurations selected to minimise the LMF discrepancy recover the relation by construction while retaining several broad impact features, although some stock-level execution and decay fits are weaker. These asymmetric results show that recovering aggregate impact stylised facts alone is insufficient to identify LMF-consistent order splitting, while the LMF-targeted result establishes compatibility within the reconstruction class rather than an independent test. The findings support consistency with, rather than direct validation of, the LMF theory using anonymous market data.",
+   "published": "2026-08-31",
+   "categories": [
+    "q-fin.TR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2609.29563v1",
+   "title": "Certified Bank-Aware Fast-Path Coverage for Hardware-Constrained NDN Forwarding Lookup",
+   "abstract": "Named Data Networking (NDN) replaces address-based forwarding with longest-prefix lookup over variable-length hierarchical names, creating a difficult fit with bounded hardware fast paths. We formulate this problem as certified fast-path coverage. An offline mapper selects a prefix-closed set of parser-visible trie nodes and a separate set of action-equivalence certificates under a shared budget. A certificate relates a selected shallow FIB prefix to a deeper true-LPM class with the same forwarding action; applying the shortcut requires a sound class guard, while uncertain traffic falls back to an exact path. We present BPC-Greedy, a certificate-aware placement heuristic, and BPC-Portfolio, a multi-strategy wrapper spanning exact-heavy, repair-based, and shallow-shortcut constructions. The formulation exposes a tree-closure knapsack structure for prefix placement, exact top-k certificate selection for a fixed selected set under uniform certificate cost, and a separate bank-feasibility layer. On a synthetic parser-depth sweep and a 50k replay of public NDN testbed names under a reproducible synthetic forwarding-action snapshot, modeled certified coverage increases from 46.48% for the best exact-prefix-only bank-aware baseline to 64.06% at total budget M=48. These results characterize placement opportunity under the stated model: the evaluator uses the known true LPM as an oracle-style guard, certificate-table bank traffic is not modeled, and no claim is made about synthesized latency, area, or throughput.",
+   "published": "2026-08-28",
+   "categories": [
+    "cs.AR",
+    "cs.NI"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2608.03500v1",
+   "title": "LLM-Assisted Review Prioritization for German Statutory Health Insurance Websites: A Multi-Stage Corpus Audit",
+   "abstract": "Background: German statutory health insurance (SHI) funds publish web portfolios that exceed continuous specialist review capacity. Their content can shape health and benefit expectations. Generic AI-text detection does not identify medical, benefit, legal, or editorial review needs. Objective: To characterize a multi-stage workflow that prioritizes substantive review needs while separating AI-provenance signals from quality claims. Methods: We analyzed 56,198 pages from 84 SHI websites or sub-sites. The workflow combined deterministic screening, model-assisted triage and in-depth review, minimum evidence checks, temporal-validity safeguards, and paired-model comparison. It is reproducibility-bounded, not a validated detector. Production code is proprietary; reproducibility rests on frozen derived tables and paired-comparison artifacts. The 300-page lower-priority check was a single-model, risk-enriched routing stress test, not a human-reference evaluation. Results: All pages received a review state. The workflow generated 35,998 review records and routed 21,452 to case review. The workload concentrated in transparency, legal framing, medical content, contradictions, and AI-related failure-mode signals. A quoted passage was locatable in captured page text for 31,347 records, confirming literal occurrence rather than factual correctness. The routing stress test surfaced a signal on 100/300 pages (33.3% within the sample). Across 182 matched cases, two models agreed in 75.8% (kappa = 0.532; 95% CI 0.415-0.649). Conclusions: The workflow produces a prioritized workload, not error prevalence or final legal, medical, or insurer-level findings. It neither proves AI authorship nor validates autonomous detection. Paired-model agreement quantifies consistency, not correctness or sufficient triage performance; public claims require human adjudication.",
+   "published": "2026-08-04",
+   "categories": [
+    "cs.CY"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2608.01322v1",
+   "title": "Can Language Models Identify Shadow Trading Targets? An NLP Evaluation of SEC Enforcement Theory",
+   "abstract": "Shadow trading -- trading in a peer firm's securities on the basis of material nonpublic information (MNPI) about an \"economically linked\" company -- is a novel and contested theory of insider trading liability, first prosecuted in SEC v. Panuwat (2023). Enforcing it requires identifying economically linked firms ex ante, a determination the SEC makes only after the fact using mass market surveillance infrastructure. We ask whether NLP can do what the SEC's theory presumes insiders already know: identify peer firms ex ante from publicly mandated disclosures. Using a two-stage LLM pipeline applied to Item 7 (Management's Discussion and Analysis) sections of SEC 10-K filings, we score semantic similarity across 30 M&A events spanning five industries and relate similarity to announcement-day abnormal stock returns. On the Panuwat fact pattern itself the pipeline recovers Incyte among the closest peers, a sanity check on the one case with a known outcome. Across the full dataset, however, we find no association: pooling 217 peer observations, the within-event rank correlation between similarity and abnormal return is +0.07 (permutation p = 0.37), and the mean per-event Spearman correlation is +0.05 with a 95% confidence interval of [-0.08, +0.18] -- narrow enough to exclude any moderate relationship rather than merely failing to detect one. A case-level reading agrees: 14 of 30 events support the hypothesis, 12 contradict it, and 4 are ambiguous. We also find that Incyte fell outside the standard \\$2B-\\$10B mid-cap band on the day before the announcement, complicating the \"mid-cap oncology\" category the SEC invoked. These results are exploratory and bound to this pipeline, corpus, and return measure, but they put pressure on the empirical premise of shadow trading enforcement and bear on constitutional questions surrounding the SEC's financial surveillance infrastructure.",
+   "published": "2026-08-02",
+   "categories": [
+    "cs.CL",
+    "cs.CY"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2607.24826v1",
+   "title": "Aethel: A Reproducible Graph-Retrieval Framework for Multi-Hop Financial Diligence",
+   "abstract": "Secondary private equity transactions require rapid synthesis of fragmented, unstructured financial disclosures, where critical metrics and their entity anchors are distributed across disjoint documents with limited lexical overlap. We present Aethel, a reproducible framework that combines bipartite Personalized PageRank graph retrieval with a coreference-aware Bipartite Coreference Teleportation layer and an orchestrated specialist-agent architecture. Aethel models corpora as entity-passage graphs and propagates relevance through explicit relational paths to support multi-hop financial diligence. We evaluate the retrieval layer on 200-question samples from the MuSiQue and 2WikiMultiHopQA validation sets, comparing sparse lexical, dense bi-encoder, vanilla graph, and coreference-aware graph retrieval. Aethel achieves HR@5 of 100.0% on 2WikiMultiHopQA and 88.5% on MuSiQue, improving coverage over vanilla graph retrieval while trading off top-rank precision. We also evaluate retrieval over a 4,123-chunk corpus of financial disclosures and find that graph retrieval outperforms dense retrieval on multi-hop recall but does not surpass a strong BM25 baseline at open-corpus scale. The results show that graph-based retrieval offers interpretable multi-hop evidence paths and degrades more gracefully than dense retrieval as corpus size grows, while also demonstrating that its advantage depends strongly on corpus scale and entity-index quality. Code and evaluation artifacts are released for reproducibility.",
+   "published": "2026-07-20",
+   "categories": [
+    "cs.IR",
+    "cs.MA"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2609.09165v1",
+   "title": "TFR-GNN: Topology- and Fault-Aware Graph Neural Scheduling for Heterogeneous Distributed Computing Systems",
+   "abstract": "Scheduling workflow directed acyclic graphs (DAGs) on heterogeneous distributed systems is a classical NP-hard problem, and the list-scheduling heuristic HEFT remains the defacto standard because of its low complexity and strong makespan. In real deployments, however, machines fail: commodity and pre-emptible nodes are far less reliable than dedicated ones, and a makespan-optimal but reliability-agnostic placement can be dramatically slowed by node failures. We show empirically, on real workflow structures from the WfCommons/Pegasus corpus, that no single fixed heuristic is best across the joint space of failure intensity and cluster load: with no failures HEFT is optimal, whereas under failures a reliability-aware placement can reduce the expected makespan by up to 52% when spare capacity exists. Motivated by this, we present TFR-GNN, a graph neural scheduler that combines bidirectional dependency attention over the task DAG, topology attention over the (bandwidth-weighted) machine graph, and a cross-attention placement head augmented with a failure-gated reliability tilt and an optional replication gate. We train TFR-GNN by distilling a best-of-portfolio fault-tolerant oracle into a single one-shot policy. On real workflows and a bimodal-reliability cluster model, TFR-GNN matches HEFT exactly when there are no failures, reduces the expected makespan under failures by 14.8% on average (up to 47%) over HEFT, beats a fixed reliability-aware baseline (R-HEFT) by 11% and matches a per-scenario hindsight oracle as a single policy without any deployment-time tuning, and generalises to unseen applications and to workflows an order of magnitude larger than those seen in training, while producing schedules in well under a second for graphs of nearly 5,000 tasks. All results are produced by a verified event-level simulator on real workflow data; no experimental numbers are synthetic.",
+   "published": "2026-07-08",
+   "categories": [
+    "cs.DC"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2606.08483v1",
+   "title": "Testing the Black Box: Structural Barriers to Independent Evaluation of Consumer-Facing Health LLMs",
+   "abstract": "Background: Consumer-facing large language models are now a common source of health information, and they interpret and personalize responses rather than retrieve them. Whether their responses vary across users is a clinical, equity, and governance question, sharpened by evidence that sycophantic responses can alter judgment and increase trust. Objective: To evaluate response variation and sycophancy in consumer-facing health LLMs under conditions resembling ordinary patient use. Methods: We constructed simulated user profiles differing in geography, browsing context, expressed beliefs, and social determinants of health, drawing on literature linking social context to health attitudes. We adapted validated instruments, including the Vaccination Attitudes Examination scale and reproductive attitudes scales, into multi-turn prompts designed to elicit clinically meaningful variation across users. Results: The evaluation encountered five linked barriers. Factual prompts produced stable responses that masked sycophancy emerging over multi-turn conversation. Browser-based interfaces did not disclose which signals influence outputs and could not be reset to a clean baseline. Large-scale testing was restricted by terms of service, rate limits, and bot detection. Accuracy-based criteria could not capture tone, framing, or omission, and LLM-as-judge methods risked shared alignment bias. Models changed without traceable version identifiers, preventing reliable replication. Conclusions: No reliable independent evaluation framework yet exists for examining how consumer-facing health LLMs behave in ordinary use. Oversight requires disclosure of personalization signals, stable version identifiers, researcher safe harbor programs, and post-deployment monitoring of health-related outputs.",
+   "published": "2026-06-07",
+   "categories": [
+    "cs.AI"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2606.00624v1",
+   "title": "Macro-aware time series forecasting via hierarchical mixed-frequency attention models",
+   "abstract": "Deep learning models show promise in financial forecasting, yet their generalization is often undermined by small datasets, noisy signals, and non-stationarity. While meta-learning and related techniques mitigate some of these issues, they typically do not account for a core limitation in macro-financial prediction: the scarcity of distinct macroeconomic regimes that drive asset returns. We introduce HANET (Hierarchical Attention Network), a hybrid LSTM-based architecture that integrates macroeconomic domain knowledge through attention over long-run macro contexts while preserving high-frequency market dynamics. HANET organizes information in a hierarchical mixed-frequency structure, with daily asset-return signals nested within monthly macroeconomic windows, and introduces a Hierarchical Cross-Attention mechanism that reconciles low-frequency macro signals with high-frequency returns without discarding granular daily information. By framing regime selection as attention over macroeconomic contexts, the model adapts to scarce and shifting regimes. Empirically, across 55 liquid futures spanning multiple asset classes, HANET consistently outperforms neural forecasters that ignore macroeconomic information, particularly during turbulent periods, improving risk-adjusted returns and mitigating losses. Ablation studies show that these gains rely on structured macro conditioning rather than naive feature augmentation: an LSTM with the same macro representation performs poorly, and shuffling macro contexts substantially degrades performance. Finally, HANET provides interpretability through attention weights, highlighting which historical regimes are most influential for each forecast and linking macro conditions to portfolio outcomes. These results establish HANET as a systematic approach to integrating macroeconomic information into attention-based deep learning for financial forecasting.",
+   "published": "2026-05-30",
+   "categories": [
+    "q-fin.ST",
+    "q-fin.CP"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2605.26493v1",
+   "title": "A two-stage stochastic programming framework for oil and gas exploration well portfolio optimization under geological and economic uncertainty",
+   "abstract": "Annual oil and gas exploration planning involves selecting a limited portfolio of drilling and appraisal-related projects before geological outcomes are known. This decision is affected by uncertainties in geological success, reserve size, and economic value, while also subject to budget, well-count, success-rate, and reserve-reliability requirements. A strategy based only on expected value is therefore insufficient, as early drilling results may change the value of subsequent follow-up opportunities. This study develops a posterior-informed two-stage stochastic multi-objective optimization framework for exploration well selection under uncertainty. The first stage selects a here-and-now portfolio of frontier traps, appraisal projects, and mature appraisal units. After first-stage outcomes are observed, the second stage determines scenario-dependent recourse projects, including follow-up appraisal, reserve upgrading, conversion-to-proved reserves, rolling extension, and data re-evaluation projects. Geological learning is modeled using a logit-scale posterior updating mechanism that links first-stage success or failure to the success probabilities of related recourse projects. The model maximizes expected net present value and minimizes conditional value-at-risk, while imposing chance constraints on drilling success rate and individual and joint reserve targets. To solve the model, sample average approximation is combined with NSGA-II for first-stage portfolio search and a scenario-wise constrained 0-1 optimization procedure for second-stage evaluation. A numerical case study shows that the proposed framework provides an interpretable risk-return frontier and supports adaptive exploration planning under geological learning, downside-risk control, and reserve-reliability requirements.",
+   "published": "2026-05-26",
+   "categories": [
+    "math.OC"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2605.22215v1",
+   "title": "A Generative Adversarial Graph Neural Network for Synthetic Time Series Data",
+   "abstract": "Generating synthetic data for financial time series poses challenges, especially considering their non-stationary nature. Traditional statistical time series models normally assume weak stationarity. However, this assumption can constrain their effectiveness. Deep learning models, particularly Generative Adversarial Networks (GANs), have exhibited considerable potential in emulating complex probability distributions. GANs employ a generator-discriminator framework, where the generator creates data samples, while the discriminator distinguishes real from generated data. In this research, we introduce the Sig-Graph GAN model, which integrates the time-series signature, offering a structured summary of its temporal evolution; the Long Short-Term Memory network, capturing its inherent autoregressive structure; and Graph Neural Networks (GNNs), leveraging geometric patterns within the time-series data. To employ GNNs optimally, we use the visibility graph algorithm to derive a graph-based representation of the underlying time series. Numerical evaluations demonstrate that the Sig-Graph GAN model outperforms baseline methods in replicating the distribution of logarithmic returns across different stock exchanges. The integration of the graph structure with the autoregressive component effectively captures both geometric and temporal patterns embedded in time-series data. This research advances the field of GAN models for time series by introducing a model capable of leveraging both autoregressive properties and geometric structures for synthetic data generation.",
+   "published": "2026-05-21",
+   "categories": [
+    "cs.CE",
+    "q-fin.CP"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2604.10212v1",
+   "title": "Relational Probing: LM-to-Graph Adaptation for Financial Prediction",
+   "abstract": "Language models can be used to identify relationships between financial entities in text. However, while structured output mechanisms exist, prompting-based pipelines still incur autoregressive decoding costs and decouple graph construction from downstream optimization. We propose \\emph{Relational Probing}, which replaces the standard language-model head with a relation head that induces a relational graph directly from language-model hidden states and is trained jointly with the downstream task model for stock-trend prediction. This approach both learns semantic representations and preserves the strict structure of the induced relational graph. It enables language-model outputs to go beyond text, allowing them to be reshaped into task-specific formats for downstream models. To enhance reproducibility, we provide an operational definition of small language models (SLMs): models that can be fine-tuned end-to-end on a single 24GB GPU under specified batch-size and sequence-length settings. Experiments use Qwen3 backbones (0.6B/1.7B/4B) as upstream SLMs and compare against a co-occurrence baseline. Relational Probing yields consistent performance improvements at competitive inference cost.",
+   "published": "2026-04-11",
+   "categories": [
+    "cs.CL"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2603.09874v1",
+   "title": "MissBench: Benchmarking Multimodal Affective Analysis under Imbalanced Missing Modalities",
+   "abstract": "Multimodal affective computing underpins key tasks such as sentiment analysis and emotion recognition. Standard evaluations, however, often assume that textual, acoustic, and visual modalities are equally available. In real applications, some modalities are systematically more fragile or expensive, creating imbalanced missing rates and training biases that task-level metrics alone do not reveal. We introduce MissBench, a benchmark and framework for multimodal affective tasks that standardizes both shared and imbalanced missing-rate protocols on four widely used sentiment and emotion datasets. MissBench also defines two diagnostic metrics. The Modality Equity Index (MEI) measures how fairly different modalities contribute across missing-modality configurations. The Modality Learning Index (MLI) quantifies optimization imbalance by comparing modality-specific gradient norms during training, aggregated across modality-related modules. Experiments on representative method families show that models that appear robust under shared missing rates can still exhibit marked modality inequity and optimization imbalance under imbalanced conditions. These findings position MissBench, together with MEI and MLI, as practical tools for stress-testing and analyzing multimodal affective models in realistic incomplete-modality settings.For reproducibility, we release our code at: https://anonymous.4open.science/r/MissBench-4098/",
+   "published": "2026-03-10",
+   "categories": [
+    "cs.CV"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2603.09767v3",
+   "title": "Age-Structured Harvesting Models: A Structural Comparison of Rate-Control and Effort-Control Optimality Systems",
+   "abstract": "We study optimal harvesting in continuous-time, age-structured population models of McKendrick--von Foerster type, and we compare two harvesting mechanisms. In the \\emph{rate-control} formulation, harvesting enters the state equation as an additive removal term; in the \\emph{effort-control} formulation, harvesting acts multiplicatively as an additional mortality intensity and the mortality coefficient depends on the aggregate stock. For the rate-control problem we first establish existence of an optimal control for the infinite-horizon discounted problem, and we then derive, \\emph{under explicitly stated regularity and constraint-qualification assumptions}, a conditional Pontryagin-type necessary optimality system consisting of the adjoint equation, the terminal-age and transversality conditions, the switching relations for the distributed and boundary controls, and the complementary-slackness relation for the state constraint. For the effort-control problem we \\emph{formally} derive the associated adjoint equation and identify the nonlocal coupling term generated by aggregate (density) dependence, with the sign of that term verified by a step-by-step variational computation; a rigorous infinite-horizon maximum principle for this nonlinear, nonlocally coupled problem is beyond the present scope and is stated as such. We complement the analysis with autonomous stationary reductions, with explicit representations of the state and adjoint, and with a reproducible numerical study. The central message is structural: the harvesting mechanism is not a cosmetic modelling choice. Rate-control produces an additive/affine/local optimality structure, whereas effort-control produces a multiplicative/nonlinear/nonlocal one, with direct consequences for persistence, stationary profiles, and bioeconomic interpretation.",
+   "published": "2026-03-10",
+   "categories": [
+    "math.OC",
+    "math.AP"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2603.06490v3",
+   "title": "Learning Together: A Format for Reflective Turn-Based Sharing in STEM Communities",
+   "abstract": "Here, we present \\textit{Learning Together}: a simple, low-cost format for structured speaking and listening on historical, cultural, and equity-related topics within a physics community. In this article, we describe the process of running these hour-long sessions, including what is needed, how to set expectations for participants, and practical facilitation moves that help participants reflect safely on unfamiliar and sometimes difficult material. We aim to offer a replicable recipe that instructors and departments can adapt to their own contexts.",
+   "published": "2026-03-06",
+   "categories": [
+    "physics.ed-ph"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2602.19590v2",
+   "title": "Metaorder modelling and identification from public data",
+   "abstract": "Market-order flow in financial markets exhibits long-range correlations. This is a widely known stylised fact of financial markets. A popular hypothesis for this stylised fact comes from the Lillo-Mike-Farmer (LMF) order-splitting theory. However, quantitative tests of this theory have historically relied on proprietary datasets with trader identifiers, limiting reproducibility and cross-market validation. We investigate whether it can be recovered from anonymous public data using synthetic metaorder reconstruction. Using transaction and quote data for the largest 239 stocks by market capitalisation on the JSE as of 13 March 2026 with the data range being 1 January 2023 until 31 December 2025, we conduct a grid search over reconstruction parameters and evaluate each configuration against established metaorder stylised facts and the LMF relation. Configurations selected to minimise errors across the metaorder impact stylised facts reproduce the targeted aggregate properties but yield a poor LMF relation. Configurations selected to minimise the LMF discrepancy recover the relation by construction while retaining several broad impact features, although some stock-level execution and decay fits are weaker. These asymmetric results show that recovering aggregate impact stylised facts alone is insufficient to identify LMF-consistent order splitting, while the LMF-targeted result establishes compatibility within the reconstruction class rather than an independent test. The findings support consistency with, rather than direct validation of, the LMF theory using anonymous market data.",
+   "published": "2026-02-23",
+   "categories": [
+    "q-fin.TR",
+    "cs.CE",
+    "q-fin.ST",
+    "stat.CO"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2602.06981v1",
+   "title": "What is Safety? Corporate Discourse, Power, and the Politics of Generative AI Safety",
+   "abstract": "This work examines how leading generative artificial intelligence companies construct and communicate the concept of \"safety\" through public-facing documents. Drawing on critical discourse analysis, we analyze a corpus of corporate safety-related statements to explicate how authority, responsibility, and legitimacy are discursively established. These discursive strategies consolidate legitimacy for corporate actors, normalize safety as an experimental and anticipatory practice, and push a perceived participatory agenda toward safe technologies. We argue that uncritical uptake of these discourses risks reproducing corporate priorities and constraining alternative approaches to governance and design. The contribution of this work is twofold: first, to situate safety as a sociotechnical discourse that warrants critical examination; second, to caution human-computer interaction scholars against legitimizing corporate framings, instead foregrounding accountability, equity, and justice. By interrogating safety discourses as artifacts of power, this paper advances a critical agenda for human-computer interaction scholarship on artificial intelligence.",
+   "published": "2026-01-26",
+   "categories": [
+    "cs.CY",
+    "cs.AI",
+    "cs.HC"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2601.17245v1",
+   "title": "Pregeometric Origins of Liquidity Geometry in Financial Order Books",
+   "abstract": "We propose a structural framework for the geometry of financial order books in which liquidity, supply, and demand are treated as emergent observables rather than primitive economic variables. The market is modeled as an inflationary relational system without assumed metric, temporal, or price coordinates. Observable quantities arise only through projection, implemented here via spectral embeddings of the graph Laplacian. A one-dimensional projection induces a price-like coordinate, while the projected density defines liquidity profiles around the mid price. Under a minimal single-scale hypothesis -- excluding intrinsic length scales beyond distance to the mid and finite visibility -- we show that projected supply and demand are constrained to gamma-like functional forms. In discrete data, this prediction translates into integrated-gamma cumulative profiles. We test these results using high-frequency Level~II data for several U.S. equities and find robust agreement across assets and intraday windows. Explicit comparison with alternative cumulative models using information criteria demonstrates a systematic preference for the integrated-gamma geometry. A minimal simulation of inflationary relational dynamics reproduces the same structure without invoking agent behavior or price formation mechanisms. These results indicate that key regularities of order-book liquidity reflect geometric constraints induced by observation rather than detailed microstructural dynamics. Supplementary Material is available at the arXiv submission.",
+   "published": "2026-01-24",
+   "categories": [
+    "q-fin.TR",
+    "physics.soc-ph"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2601.07792v1",
+   "title": "Non-Convex Portfolio Optimization via Energy-Based Models: A Comparative Analysis Using the Thermodynamic HypergRaphical Model Library (THRML) for Index Tracking",
+   "abstract": "Portfolio optimization under cardinality constraints transforms the classical Markowitz mean-variance problem from a convex quadratic problem into an NP-hard combinatorial optimization problem. This paper introduces a novel approach using THRML (Thermodynamic HypergRaphical Model Library), a JAX-based library for building and sampling probabilistic graphical models that reformulates index tracking as probabilistic inference on an Ising Hamiltonian. Unlike traditional methods that seek a single optimal solution, THRML samples from the Boltzmann distribution of high-quality portfolios using GPU-accelerated block Gibbs sampling, providing natural regularization against overfitting. We implement three key innovations: (1) dynamic coupling strength that scales inversely with market volatility (VIX), adapting diversification pressure to market regimes; (2) rebalanced bias weights prioritizing tracking quality over momentum for index replication; and (3) sector-aware post-processing ensuring institutional-grade diversification. Backtesting on a 100-stock S and P 500 universe from 2023 to 2025 demonstrates that THRML achieves 4.31 percent annualized tracking error versus 5.66 to 6.30 percent for baselines, while simultaneously generating 128.63 percent total return against the index total return of 79.61 percent. The Diebold-Mariano test confirms statistical significance with p less than 0.0001 across all comparisons. These results position energy-based models as a promising paradigm for portfolio construction, bridging statistical mechanics and quantitative finance.",
+   "published": "2026-01-12",
+   "categories": [
+    "q-fin.CP",
+    "q-fin.PM",
+    "stat.ML"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2512.17225v2",
+   "title": "Modeling financial time series with $\u03c6^{4}$ quantum field theory",
+   "abstract": "We use a $\u03c6^{4}$ quantum field theory with inhomogeneous couplings and explicit symmetry-breaking to model an ensemble of financial time series from the S$\\&$P 500 index. The continuum nature of the $\u03c6^4$ theory avoids the inaccuracies that occur in Ising-based models which require a discretization of the time series. We demonstrate this using the example of the 2008 global financial crisis. The $\u03c6^{4}$ quantum field theory is expressive enough to reproduce the higher-order statistics such as the market kurtosis, which can serve as an indicator of possible market shocks. Accurate reproduction of high kurtosis is absent in binarized models. Therefore Ising models, despite being widely employed in econophysics, are incapable of fully representing empirical financial data, a limitation not present in the generalization of the $\u03c6^{4}$ scalar field theory. We then investigate the scaling properties of the $\u03c6^{4}$ machine learning algorithm and extract exponents which govern the behavior of the learned couplings (or weights and biases in ML language) in relation to the number of stocks in the model. Finally, we use our model to forecast the price changes of the AAPL, MSFT, and NVDA stocks. We conclude by discussing how the $\u03c6^{4}$ scalar field theory could be used to build investment strategies and the possible intuitions that the QFT operations of dimensional compactification and renormalization can provide for financial modelling.",
+   "published": "2025-12-19",
+   "categories": [
+    "q-fin.ST",
+    "cond-mat.dis-nn",
+    "cs.CE",
+    "hep-lat",
+    "hep-th"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2511.20801v1",
+   "title": "A Research and Development Portfolio of GNN Centric Malware Detection, Explainability, and Dataset Curation",
+   "abstract": "Graph Neural Networks (GNNs) have become an effective tool for malware detection by capturing program execution through graph-structured representations. However, important challenges remain regarding scalability, interpretability, and the availability of reliable datasets. This paper brings together six related studies that collectively address these issues. The portfolio begins with a survey of graph-based malware detection and explainability, then advances to new graph reduction methods, integrated reduction-learning approaches, and investigations into the consistency of explanations. It also introduces dual explanation techniques based on subgraph matching and develops ensemble-based models with attention-guided stacked GNNs to improve interpretability. In parallel, curated datasets of control flow graphs are released to support reproducibility and enable future research. Together, these contributions form a coherent line of research that strengthens GNN-based malware detection by enhancing efficiency, increasing transparency, and providing solid experimental foundations.",
+   "published": "2025-11-25",
+   "categories": [
+    "cs.CR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2511.07205v1",
+   "title": "Twenty-Five Years of MIR Research: Achievements, Practices, Evaluations, and Future Challenges",
+   "abstract": "In this paper, we trace the evolution of Music Information Retrieval (MIR) over the past 25 years. While MIR gathers all kinds of research related to music informatics, a large part of it focuses on signal processing techniques for music data, fostering a close relationship with the IEEE Audio and Acoustic Signal Processing Technical Commitee. In this paper, we reflect the main research achievements of MIR along the three EDICS related to music analysis, processing and generation. We then review a set of successful practices that fuel the rapid development of MIR research. One practice is the annual research benchmark, the Music Information Retrieval Evaluation eXchange, where participants compete on a set of research tasks. Another practice is the pursuit of reproducible and open research. The active engagement with industry research and products is another key factor for achieving large societal impacts and motivating younger generations of students to join the field. Last but not the least, the commitment to diversity, equity and inclusion ensures MIR to be a vibrant and open community where various ideas, methodologies, and career pathways collide. We finish by providing future challenges MIR will have to face.",
+   "published": "2025-11-10",
+   "categories": [
+    "cs.SD",
+    "cs.AI"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2511.00039v1",
+   "title": "Graph-Attentive MAPPO for Dynamic Retail Pricing",
+   "abstract": "Dynamic pricing in retail requires policies that adapt to shifting demand while coordinating decisions across related products. We present a systematic empirical study of multi-agent reinforcement learning for retail price optimization, comparing a strong MAPPO baseline with a graph-attention-augmented variant (MAPPO+GAT) that leverages learned interactions among products. Using a simulated pricing environment derived from real transaction data, we evaluate profit, stability across random seeds, fairness across products, and training efficiency under a standardized evaluation protocol. The results indicate that MAPPO provides a robust and reproducible foundation for portfolio-level price control, and that MAPPO+GAT further enhances performance by sharing information over the product graph without inducing excessive price volatility. These results indicate that graph-integrated MARL provides a more scalable and stable solution than independent learners for dynamic retail pricing, offering practical advantages in multi-product decision-making.",
+   "published": "2025-10-28",
+   "categories": [
+    "cs.AI",
+    "cs.LG"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2510.01995v1",
+   "title": "LLM-Based Multi-Task Bangla Hate Speech Detection: Type, Severity, and Target",
+   "abstract": "Online social media platforms are central to everyday communication and information seeking. While these platforms serve positive purposes, they also provide fertile ground for the spread of hate speech, offensive language, and bullying content targeting individuals, organizations, and communities. Such content undermines safety, participation, and equity online. Reliable detection systems are therefore needed, especially for low-resource languages where moderation tools are limited. In Bangla, prior work has contributed resources and models, but most are single-task (e.g., binary hate/offense) with limited coverage of multi-facet signals (type, severity, target). We address these gaps by introducing the first multi-task Bangla hate-speech dataset, BanglaMultiHate, one of the largest manually annotated corpus to date. Building on this resource, we conduct a comprehensive, controlled comparison spanning classical baselines, monolingual pretrained models, and LLMs under zero-shot prompting and LoRA fine-tuning. Our experiments assess LLM adaptability in a low-resource setting and reveal a consistent trend: although LoRA-tuned LLMs are competitive with BanglaBERT, culturally and linguistically grounded pretraining remains critical for robust performance. Together, our dataset and findings establish a stronger benchmark for developing culturally aligned moderation tools in low-resource contexts. For reproducibility, we will release the dataset and all related scripts.",
+   "published": "2025-10-02",
+   "categories": [
+    "cs.CL"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2507.18386v1",
+   "title": "Becoming Green: Decomposing the Macroeconomic Effects of Green Technology News Shocks",
+   "abstract": "This paper studies the macroeconomic effects of news about future technological advancements in the green sector. Utilizing the economic value of green patents granted to publicly listed companies in the U.S., we identify green technology news shocks via a convenient and meaningful rotation of the innovations from a Bayesian Vector Autorregresion Model (BVAR). These shocks are decomposed into two orthogonal components: i) a common technological component shared by both green and non-green innovation, that reproduces response patterns similar to those expected from a technology news shock with long-run impacts on productivity; and ii) an idiosyncratic component to green innovation inducing inflationary pressures and stock price reductions. The responses to the idiosyncratic component suggest the existence of a green transition news mechanism related to expectations of more rigorous carbon policies or stricter environmental standards in the future. The focus on green innovation deepens our understanding about the effect of technology-specific news shocks and provides information of practical importance for macroeconomic and environmental policies.",
+   "published": "2025-07-24",
+   "categories": [
+    "econ.GN"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2507.02018v1",
+   "title": "NGAT: A Node-level Graph Attention Network for Long-term Stock Prediction",
+   "abstract": "Graph representation learning methods have been widely adopted in financial applications to enhance company representations by leveraging inter-firm relationships. However, current approaches face three key challenges: (1) The advantages of relational information are obscured by limitations in downstream task designs; (2) Existing graph models specifically designed for stock prediction often suffer from excessive complexity and poor generalization; (3) Experience-based construction of corporate relationship graphs lacks effective comparison of different graph structures. To address these limitations, we propose a long-term stock prediction task and develop a Node-level Graph Attention Network (NGAT) specifically tailored for corporate relationship graphs. Furthermore, we experimentally demonstrate the limitations of existing graph comparison methods based on model downstream task performance. Experimental results across two datasets consistently demonstrate the effectiveness of our proposed task and model. The project is publicly available on GitHub to encourage reproducibility and future research.",
+   "published": "2025-07-02",
+   "categories": [
+    "q-fin.ST",
+    "cs.AI",
+    "cs.LG"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2504.18185v1",
+   "title": "An Open-Source and Reproducible Implementation of LSTM and GRU Networks for Time Series Forecasting",
+   "abstract": "This paper introduces an open-source and reproducible implementation of Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) Networks for time series forecasting. We evaluated LSTM and GRU networks because of their performance reported in related work. We describe our method and its results on two datasets. The first dataset is the S&P BSE BANKEX, composed of stock time series (closing prices) of ten financial institutions. The second dataset, called Activities, comprises ten synthetic time series resembling weekly activities with five days of high activity and two days of low activity. We report Root Mean Squared Error (RMSE) between actual and predicted values, as well as Directional Accuracy (DA). We show that a single time series from a dataset can be used to adequately train the networks if the sequences in the dataset contain patterns that repeat, even with certain variation, and are properly processed. For 1-step ahead and 20-step ahead forecasts, LSTM and GRU networks significantly outperform a baseline on the Activities dataset. The baseline simply repeats the last available value. On the stock market dataset, the networks perform just like the baseline, possibly due to the nature of these series. We release the datasets used as well as the implementation with all experiments performed to enable future comparisons and to make our research reproducible.",
+   "published": "2025-04-25",
+   "categories": [
+    "cs.LG"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2502.17934v1",
+   "title": "Measuring Interlayer Dependence of Large Degrees in Multilayer Inhomogeneous Random Graphs",
+   "abstract": "Accurately capturing interlayer dependence is essential for understanding the structure of complex multilayer networks. We propose an upper tail dependence estimator specifically designed for multilayer networks, leveraging multilayer inhomogeneous random graphs and multivariate regular variation to model extremal dependence. We establish the consistency of the estimator and demonstrate its practical effectiveness through real-data analysis of Reddit. Our findings reveal how financial market dynamics influence user interactions in the BitcoinMarkets subreddit and how seasonal trends shape engagement in sports-related subreddits. This work provides a rigorous and practical tool for quantifying extremal dependence across network layers, offering valuable insights into risk propagation and interaction patterns in multilayer systems.",
+   "published": "2025-02-25",
+   "categories": [
+    "stat.AP"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2410.07216v1",
+   "title": "Evaluating Financial Relational Graphs: Interpretation Before Prediction",
+   "abstract": "Accurate and robust stock trend forecasting has been a crucial and challenging task, as stock price changes are influenced by multiple factors. Graph neural network-based methods have recently achieved remarkable success in this domain by constructing stock relationship graphs that reflect internal factors and relationships between stocks. However, most of these methods rely on predefined factors to construct static stock relationship graphs due to the lack of suitable datasets, failing to capture the dynamic changes in stock relationships. Moreover, the evaluation of relationship graphs in these methods is often tied to the performance of neural network models on downstream tasks, leading to confusion and imprecision. To address these issues, we introduce the SPNews dataset, collected based on S\\&P 500 Index stocks, to facilitate the construction of dynamic relationship graphs. Furthermore, we propose a novel set of financial relationship graph evaluation methods that are independent of downstream tasks. By using the relationship graph to explain historical financial phenomena, we assess its validity before constructing a graph neural network, ensuring the graph's effectiveness in capturing relevant financial relationships. Experimental results demonstrate that our evaluation methods can effectively differentiate between various financial relationship graphs, yielding more interpretable results compared to traditional approaches. We make our source code publicly available on GitHub to promote reproducibility and further research in this area.",
+   "published": "2024-09-28",
+   "categories": [
+    "q-fin.ST",
+    "cs.AI",
+    "cs.LG"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2409.10859v3",
+   "title": "Macroscopic properties of equity markets: stylized facts and portfolio performance",
+   "abstract": "Macroscopic properties of equity markets affect the performance of active equity strategies but many are not adequately captured by conventional models of financial mathematics and econometrics. Using the CRSP Database of the US equity market, we study empirically several macroscopic properties defined in terms of market capitalizations and returns, and highlight a list of stylized facts and open questions motivated in part by stochastic portfolio theory. Additionally, we present a systematic backtest of the diversity-weighted portfolio under various configurations and study its performance in relation to macroscopic quantities. All of our results can be replicated using codes made available on our online repository.",
+   "published": "2024-09-17",
+   "categories": [
+    "q-fin.ST"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2406.10292v3",
+   "title": "Automatically Labeling Clinical Trial Outcomes: A Large-Scale Benchmark for Drug Development",
+   "abstract": "Background The cost of drug discovery and development is substantial, with clinical trial outcomes playing a critical role in regulatory approval and patient care. However, access to large-scale, high-quality clinical trial outcome data remains limited, hindering advancements in predictive modeling and evidence-based decision-making. Methods We present the Clinical Trial Outcome (CTO) benchmark, a fully reproducible, large-scale repository encompassing approximately 125,000 drug and biologics trials. CTO integrates large language model (LLM) interpretations of publications, trial phase progression tracking, sentiment analysis from news sources, stock price movements of trial sponsors, and additional trial-related metrics. Furthermore, we manually annotated a dataset of clinical trials conducted between 2020 and 2024 to enhance the quality and reliability of outcome labels. Results The trial outcome labels in the CTO benchmark agree strongly with expert annotations, achieving an F1 score of 94 for Phase 3 trials and 91 across all phases. Additionally, benchmarking standard machine learning models on our manually annotated dataset revealed distribution shifts in recent trials, underscoring the necessity of continuously updated labeling approaches. Conclusions By analyzing CTO's performance on recent clinical trials, we demonstrate the ongoing need for high-quality, up-to-date trial outcome labels. We publicly release the CTO knowledge base and annotated labels at https://chufangao.github.io/CTOD, with regular updates to support research on clinical trial outcomes and inform data-driven improvements in drug development.",
+   "published": "2024-06-13",
+   "categories": [
+    "cs.AI",
+    "cs.CL",
+    "cs.LG"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2310.14432v1",
+   "title": "Fairness-aware Optimal Graph Filter Design",
+   "abstract": "Graphs are mathematical tools that can be used to represent complex real-world interconnected systems, such as financial markets and social networks. Hence, machine learning (ML) over graphs has attracted significant attention recently. However, it has been demonstrated that ML over graphs amplifies the already existing bias towards certain under-represented groups in various decision-making problems due to the information aggregation over biased graph structures. Faced with this challenge, here we take a fresh look at the problem of bias mitigation in graph-based learning by borrowing insights from graph signal processing. Our idea is to introduce predesigned graph filters within an ML pipeline to reduce a novel unsupervised bias measure, namely the correlation between sensitive attributes and the underlying graph connectivity. We show that the optimal design of said filters can be cast as a convex problem in the graph spectral domain. We also formulate a linear programming (LP) problem informed by a theoretical bias analysis, which attains a closed-form solution and leads to a more efficient fairness-aware graph filter. Finally, for a design whose degrees of freedom are independent of the input graph size, we minimize the bias metric over the family of polynomial graph convolutional filters. Our optimal filter designs offer complementary strengths to explore favorable fairness-utility-complexity tradeoffs. For performance evaluation, we conduct extensive and reproducible node classification experiments over real-world networks. Our results show that the proposed framework leads to better fairness measures together with similar utility compared to state-of-the-art fairness-aware baselines.",
+   "published": "2023-10-22",
+   "categories": [
+    "cs.LG",
+    "eess.SP"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2305.00724v1",
+   "title": "Strengthening structural baselines for graph classification using Local Topological Profile",
+   "abstract": "We present the analysis of the topological graph descriptor Local Degree Profile (LDP), which forms a widely used structural baseline for graph classification. Our study focuses on model evaluation in the context of the recently developed fair evaluation framework, which defines rigorous routines for model selection and evaluation for graph classification, ensuring reproducibility and comparability of the results. Based on the obtained insights, we propose a new baseline algorithm called Local Topological Profile (LTP), which extends LDP by using additional centrality measures and local vertex descriptors. The new approach provides the results outperforming or very close to the latest GNNs for all datasets used. Specifically, state-of-the-art results were obtained for 4 out of 9 benchmark datasets. We also consider computational aspects of LDP-based feature extraction and model construction to propose practical improvements affecting execution speed and scalability. This allows for handling modern, large datasets and extends the portfolio of benchmarks used in graph representation learning. As the outcome of our work, we obtained LTP as a simple to understand, fast and scalable, still robust baseline, capable of outcompeting modern graph classification models such as Graph Isomorphism Network (GIN). We provide open-source implementation at \\href{https://github.com/j-adamczyk/LTP}{GitHub}.",
+   "published": "2023-05-01",
+   "categories": [
+    "cs.LG"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2210.12896v2",
+   "title": "Classifying Ambiguous Identities in Hidden-Role Stochastic Games with Multi-Agent Reinforcement Learning",
+   "abstract": "Multi-agent reinforcement learning (MARL) is a prevalent learning paradigm for solving stochastic games. In most MARL studies, agents in a game are defined as teammates or enemies beforehand, and the relationships among the agents remain fixed throughout the game. However, in real-world problems, the agent relationships are commonly unknown in advance or dynamically changing. Many multi-party interactions start off by asking: who is on my team? This question arises whether it is the first day at the stock exchange or the kindergarten. Therefore, training policies for such situations in the face of imperfect information and ambiguous identities is an important problem that needs to be addressed. In this work, we develop a novel identity detection reinforcement learning (IDRL) framework that allows an agent to dynamically infer the identities of nearby agents and select an appropriate policy to accomplish the task. In the IDRL framework, a relation network is constructed to deduce the identities of other agents by observing the behaviors of the agents. A danger network is optimized to estimate the risk of false-positive identifications. Beyond that, we propose an intrinsic reward that balances the need to maximize external rewards and accurate identification. After identifying the cooperation-competition pattern among the agents, IDRL applies one of the off-the-shelf MARL methods to learn the policy. To evaluate the proposed method, we conduct experiments on Red-10 card-shedding game, and the results show that IDRL achieves superior performance over other state-of-the-art MARL methods. Impressively, the relation network has the par performance to identify the identities of agents with top human players; the danger network reasonably avoids the risk of imperfect identification. The code to reproduce all the reported results is available online at https://github.com/MR-BENjie/IDRL.",
+   "published": "2022-10-24",
+   "categories": [
+    "cs.AI"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2210.07955v1",
+   "title": "Impact of WACC on Firm Profitability: Evidence from Food and Allied Industry of Bangladesh",
+   "abstract": "The research paper aims to analyze the underlying relationship in between the profitability and cost of funds of a firm. A total of twelve companies were selected as a sample for this study which are listed in Dhaka Stock Exchange under Food and Allied Industry. A panel data set of 15 years from 2005 to 2019 was used to conduct the necessary analysis. In this paper, Return on Asset (ROA) is used as the accounting criteria of profitability. WACC is the independent variable while Firm Size, Firm Age and Firm Leverage are used as control variable for the study. Fixed Effects Panel Regression Model is used to analyze the dataset. The result of the analysis shows that WACC is negatively related with the profitability measure and this relationship is significant. The study has potential to be replicated by other industries like textile, cement, pharmaceutical & chemical, fuel & power, tannery etc.",
+   "published": "2022-10-14",
+   "categories": [
+    "q-fin.GN"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2209.03307v1",
+   "title": "A primer on perpetuals",
+   "abstract": "We consider a continuous-time financial market with no arbitrage and no transactions costs. In this setting, we introduce two types of perpetual contracts, one in which the payoff to the long side is a fixed function of the underlyers and the long side pays a funding rate to the short side, the other in which the payoff to the long side is a fixed function of the underlyers times a discount factor that changes over time but no funding payments are required. Assuming asset prices are continuous and strictly positive, we derive model-free expressions for the funding rate and discount rate of these perpetual contracts as well as replication strategies for the short side. When asset prices can jump, we derive expressions for the funding and discount rates, which are semi-robust in the sense that they do not depend on the dynamics of the volatility process of the underlying risky assets, but do depend on the intensity of jumps under the market's pricing measure. When asset prices can jump and the volatility process is independent of the underlying risky assets, we derive an explicit replication strategy for the short side of a perpetual contract. Throughout the paper, we illustrate through examples how specific perpetual contracts relate to traditional financial instruments such as variance swaps and leveraged exchange traded funds.",
+   "published": "2022-09-07",
+   "categories": [
+    "q-fin.MF"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2206.10419v3",
+   "title": "Multivariate Quadratic Hawkes Processes -- Part I: Theoretical Analysis",
+   "abstract": "Quadratic Hawkes (QHawkes) processes have proved effective at reproducing the statistics of price changes, capturing many of the stylised facts of financial markets. Motivated by the recently reported strong occurrence of endogenous co-jumps (simultaneous price jumps of several assets) we extend QHawkes to a multivariate framework (MQHawkes), that is considering several financial assets and their interactions. Assuming that quadratic kernels write as the sum of a time-diagonal component and a rank one (trend) contribution, we investigate endogeneity ratios and the resulting stationarity conditions. We then derive the so-called Yule-Walker equations relating covariances and feedback kernels, which are essential to calibrate the MQHawkes process on empirical data. Finally, we investigate the volatility distribution of the process and find that, as in the univariate case, it exhibits power-law behavior, with an exponent that can be exactly computed in some limiting cases.",
+   "published": "2022-06-21",
+   "categories": [
+    "q-fin.TR",
+    "cond-mat.stat-mech",
+    "math.PR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2111.12967v1",
+   "title": "A General Surplus Decomposition Principle in Life Insurance",
+   "abstract": "In with-profit life insurance, the prudent valuation of future insurance liabilities leads to systematic surplus that mainly belongs to the policyholders and is redistributed as bonus. For a fair and lawful redistribution of surplus the insurer needs to decompose the total portfolio surplus with respect to the contributions of individual policies and with respect to different risk sources. For this task, actuaries have a number of heuristic decomposition formulas, but an overarching decomposition principle is still missing. This paper fills that gap by introducing a so-called ISU decomposition principle that bases on infinitesimal sequential updates of the insurer's valuation basis. It is shown that the existing heuristic decomposition formulas can be replicated as ISU decompositions. Furthermore, alternative decomposition principles and their relation to the ISU decomposition principle are discussed. The generality of the ISU concept makes it a useful tool also beyond classical surplus decompositions in life insurance.",
+   "published": "2021-11-25",
+   "categories": [
+    "q-fin.RM"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2108.02506v3",
+   "title": "Understanding the nature of the long-range memory phenomenon in socioeconomic systems",
+   "abstract": "In the face of the upcoming 30th anniversary of econophysics, we review our contributions and other related works on the modeling of the long-range memory phenomenon in physical, economic, and other social complex systems. Our group has shown that the long-range memory phenomenon can be reproduced using various Markov processes, such as point processes, stochastic differential equations and agent-based models. Reproduced well enough to match other statistical properties of the financial markets, such as return and trading activity distributions and first-passage time distributions. Research has lead us to question whether the observed long-range memory is a result of actual long-range memory process or just a consequence of non-linearity of Markov processes. As our most recent result we discuss the long-range memory of the order flow data in the financial markets and other social systems from the perspective of the fractional L\u00e8vy stable motion. We test widely used long-range memory estimators on discrete fractional L\u00e8vy stable motion represented by the ARFIMA sample series. Our newly obtained results seem indicate that new estimators of self-similarity and long-range memory for analyzing systems with non-Gaussian distributions have to be developed.",
+   "published": "2021-08-05",
+   "categories": [
+    "physics.soc-ph",
+    "q-fin.ST"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2105.00733v2",
+   "title": "The Doge of Wall Street: Analysis and Detection of Pump and Dump Cryptocurrency Manipulations",
+   "abstract": "Cryptocurrencies are increasingly popular. Even people who are not experts have started to invest in these assets, and nowadays, cryptocurrency exchanges process transactions for over 100 billion US dollars per month. Despite this, many cryptocurrencies have low liquidity and are highly prone to market manipulation. This paper performs an in-depth analysis of two market manipulations organized by communities over the Internet: The pump and dump and the crowd pump. The pump and dump scheme is a fraud as old as the stock market. Now, it got new vitality in the loosely regulated market of cryptocurrencies. Groups of highly coordinated people systematically arrange this scam, usually on Telegram and Discord. We monitored these groups for more than 3 years detecting around 900 individual events. We report on three case studies related to pump and dump groups. We leverage our unique dataset of the verified pump and dumps to build a machine learning model able to detect a pump and dump in 25 seconds from the moment it starts, achieving the results of 94.5% of F1-score. Then, we move on to the crowd pump, a new phenomenon that hit the news in the first months of 2021, when a Reddit community inflates the price of the GameStop stocks (GME) by over 1,900% on Wall Street, the world's largest stock exchange. Later, other Reddit communities replicate the operation on the cryptocurrency markets. The targets were DogeCoin (DOGE) and Ripple (XRP). We reconstruct how these operations developed and discuss differences and analogies with the standard pump and dump. We believe this study helps understand a widespread phenomenon affecting cryptocurrency markets. The detection algorithms we develop effectively detect these events in real-time and help investors stay out of the market when these frauds are in action.",
+   "published": "2021-05-03",
+   "categories": [
+    "cs.CY"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2104.09863v1",
+   "title": "Calibrating an adaptive Farmer-Joshi agent-based model for financial markets",
+   "abstract": "We replicate the contested calibration of the Farmer and Joshi agent based model of financial markets using a genetic algorithm and a Nelder-Mead with threshold accepting algorithm following Fabretti. The novelty of the Farmer-Joshi model is that the dynamics are driven by trade entry and exit thresholds alone. We recover the known claim that some important stylized facts observed in financial markets cannot be easily found under calibration -- in particular those relating to the auto-correlations in the absolute values of the price fluctuations, and sufficient kurtosis. However, rather than concerns relating to the calibration method, what is novel here is that we extended the Farmer-Joshi model to include agent adaptation using an Brock and Hommes approach to strategy fitness based on trading strategy profitability. We call this an adaptive Farmer-Joshi model: the model allows trading agents to switch between strategies by favouring strategies that have been more profitable over some period of time determined by a free-parameter fixing the profit monitoring time-horizon. In the adaptive model we are able to calibrate and recover additional stylized facts, despite apparent degeneracy's. This is achieved by combining the interactions of trade entry levels with trade strategy switching. We use this to argue that for low-frequency trading across days, as calibrated to daily sampled data, feed-backs can be accounted for by strategy die-out based on intermediate term profitability; we find that the average trade monitoring horizon is approximately two to three months (or 40 to 60 days) of trading.",
+   "published": "2021-04-20",
+   "categories": [
+    "q-fin.CP",
+    "stat.CO"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2007.02076v2",
+   "title": "Note on simulation pricing of $\u03c0$-options",
+   "abstract": "In this work, we adapt a Monte Carlo algorithm introduced by Broadie and Glasserman (1997) to price a $\u03c0$-option. This method is based on the simulated price tree that comes from discretization and replication of possible trajectories of the underlying asset's price. As a result this algorithm produces the lower and the upper bounds that converge to the true price with the increasing depth of the tree. Under specific parametrization, this $\u03c0$-option is related to relative maximum drawdown and can be used in the real-market environment to protect a portfolio against volatile and unexpected price drops. We also provide some numerical analysis.",
+   "published": "2020-07-04",
+   "categories": [
+    "q-fin.CP"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/2004.10560v2",
+   "title": "Examining Lead-Lag Relationships In-Depth, With Focus On FX Market As Covid-19 Crises Unfolds",
+   "abstract": "The lead-lag relationship plays a vital role in financial markets. It is the phenomenon where a certain price-series lags behind and partially replicates the movement of leading time-series. The present research proposes a new technique which helps better identify the lead-lag relationship empirically. Apart from better identifying the lead-lag path, the technique also gives a measure for adjudging closeness between financial time-series. Also, the proposed measure is closely related to correlation, and it uses Dynamic Programming technique for finding the optimal lead-lag path. Further, it retains most of the properties of a metric, so much so, it is termed as loose metric. Tests are performed on Synthetic Time Series (STS) with known lead-lag relationship and comparisons are done with other state-of-the-art models on the basis of significance and forecastability. The proposed technique gives the best results in both the tests. It finds paths which are all statistically significant, and its forecasts are closest to the target values. Then, we use the measure to study the topology evolution of the Foreign Exchange market, as the COVID-19 pandemic unfolds. Here, we study the FX currency prices of 29 prominent countries of the world. It is observed that as the crises unfold, all the currencies become strongly interlinked to each other. Also, USA Dollar starts playing even more central role in the FX market. Finally, we mention several other application areas of the proposed technique for designing intelligent systems.",
+   "published": "2020-04-22",
+   "categories": [
+    "q-fin.ST",
+    "cs.CE"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1911.04322v1",
+   "title": "Kernel Dependence Regularizers and Gaussian Processes with Applications to Algorithmic Fairness",
+   "abstract": "Current adoption of machine learning in industrial, societal and economical activities has raised concerns about the fairness, equity and ethics of automated decisions. Predictive models are often developed using biased datasets and thus retain or even exacerbate biases in their decisions and recommendations. Removing the sensitive covariates, such as gender or race, is insufficient to remedy this issue since the biases may be retained due to other related covariates. We present a regularization approach to this problem that trades off predictive accuracy of the learned models (with respect to biased labels) for the fairness in terms of statistical parity, i.e. independence of the decisions from the sensitive covariates. In particular, we consider a general framework of regularized empirical risk minimization over reproducing kernel Hilbert spaces and impose an additional regularizer of dependence between predictors and sensitive covariates using kernel-based measures of dependence, namely the Hilbert-Schmidt Independence Criterion (HSIC) and its normalized version. This approach leads to a closed-form solution in the case of squared loss, i.e. ridge regression. Moreover, we show that the dependence regularizer has an interpretation as modifying the corresponding Gaussian process (GP) prior. As a consequence, a GP model with a prior that encourages fairness to sensitive variables can be derived, allowing principled hyperparameter selection and studying of the relative relevance of covariates under fairness constraints. Experimental results in synthetic examples and in real problems of income and crime prediction illustrate the potential of the approach to improve fairness of automated decisions.",
+   "published": "2019-11-11",
+   "categories": [
+    "stat.ML",
+    "cs.LG"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1910.11840v1",
+   "title": "Sparsity and Stability for Minimum-Variance Portfolios",
+   "abstract": "The popularity of modern portfolio theory has decreased among practitioners because of its unfavorable out-of-sample performance. Estimation errors tend to affect the optimal weight calculation noticeably, especially when a large number of assets is considered. To overcome these issues, many methods have been proposed in recent years, although most only address a small set of practically relevant questions related to portfolio allocation. This study therefore sheds light on different covariance estimation techniques, combines them with sparse model approaches, and includes a turnover constraint that induces stability. We use two datasets - comprising 319 and 100 companies of the S&P 500, respectively - to create a realistic and reproducible data foundation for our empirical study. To the best of our knowledge, this study is the first to show that it is possible to maintain the low-risk profile of efficient estimation methods while automatically selecting only a subset of assets and further inducing low portfolio turnover. Moreover, we provide evidence that using the LASSO as the sparsity-generating model is insufficient to lower turnover when the involved tuning parameter can change over time.",
+   "published": "2019-10-25",
+   "categories": [
+    "q-fin.PM"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1811.00210v4",
+   "title": "Online Planner Selection with Graph Neural Networks and Adaptive Scheduling",
+   "abstract": "Automated planning is one of the foundational areas of AI. Since no single planner can work well for all tasks and domains, portfolio-based techniques have become increasingly popular in recent years. In particular, deep learning emerges as a promising methodology for online planner selection. Owing to the recent development of structural graph representations of planning tasks, we propose a graph neural network (GNN) approach to selecting candidate planners. GNNs are advantageous over a straightforward alternative, the convolutional neural networks, in that they are invariant to node permutations and that they incorporate node labels for better inference. Additionally, for cost-optimal planning, we propose a two-stage adaptive scheduling method to further improve the likelihood that a given task is solved in time. The scheduler may switch at halftime to a different planner, conditioned on the observed performance of the first one. Experimental results validate the effectiveness of the proposed method against strong baselines, both deep learning and non-deep learning based. The code is available at \\url{https://github.com/matenure/GNN_planner}.",
+   "published": "2018-11-01",
+   "categories": [
+    "cs.AI",
+    "cs.LG",
+    "stat.ML"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1809.02772v3",
+   "title": "Order book model with herd behavior exhibiting long-range memory",
+   "abstract": "In this work, we propose an order book model with herd behavior. The proposed model is built upon two distinct approaches: a recent empirical study of the detailed order book records by Kanazawa et al. [Phys. Rev. Lett. 120, 138301] and financial herd behavior model. Combining these approaches allows us to propose a model that replicates the long-range memory of absolute returns and trading activity. We compare the statistical properties of the model against the empirical statistical properties of the Bitcoin exchange rates and New York stock exchange tickers. We also show that the fracture in the spectral density of the high-frequency absolute return time series might be related to the mechanism of convergence towards the equilibrium price.",
+   "published": "2018-09-08",
+   "categories": [
+    "q-fin.ST",
+    "physics.soc-ph"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1808.06663v1",
+   "title": "How do Software Ecosystems Co-Evolve? A view from OpenStack and beyond",
+   "abstract": "Much research that analyzes the evolution of a software ecosystem is confined to its own boundaries. Evidence shows, however, that software ecosystems co-evolve independently with other software ecosystems. In other words, understanding the evolution of a software ecosystem requires an especially astute awareness of its competitive landscape and much consideration for other software ecosystems in related markets. A software ecosystem does not evolve in insulation but with other software ecosystems. In this research, we analyzed the OpenStack software ecosystem with a focal perspective that attempted to understand its evolution as a function of other software ecosystems. We attempted to understand and explain the evolution of OpenStack in relation to other software ecosystems in the cloud computing market. Our findings add to theoretical knowledge in software ecosystems by identifying and discussing seven different mechanisms by which software ecosystems mutually influence each other: sedimentation and embeddedness of business relationships, strategic management of the portfolio of business relationships, firms values and reputation as a partner, core technological architecture, design of the APIs, competitive replication of functionality and multi-homing. Research addressing the evolution of software ecosystem should, therefore, acknowledge that software ecosystems entangle with other software ecosystems in multiple ways, even with competing ones. A rigorous analysis of the evolution of a software ecosystem should not be solely confined to its inner boundaries.",
+   "published": "2018-08-20",
+   "categories": [
+    "cs.SE"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1808.04908v5",
+   "title": "Robust XVA",
+   "abstract": "We introduce an arbitrage-free framework for robust valuation adjustments. An investor trades a credit default swap portfolio with a risky counterparty, and hedges credit risk by taking a position in defaultable bonds. The investor does not know the return rate of her counterparty's bond, but is confident that it lies within an uncertainty interval. We derive both upper and lower bounds for the XVA process of the portfolio, and show that these bounds may be recovered as solutions of nonlinear ordinary differential equations. The presence of collateralization and closeout payoffs leads to important differences with respect to classical credit risk valuation. The value of the super-replicating portfolio cannot be directly obtained by plugging one of the extremes of the uncertainty interval in the valuation equation, but rather depends on the relation between the XVA replicating portfolio and the close-out value throughout the life of the transaction. Our comparative statics analysis indicates that credit contagion has a nonlinear effect on the replication strategies and on the XVA.",
+   "published": "2018-08-14",
+   "categories": [
+    "q-fin.PR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1807.11751v1",
+   "title": "Co-existence of Trend and Value in Financial Markets: Estimating an Extended Chiarella Model",
+   "abstract": "Trend and Value are pervasive anomalies, common to all financial markets. We address the problem of their co-existence and interaction within the framework of Heterogeneous Agent Based Models (HABM). More specifically, we extend the Chiarella (1992) model by adding noise traders and a non-linear demand of fundamentalists. We use Bayesian filtering techniques to calibrate the model on time series of prices across a variety of asset classes since 1800. The fundamental value is an output of the calibration, and does not require the use of an external pricing model. Our extended model reproduces many empirical observations, including the non-monotonic relation between past trends and future returns. The destabilizing activity of trend-followers leads to a qualitative change of mispricing distribution, from unimodal to bimodal, meaning that some markets tend to be over- (or under-) valued for long periods of time.",
+   "published": "2018-07-31",
+   "categories": [
+    "q-fin.ST"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1801.04910v1",
+   "title": "Urn model for products' shares in international trade",
+   "abstract": "International trade fluxes evolve as countries revise their portfolios of trade products towards economic development. Accordingly products' shares in international trade vary with time, reflecting the transfer of capital between distinct industrial sectors. Here we analyze the share of hundreds of product categories in world trade for four decades and find a scaling law obeyed by the annual variation of product share, which informs us of how capital flows and interacts over the product space. A model of stochastic transfer of capital between products based on the observed scaling relation is proposed and shown to reproduce exactly the empirical share distribution. The model allows analytic solutions as well as numerical simulations, which predict a pseudo-condensation of capital onto few product categories and when it will occur. At the individual level, our model finds certain products unpredictable, the excess or deficient growth of which with respect to the model prediction is shown to be correlated with the nature of goods.",
+   "published": "2017-12-14",
+   "categories": [
+    "q-fin.TR",
+    "cond-mat.stat-mech",
+    "physics.soc-ph"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1712.04609v3",
+   "title": "QLBS: Q-Learner in the Black-Scholes(-Merton) Worlds",
+   "abstract": "This paper presents a discrete-time option pricing model that is rooted in Reinforcement Learning (RL), and more specifically in the famous Q-Learning method of RL. We construct a risk-adjusted Markov Decision Process for a discrete-time version of the classical Black-Scholes-Merton (BSM) model, where the option price is an optimal Q-function, while the optimal hedge is a second argument of this optimal Q-function, so that both the price and hedge are parts of the same formula. Pricing is done by learning to dynamically optimize risk-adjusted returns for an option replicating portfolio, as in the Markowitz portfolio theory. Using Q-Learning and related methods, once created in a parametric setting, the model is able to go model-free and learn to price and hedge an option directly from data, and without an explicit model of the world. This suggests that RL may provide efficient data-driven and model-free methods for optimal pricing and hedging of options, once we depart from the academic continuous-time limit, and vice versa, option pricing methods developed in Mathematical Finance may be viewed as special cases of model-based Reinforcement Learning. Further, due to simplicity and tractability of our model which only needs basic linear algebra (plus Monte Carlo simulation, if we work with synthetic data), and its close relation to the original BSM model, we suggest that our model could be used for benchmarking of different RL algorithms for financial trading applications",
+   "published": "2017-12-13",
+   "categories": [
+    "q-fin.CP",
+    "cs.LG"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1708.08695v1",
+   "title": "The stabilizing effect of volatility in financial markets",
+   "abstract": "In financial markets, greater volatility is usually considered synonym of greater risk and instability. However, large market downturns and upturns are often preceded by long periods where price returns exhibit only small fluctuations. To investigate this surprising feature, here we propose using the mean first hitting time, i.e. the average time a stock return takes to undergo for the first time a large negative or positive variation, as an indicator of price stability, and relate this to a standard measure of volatility. In an empirical analysis of daily returns for $1071$ stocks traded in the New York Stock Exchange, we find that this measure of stability displays nonmonotonic behavior, with a maximum, as a function of volatility. Also, we show that the statistical properties of the empirical data can be reproduced by a nonlinear Heston model. This analysis implies that, contrary to conventional wisdom, not only high, but also low volatility values can be associated with higher instability in financial markets.",
+   "published": "2017-08-29",
+   "categories": [
+    "q-fin.ST"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1607.04100v1",
+   "title": "Insurance valuation: a computable multi-period cost-of-capital approach",
+   "abstract": "We present an approach to market-consistent multi-period valuation of insurance liability cash flows based on a two-stage valuation procedure. First, a portfolio of traded financial instrument aimed at replicating the liability cash flow is fixed. Then the residual cash flow is managed by repeated one-period replication using only cash funds. The latter part takes capital requirements and costs into account, as well as limited liability and risk averseness of capital providers. The cost-of-capital margin is the value of the residual cash flow. We set up a general framework for the cost-of-capital margin and relate it to dynamic risk measurement. Moreover, we present explicit formulas and properties of the cost-of-capital margin under further assumptions on the model for the liability cash flow and on the conditional risk measures and utility functions. Finally, we highlight computational aspects of the cost-of-capital margin, and related quantities, in terms of an example from life insurance.",
+   "published": "2016-07-14",
+   "categories": [
+    "q-fin.RM"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1601.00229v2",
+   "title": "A detailed heterogeneous agent model for a single asset financial market with trading via an order book",
+   "abstract": "We present an agent based model of a single asset financial market that is capable of replicating several non-trivial statistical properties observed in real financial markets, generically referred to as stylized facts. While previous models reported in the literature are also capable of replicating some of these statistical properties, in general, they tend to oversimplify either the trading mechanisms or the behavior of the agents. In our model, we strived to capture the most important characteristics of both aspects to create agents that employ strategies inspired on those used in real markets, and, at the same time, a more realistic trade mechanism based on a double auction order book. We study the role of the distinct types of trader on the return statistics: specifically, correlation properties (or lack thereof), volatilty clustering, heavy tails, and the degree to which the distribution can be described by a log-normal. Further, by introducing the practice of profit taking, our model is also capable of replicating the stylized fact related to an asymmetry in the distribution of losses and gains.",
+   "published": "2016-01-02",
+   "categories": [
+    "q-fin.CP",
+    "q-fin.TR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1511.09259v5",
+   "title": "The Alternating Stock Size Problem and the Gasoline Puzzle",
+   "abstract": "Given a set S of integers whose sum is zero, consider the problem of finding a permutation of these integers such that: (i) all prefix sums of the ordering are nonnegative, and (ii) the maximum value of a prefix sum is minimized. Kellerer et al. referred to this problem as the \"Stock Size Problem\" and showed that it can be approximated to within 3/2. They also showed that an approximation ratio of 2 can be achieved via several simple algorithms. We consider a related problem, which we call the \"Alternating Stock Size Problem\", where the number of positive and negative integers in the input set S are equal. The problem is the same as above, but we are additionally required to alternate the positive and negative numbers in the output ordering. This problem also has several simple 2-approximations. We show that it can be approximated to within 1.79. Then we show that this problem is closely related to an optimization version of the gasoline puzzle due to Lov\u00e1sz, in which we want to minimize the size of the gas tank necessary to go around the track. We present a 2-approximation for this problem, using a natural linear programming relaxation whose feasible solutions are doubly stochastic matrices. Our novel rounding algorithm is based on a transformation that yields another doubly stochastic matrix with special properties, from which we can extract a suitable permutation.",
+   "published": "2015-11-30",
+   "categories": [
+    "cs.DS"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1503.00173v6",
+   "title": "Signal Processing on Graphs: Causal Modeling of Unstructured Data",
+   "abstract": "Many applications collect a large number of time series, for example, the financial data of companies quoted in a stock exchange, the health care data of all patients that visit the emergency room of a hospital, or the temperature sequences continuously measured by weather stations across the US. These data are often referred to as unstructured. A first task in its analytics is to derive a low dimensional representation, a graph or discrete manifold, that describes well the interrelations among the time series and their intrarelations across time. This paper presents a computationally tractable algorithm for estimating this graph that structures the data. The resulting graph is directed and weighted, possibly capturing causal relations, not just reciprocal correlations as in many existing approaches in the literature. A convergence analysis is carried out. The algorithm is demonstrated on random graph datasets and real network time series datasets, and its performance is compared to that of related methods. The adjacency matrices estimated with the new method are close to the true graph in the simulated data and consistent with prior physical knowledge in the real dataset tested.",
+   "published": "2015-02-28",
+   "categories": [
+    "cs.IT",
+    "stat.ML"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1405.1266v1",
+   "title": "The super-replication theorem under proportional transaction costs revisited",
+   "abstract": "We consider a financial market with one riskless and one risky asset. The super-replication theorem states that there is no duality gap in the problem of super-replicating a contingent claim under transaction costs and the associated dual problem. We give two versions of this theorem. The first theorem relates a num\u00e9raire-based admissibility condition in the primal problem to the notion of a local martingale in the dual problem. The second theorem relates a num\u00e9raire -free admissibility condition in the primal problem to the notion of a uniformly integrable martingale in the dual problem.",
+   "published": "2014-05-06",
+   "categories": [
+    "math.PR",
+    "q-fin.PM"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1404.7275v2",
+   "title": "Binary versus non-binary information in real time series: empirical results and maximum-entropy matrix models",
+   "abstract": "The dynamics of complex systems, from financial markets to the brain, can be monitored in terms of multiple time series of activity of the constituent units, such as stocks or neurons respectively. While the main focus of time series analysis is on the magnitude of temporal increments, a significant piece of information is encoded into the binary projection (i.e. the sign) of such increments. In this paper we provide further evidence of this by showing strong nonlinear relations between binary and non-binary properties of financial time series. These relations are a novel quantification of the fact that extreme price increments occur more often when most stocks move in the same direction. We then introduce an information-theoretic approach to the analysis of the binary signature of single and multiple time series. Through the definition of maximum-entropy ensembles of binary matrices and their mapping to spin models in statistical physics, we quantify the information encoded into the simplest binary properties of real time series and identify the most informative property given a set of measurements. Our formalism is able to accurately replicate, and mathematically characterize, the observed binary/non-binary relations. We also obtain a phase diagram allowing us to identify, based only on the instantaneous aggregate return of a set of multiple time series, a regime where the so-called `market mode' has an optimal interpretation in terms of collective (endogenous) effects, a regime where it is parsimoniously explained by pure noise, and a regime where it can be regarded as a combination of endogenous and exogenous factors. Our approach allows us to connect spin models, simple stochastic processes, and ensembles of time series inferred from partial information.",
+   "published": "2014-04-29",
+   "categories": [
+    "physics.data-an"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1403.1574v2",
+   "title": "Consentaneous agent-based and stochastic model of the financial markets",
+   "abstract": "We are looking for the agent-based treatment of the financial markets considering necessity to build bridges between microscopic, agent based, and macroscopic, phenomenological modeling. The acknowledgment that agent-based modeling framework, which may provide qualitative and quantitative understanding of the financial markets, is very ambiguous emphasizes the exceptional value of well defined analytically tractable agent systems. Herding as one of the behavior peculiarities considered in the behavioral finance is the main property of the agent interactions we deal with in this contribution. Looking for the consentaneous agent-based and macroscopic approach we combine two origins of the noise: exogenous one, related to the information flow, and endogenous one, arising form the complex stochastic dynamics of agents. As a result we propose a three state agent-based herding model of the financial markets. From this agent-based model we derive a set of stochastic differential equations, which describes underlying macroscopic dynamics of agent population and log price in the financial markets. The obtained solution is then subjected to the exogenous noise, which shapes instantaneous return fluctuations. We test both Gaussian and q-Gaussian noise as a source of the short term fluctuations. The resulting model of the return in the financial markets with the same set of parameters reproduces empirical probability and spectral densities of absolute return observed in New York, Warsaw and NASDAQ OMX Vilnius Stock Exchanges. Our result confirms the prevalent idea in behavioral finance that herding interactions may be dominant over agent rationality and contribute towards bubble formation.",
+   "published": "2014-03-06",
+   "categories": [
+    "q-fin.ST",
+    "physics.data-an"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1403.0842v2",
+   "title": "The adaptive nature of liquidity taking in limit order books",
+   "abstract": "In financial markets, the order flow, defined as the process assuming value one for buy market orders and minus one for sell market orders, displays a very slowly decaying autocorrelation function. Since orders impact prices, reconciling the persistence of the order flow with market efficiency is a subtle issue. A possible solution is provided by asymmetric liquidity, which states that the impact of a buy or sell order is inversely related to the probability of its occurrence. We empirically find that when the order flow predictability increases in one direction, the liquidity in the opposite side decreases, but the probability that a trade moves the price decreases significantly. While the last mechanism is able to counterbalance the persistence of order flow and restore efficiency and diffusivity, the first acts in opposite direction. We introduce a statistical order book model where the persistence of the order flow is mitigated by adjusting the market order volume to the predictability of the order flow. The model reproduces the diffusive behaviour of prices at all time scales without fine-tuning the values of parameters, as well as the behaviour of most order book quantities as a function of the local predictability of order flow.",
+   "published": "2014-03-04",
+   "categories": [
+    "q-fin.ST",
+    "q-fin.TR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1311.4274v3",
+   "title": "Impact of information cost and switching of trading strategies in an artificial stock market",
+   "abstract": "This paper studies the switching of trading strategies and its effect on the market volatility in a continuous double auction market. We describe the behavior when some uninformed agents, who we call switchers, decide whether or not to pay for information before they trade. By paying for the information they behave as informed traders. First we verify that our model is able to reproduce some of the stylized facts in real financial markets. Next we consider the relationship between switching and the market volatility under different structures of investors. We find that there exists a positive relationship between the market volatility and the percentage of switchers. We therefore conclude that the switchers are a destabilizing factor in the market. However, for a given fixed percentage of switchers, the proportion of switchers that decide to buy information at a given moment of time is negatively related to the current market volatility. In other words, if more agents pay for information to know the fundamental value at some time, the market volatility will be lower. This is because the market price is closer to the fundamental value due to information diffusion between switchers.",
+   "published": "2013-11-18",
+   "categories": [
+    "q-fin.TR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1304.5040v3",
+   "title": "Dynamic robust duality in utility maximization",
+   "abstract": "A celebrated financial application of convex duality theory gives an explicit relation between the following two quantities: (i) The optimal terminal wealth $X^*(T) : = X_{\\varphi^*}(T)$ of the problem to maximize the expected $U$-utility of the terminal wealth $X_{\\varphi}(T)$ generated by admissible portfolios $\\varphi(t), 0 \\leq t \\leq T$ in a market with the risky asset price process modeled as a semimartingale; (ii) The optimal scenario $\\frac{dQ^*}{dP}$ of the dual problem to minimize the expected $V$-value of $\\frac{dQ}{dP}$ over a family of equivalent local martingale measures $Q$, where $V$ is the convex conjugate function of the concave function $U$. In this paper we consider markets modeled by It\u00f4-L\u00e9vy processes. In the first part we use the maximum principle in stochastic control theory to extend the above relation to a \\emph{dynamic} relation, valid for all $t \\in [0,T]$. We prove in particular that the optimal adjoint process for the primal problem coincides with the optimal density process, and that the optimal adjoint process for the dual problem coincides with the optimal wealth process, $0 \\leq t \\leq T$. In the terminal time case $t=T$ we recover the classical duality connection above. We get moreover an explicit relation between the optimal portfolio $\\varphi^*$ and the optimal measure $Q^*$. We also obtain that the existence of an optimal scenario is equivalent to the replicability of a related $T$-claim. In the second part we present robust (model uncertainty) versions of the optimization problems in (i) and (ii), and we prove a similar dynamic relation between them. In particular, we show how to get from the solution of one of the problems to the other. We illustrate the results with explicit examples.",
+   "published": "2013-04-18",
+   "categories": [
+    "q-fin.PM",
+    "math.OC"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1210.1838v3",
+   "title": "Three-state herding model of the financial markets",
+   "abstract": "We propose a Markov jump process with the three-state herding interaction. We see our approach as an agent-based model for the financial markets. Under certain assumptions this agent-based model can be related to the stochastic description exhibiting sophisticated statistical features. Along with power-law probability density function of the absolute returns we are able to reproduce the fractured power spectral density, which is observed in the high-frequency financial market data. Given example of consistent agent-based and stochastic modeling will provide background for the further developments in the research of complex social systems.",
+   "published": "2012-10-05",
+   "categories": [
+    "q-fin.TR",
+    "physics.soc-ph"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/1009.5830v2",
+   "title": "Self-organized criticality in a network of economic agents with finite consumption",
+   "abstract": "We introduce a simple model for addressing the controversy in the study of financial systems, sometimes taken as brownian-like processes and other as critical systems with fluctuations of arbitrary magnitude. The model considers a collection of economical agents which establish trade connections among them according to basic economical principles properly translated into physical properties and interaction. With our model we are able to reproduce the evolution of macroscopic quantities (indices) and to correctly retrieve the common exponent value characterizing several indices in financial markets, relating it to the underlying topology of connections.",
+   "published": "2010-09-29",
+   "categories": [
+    "q-fin.GN",
+    "physics.data-an",
+    "physics.soc-ph"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/0909.1974v2",
+   "title": "Econophysics: Empirical facts and agent-based models",
+   "abstract": "This article aims at reviewing recent empirical and theoretical developments usually grouped under the term Econophysics. Since its name was coined in 1995 by merging the words Economics and Physics, this new interdisciplinary field has grown in various directions: theoretical macroeconomics (wealth distributions), microstructure of financial markets (order book modelling), econometrics of financial bubbles and crashes, etc. In the first part of the review, we discuss on the emergence of Econophysics. Then we present empirical studies revealing statistical properties of financial time series. We begin the presentation with the widely acknowledged stylized facts which describe the returns of financial assets- fat tails, volatility clustering, autocorrelation, etc.- and recall that some of these properties are directly linked to the way time is taken into account. We continue with the statistical properties observed on order books in financial markets. For the sake of illustrating this review, (nearly) all the stated facts are reproduced using our own high-frequency financial database. Finally, contributions to the study of correlations of assets such as random matrix theory and graph theory are presented. In the second part of the review, we deal with models in Econophysics through the point of view of agent-based modelling. Amongst a large number of multi-agent-based models, we have identified three representative areas. First, using previous work originally presented in the fields of behavioural finance and market microstructure theory, econophysicists have developed agent-based models of order-driven markets that are extensively presented here. Second, kinetic theory models designed to explain some empirical facts on wealth distribution are reviewed. Third, we briefly summarize game theory models by reviewing the now classic minority game and related problems.",
+   "published": "2009-09-10",
+   "categories": [
+    "q-fin.GN",
+    "q-fin.ST",
+    "q-fin.TR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/0809.0481v2",
+   "title": "Solvable Stochastic Dealer Models for Financial Markets",
+   "abstract": "We introduce solvable stochastic dealer models, which can reproduce basic empirical laws of financial markets such as the power law of price change. Starting from the simplest model that is almost equivalent to a Poisson random noise generator, the model becomes fairly realistic by adding only two effects, the self-modulation of transaction intervals and a forecasting tendency, which uses a moving average of the latest market price changes. Based on the present microscopic model of markets, we find a quantitative relation with market potential forces, which has recently been discovered in the study of market price modeling based on random walks.",
+   "published": "2008-09-02",
+   "categories": [
+    "q-fin.TR",
+    "physics.soc-ph"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/0711.0729v2",
+   "title": "Forbidden patterns in financial time series",
+   "abstract": "The existence of forbidden patterns, i.e., certain missing sequences in a given time series, is a recently proposed instrument of potential application in the study of time series. Forbidden patterns are related to the permutation entropy, which has the basic properties of classic chaos indicators, thus allowing to separate deterministic (usually chaotic) from random series; however, it requires less values of the series to be calculated, and it is suitable for using with small datasets. In this Letter, the appearance of forbidden patterns is studied in different economical indicators like stock indices (Dow Jones Industrial Average and Nasdaq Composite), NYSE stocks (IBM and Boeing) and others (10-year Bond interest rate), to find evidences of deterministic behavior in their evolutions.",
+   "published": "2007-11-05",
+   "categories": [
+    "q-fin.ST",
+    "physics.data-an",
+    "physics.soc-ph"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/physics/0701140v1",
+   "title": "Agent-based Models of Financial Markets",
+   "abstract": "This review deals with several microscopic (``agent-based'') models of financial markets which have been studied by economists and physicists over the last decade: Kim-Markowitz, Levy-Levy-Solomon, Cont-Bouchaud, Solomon-Weisbuch, Lux-Marchesi, Donangelo-Sneppen and Solomon-Levy-Huang. After an overview of simulation approaches in financial economics, we first give a summary of the Donangelo-Sneppen model of monetary exchange and compare it with related models in economics literature. Our selective review then outlines the main ingredients of some influential early models of multi-agent dynamics in financial markets (Kim-Markowitz, Levy-Levy-Solomon). As will be seen, these contributions draw their inspiration from the complex appearance of investors' interactions in real-life markets. Their main aim is to reproduce (and, thereby, provide possible explanations) for the spectacular bubbles and crashes seen in certain historical episodes, but they lack (like almost all the work before 1998 or so) a perspective in terms of the universal statistical features of financial time series.",
+   "published": "2007-01-11",
+   "categories": [
+    "physics.soc-ph",
+    "q-fin.TR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/physics/0608036v1",
+   "title": "Modeling long-range memory trading activity by stochastic differential equations",
+   "abstract": "We propose a model of fractal point process driven by the nonlinear stochastic differential equation. The model is adjusted to the empirical data of trading activity in financial markets. This reproduces the probability distribution function and power spectral density of trading activity observed in the stock markets. We present a simple stochastic relation between the trading activity and return, which enables us to reproduce long-range memory statistical properties of volatility by numerical calculations based on the proposed fractal point process.",
+   "published": "2006-08-03",
+   "categories": [
+    "physics.soc-ph",
+    "q-fin.ST"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/cond-mat/0412723v1",
+   "title": "Modelling financial markets by the multiplicative sequence of trades",
+   "abstract": "We introduce the stochastic multiplicative point process modelling trading activity of financial markets. Such a model system exhibits power-law spectral density S(f) ~ 1/f**beta, scaled as power of frequency for various values of beta between 0.5 and 2. Furthermore, we analyze the relation between the power-law autocorrelations and the origin of the power-law probability distribution of the trading activity. The model reproduces the spectral properties of trading activity and explains the mechanism of power-law distribution in real markets.",
+   "published": "2004-12-28",
+   "categories": [
+    "cond-mat.stat-mech",
+    "cs.CE",
+    "math.SP",
+    "physics.data-an",
+    "q-fin.ST"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/cond-mat/0409107v1",
+   "title": "Error threshold in optimal coding, numerical criteria and classes of universalities for complexity",
+   "abstract": "The free energy of the Random Energy Model at the transition point between ferromagnetic and spin glass phases is calculated. At this point, equivalent to the decoding error threshold in optimal codes, free energy has finite size corrections proportional to the square root of the number of degrees. The response of the magnetization to the ferromagnetic couplings is maximal at the values of magnetization equal to half. We give several criteria of complexity and define different universality classes. According to our classification, at the lowest class of complexity are random graph, Markov Models and Hidden Markov Models. At the next level is Sherrington-Kirkpatrick spin glass, connected with neuron-network models. On a higher level are critical theories, spin glass phase of Random Energy Model, percolation, self organized criticality (SOC). The top level class involves HOT design, error threshold in optimal coding, language, and, maybe, financial market. Alive systems are also related with the last class. A concept of anti-resonance is suggested for the complex systems.",
+   "published": "2004-09-05",
+   "categories": [
+    "cond-mat.stat-mech"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/cond-mat/0312682v1",
+   "title": "Clustering and information in correlation based financial networks",
+   "abstract": "Networks of companies can be constructed by using return correlations. A crucial issue in this approach is to select the relevant correlations from the correlation matrix. In order to study this problem, we start from an empty graph with no edges where the vertices correspond to stocks. Then, one by one, we insert edges between the vertices according to the rank of their correlation strength, resulting in a network called asset graph. We study its properties, such as topologically different growth types, number and size of clusters and clustering coefficient. These properties, calculated from empirical data, are compared against those of a random graph. The growth of the graph can be classified according to the topological role of the newly inserted edge. We find that the type of growth which is responsible for creating cycles in the graph sets in much earlier for the empirical asset graph than for the random graph, and thus reflects the high degree of networking present in the market. We also find the number of clusters in the random graph to be one order of magnitude higher than for the asset graph. At a critical threshold, the random graph undergoes a radical change in topology related to percolation transition and forms a single giant cluster, a phenomenon which is not observed for the asset graph. Differences in mean clustering coefficient lead us to conclude that most information is contained roughly within 10% of the edges.",
+   "published": "2003-12-29",
+   "categories": [
+    "cond-mat.stat-mech"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/cond-mat/0310503v2",
+   "title": "The scale-free topology of market investments",
+   "abstract": "We propose a network description of large market investments, where both stocks and shareholders are represented as vertices connected by weighted links corresponding to shareholdings. In this framework, the in-degree ($k_{in}$) and the sum of incoming link weights ($v$) of an investor correspond to the number of assets held (\\emph{portfolio diversification}) and to the invested wealth (\\emph{portfolio volume}) respectively. An empirical analysis of three different real markets reveals that the distributions of both $k_{in}$ and $v$ display power-law tails with exponents $\u03b3$ and $\u03b1$. Moreover, we find that $k_{in}$ scales as a power-law function of $v$ with an exponent $\u03b2$. Remarkably, despite the values of $\u03b1$, $\u03b2$ and $\u03b3$ differ across the three markets, they are always governed by the scaling relation $\u03b2=(1-\u03b1)/(1-\u03b3)$. We show that these empirical findings can be reproduced by a recent model relating the emergence of scale-free networks to an underlying Paretian distribution of `hidden' vertex properties.",
+   "published": "2003-10-21",
+   "categories": [
+    "cond-mat.stat-mech",
+    "cond-mat.dis-nn",
+    "nlin.AO",
+    "physics.soc-ph",
+    "q-fin.PM"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/cond-mat/0303089v2",
+   "title": "Multiplicative point process as a model of trading activity",
+   "abstract": "Signals consisting of a sequence of pulses show that inherent origin of the 1/f noise is a Brownian fluctuation of the average interevent time between subsequent pulses of the pulse sequence. In this paper we generalize the model of interevent time to reproduce a variety of self-affine time series exhibiting power spectral density S(f) scaling as a power of the frequency f. Furthermore, we analyze the relation between the power-law correlations and the origin of the power-law probability distribution of the signal intensity. We introduce a stochastic multiplicative model for the time intervals between point events and analyze the statistical properties of the signal analytically and numerically. Such model system exhibits power-law spectral density S(f)~1/f**beta for various values of beta, including beta=1/2, 1 and 3/2. Explicit expressions for the power spectra in the low frequency limit and for the distribution density of the interevent time are obtained. The counting statistics of the events is analyzed analytically and numerically, as well. The specific interest of our analysis is related with the financial markets, where long-range correlations of price fluctuations largely depend on the number of transactions. We analyze the spectral density and counting statistics of the number of transactions. The model reproduces spectral properties of the real markets and explains the mechanism of power-law distribution of trading activity. The study provides evidence that the statistical properties of the financial markets are enclosed in the statistics of the time interval between trades. A multiplicative point process serves as a consistent model generating this statistics.",
+   "published": "2003-03-05",
+   "categories": [
+    "cond-mat.stat-mech",
+    "cs.CE",
+    "math.SP",
+    "nlin.AO",
+    "nlin.CD",
+    "q-fin.TR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/physics/0210025v1",
+   "title": "Pricing European Options in Realistic Markets",
+   "abstract": "We investigate the relation between the fair price for European-style vanilla options and the distribution of short-term returns on the underlying asset ignoring transaction and other costs. We compute the risk-neutral probability density conditional on the total variance of the asset's returns when the option expires. If the asset's future price has finite expectation, the option's fair value satisfies a parabolic partial differential equation of the Black-Scholes type in which the variance of the asset's returns rather than a trading time is the evolution parameter. By immunizing the portfolio against large-scale price fluctuations of the asset, the valuation of options is extended to the realistic case\\cite{St99} of assets whose short-term returns have finite variance but very large, or even infinite, higher moments. A dynamic Delta-hedged portfolio that is statically insured against exceptionally large fluctuations includes at least two different options on the asset. The fair value of an option in this case is determined by a universal drift function that is common to all options on the asset. This drift is interpreted as the premium for an investment exposed to risk due to exceptionally large variations of the asset's price. It affects the option valuation like an effective cost-of-carry for the underlying in the Black-Scholes world would. The derived pricing formula for options in realistic markets is arbitrage free by construction. A simple model with constant drift qualitatively reproduces the often observed volatility -skew and -term structure.",
+   "published": "2002-10-06",
+   "categories": [
+    "physics.soc-ph",
+    "physics.data-an",
+    "q-fin.PR"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/cond-mat/0209107v2",
+   "title": "Diversification and Gerneralized Tracking Errors For Correlated Non-Normal Returns",
+   "abstract": "The probability distribution for the relative return of a portfolio constructed from a subset n of the assets from a benchmark, consisting of N assets whose returns are multivariate normal, is completely characterized by its tracking error. However, if the benchmark asset returns are not multivariate normal then higher moments of the probability distribution for the portfolio's relative return are not related to its tracking error. We discuss the convergence of generalized tracking error measures as the size of the subset of benchmark assets increases. Assuming that the joint probability distribution for the returns of the assets is symmetric under their permutations we show that increasing n makes these generalized tracking errors small (even though n<<N). For n>>1 the probability distribution for the portfolio's relative return is approximately symmetric and strongly peaked about the origin. The results of this paper generalize the conclusions of Dynkin et. al. (2002) to more general underlying asset distributions.",
+   "published": "2002-09-04",
+   "categories": [
+    "cond-mat"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/astro-ph/0205315v1",
+   "title": "Quantitative Stellar Spectral Classification. II. Early Type Stars",
+   "abstract": "The method developed by Stock and Stock (1999) for stars of spectral types A to K to derive absolute magnitudes and intrinsic colors from the equivalent widths of absorption lines in stellar spectra is extended to B-type stars. Spectra of this type of stars for which the Hipparcos Catalogue gives parallaxes with an error of less than 20% were observed with the CIDA 1-meter reflector equipped with a Richardson spectrograph with a Thompson 576x384 CCD detector. The dispersion is 1.753 A/pixel using a 600 lines/mm grating in the first order. In order to cover the spectral range 3850 A to 5750 A the grating had to be used in two different positions, with an overlap in the region from 4800 A to 4900 A. A total of 116 stars was oberved, but not all with both grating positions. A total of 12 measureable absorption lines was identified in the spectra and their equivalent widths were measured. These were related to the absolute magnitudes derived from the Hipparcos Catalogue and to the intrinsic colors (deduced from the MK spectral types) using linear and second order polynomials and two or three lines as independent variables. The best solutions were obtained with polynomials of three lines, reproducing the absolute magnitudes with an average residual of about 0.40 magnitudes and the intrinsic colors with an average residual of 0.016 magnitudes.",
+   "published": "2002-05-18",
+   "categories": [
+    "astro-ph"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/physics/0203006v2",
+   "title": "Quantum Finance",
+   "abstract": "Quantum theory is used to model secondary financial markets. Contrary to stochastic descriptions, the formalism emphasizes the importance of trading in determining the value of a security. All possible realizations of investors holding securities and cash is taken as the basis of the Hilbert space of market states. The temporal evolution of an isolated market is unitary in this space. Linear operators representing basic financial transactions such as cash transfer and the buying or selling of securities are constructed and simple model Hamiltonians that generate the temporal evolution due to cash flows and the trading of securities are proposed. The Hamiltonian describing financial transactions becomes local when the profit/loss from trading is small compared to the turnover. This approximation may describe a highly liquid and efficient stock market. The lognormal probability distribution for the price of a stock with a variance that is proportional to the elapsed time is reproduced for an equilibrium market. The asymptotic volatility of a stock in this case is related to the long-term probability that it is traded.",
+   "published": "2002-03-04",
+   "categories": [
+    "physics.soc-ph",
+    "cond-mat",
+    "physics.data-an",
+    "q-fin.ST"
+   ]
+  },
+  {
+   "id": "http://arxiv.org/abs/cond-mat/0201514v1",
+   "title": "Modelling share volume traded in financial markets",
+   "abstract": "A simple analytically solvable model exhibiting a 1/f spectrum in an arbitrarily wide frequency range was recently proposed by Kaulakys and Meskauskas (KM). Signals consisting of a sequence of pulses show that inherent origin of the 1/f noise is Brownian fluctuations of the average intervent time between subsequent pulses of the pulse sequence. We generalize the KM model to reproduce the variety of self-affine time series exhibiting power spectral density S(f) scaled as power of their frequency f. Numerical calculations with the generalized discrete model (GDM) reproduce power spectral density S(f) scaled as power of frequency 1/f^b for various values of b, including b =1/2 for applications in financial markets. The particular applications of the model proposed are related with financial time series of share volume traded.",
+   "published": "2002-01-28",
+   "categories": [
+    "cond-mat.stat-mech",
+    "q-fin.ST"
+   ]
+  }
+ ]
+}

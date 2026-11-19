@@ -1,0 +1,60 @@
+# Placebo ladder — light synthetic screen (ridge experts only, ~6 min on a laptop CPU).
+#
+# Pre-registration (written 2026-11-09, BEFORE any result of this experiment existed).
+#
+# Question: a single placebo (no-graph ablation, Erdos-Renyi graph, node permutation, daily rewire)
+# lumps together several different reasons a graph can help. Does a NESTED ladder of retrained
+# null graphs attribute graph value to the structural level that actually carries it?
+#
+#   L0 none  ->  L1 ER (same edge count)  ->  L2 degree-preserving (per-node degree)
+#            ->  L3 degree + sector-block preserving  ->  L4 observed graph
+#   steps:  density = L0-L1,  degree = L1-L2,  block = L2-L3,  edge = L3-L4   (loss differences;
+#   positive = the extra structure helps). They telescope exactly to D1 = L0-L4.
+#
+# Ground-truth scenarios (same observed graph in every scenario; only the signal changes):
+#   edge    : mu depends on the specific true neighbours' feature           -> value at `edge`
+#   block   : mu depends on the sector mean (any same-sector graph works)   -> value at `block`
+#   degree  : mu depends on node degree x common factor                     -> value at `degree`
+#   null    : no relational signal                                          -> no positive step
+#
+# Pre-registered confirmatory hypotheses (Holm over all of them, alpha 0.05, 20 seeds):
+#   H1 edge scenario:   edge step > 0
+#   H2 block scenario:  block step > 0
+#   H3 degree scenario: degree step > 0
+#   H4 attribution: in each of edge/block/degree scenarios, the predicted step carries >= 70% of the
+#      summed positive step value in >= 80% of seeds (descriptive threshold, no p-value)
+#   H5 misattribution of standard placebos (the claim that motivates the ladder):
+#      H5a block scenario:  D2 vs ER placebo > 0      (an ER placebo would say "edges matter")
+#      H5b degree scenario: D2 vs fixed node-permutation placebo > 0  (would say "mapping matters")
+#   H6 null scenario: no step is significantly positive (reported, two-sided)
+# Nothing is tuned after seeing test results. All numbers reported regardless of direction.
+
+experiment:
+  name: placebo_ladder_v1
+  output_dir: outputs/placebo_ladder_v1
+  seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+  placebos_per_level: 10
+
+world:
+  n_sectors: 4
+  per_sector: 15
+  T: 2000
+  p_intra: 0.30
+  p_inter: 0.02
+  own_coef: 0.15
+  noise_sd: 1.0
+  rel_coef: {edge: 0.30, block: 0.50, degree: 0.30, "null": 0.0}
+
+splits:            # decision-time indices; label of t is r[t+1]; last index of each split purged
+  train: [0, 1000]
+  val: [1000, 1300]
+  test: [1300, 1999]
+
+model:
+  ridge_alpha_grid: [0.1, 1.0, 10.0, 100.0, 1000.0]
+  target: excess   # cross-sectional demeaned next-step return
+
+hypotheses:
+  attribution_share: 0.70
+  attribution_seed_frac: 0.80
+  alpha: 0.05

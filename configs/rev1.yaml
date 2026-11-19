@@ -1,0 +1,27 @@
+# Revision 1 robustness — machine-readable spec for PREREG_REV1.md (DRAFT until PREREG_REV1_FREEZE.md exists).
+alpha: 0.05
+study_S:                                  # RSR, size-stratified within-industry placebos (laptop, rsr_arm)
+  parent_config: configs/rsr_replica.yaml
+  relation: wikidata
+  markets: [NASDAQ, NYSE]                 # mi = 0, 1 (order of rsr_replica.yaml markets)
+  K: 99
+  rng: [20261110, mi, 8, k]               # parent placebos use tag 7
+  size:
+    measure: median_close_x_volume
+    window_rows: [29, 785]                # rows of {market}_aver_line_dates.csv = processed rows 0-755 (training)
+    min_days: 50                          # fewer valid days -> lower bin
+  bins: 2                                 # lower floor(n/2) by (size, index) within each parent permutation group
+  seed: 0                                 # model seed = 20261110 + 1000*mi + 0 (CRN with parent real s0)
+  rerun_real_s0: true                     # determinism check against parent npz (tol 1e-9)
+  output_dir: outputs/rev1_rsr_sizebin_v1
+  multiplicity: {method: holm, family: [NASDAQ, NYSE]}
+study_K:                                  # RT-GCN(U), extend placebos 19 -> 99 with the FROZEN runners (hyperion)
+  cells:
+    NASDAQ_U: {runner: scripts/run_rtgcn_replica.py, output_dir: outputs/rtgcn_v1,     mem: 6G}
+    NYSE_U:   {runner: scripts/run_rtgcn_ext.py,     output_dir: outputs/rtgcn_ext_v1, mem: 10G}
+  existing_k: [0, 19]                     # perm000-perm018, kept
+  new_k: [19, 99]                         # perm019-perm098, seed 0, val arm, paper config
+  K: 99
+  statistic: irr1_val_selected_all_172_days
+  multiplicity: {method: holm, family: [NASDAQ_U, NYSE_U]}
+  secondary: {nyse_excl_day: 89, mde_power: 0.8}

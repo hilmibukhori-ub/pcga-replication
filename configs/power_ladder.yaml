@@ -1,0 +1,50 @@
+# Power analysis for the placebo ladder on RSR-sized and CRSP-sized panels.
+#
+# Pre-registration (written 2026-11-09, before any power result existed; no RSR data touched):
+#   Question: with the RSR split (train 2013-15, val 2016, test 2017 = ~252 test days), how large
+#   must the edge-specific graph signal be for D1 and the ladder `edge` step to be detected?
+#   Signal size is the incremental R^2 of the relational component (fraction of excess-return
+#   variance), with the implied cross-sectional IC reported alongside.
+#   A-priori plausible range for a daily graph lead-lag signal: R^2 1e-4 to 5e-4 (IC ~0.01-0.02).
+#   Decision rule:
+#     - If the 80%-power minimum detectable effect (MDE80) of the edge step on RSR (either market,
+#       or pooled) is <= 5e-4, RSR can test edge-level claims; proceed to RSR.
+#     - Otherwise RSR can only bound effects from above; edge-level claims need a longer panel
+#       (CRSP-like cell), and RSR would be a replication / sanity track only.
+#   Caveats fixed in advance: the ridge expert knows the correct functional form, so these powers
+#   are OPTIMISTIC (upper bounds) for a real GNN. No Holm correction is applied here; the
+#   confirmatory analysis will apply it, so true power is lower again.
+
+experiment:
+  name: power_ladder_v1
+  output_dir: outputs/power_ladder_v1
+  reps: 40
+  placebos_per_level: 3
+  seed: 20261109
+
+cells:            # days are trading days
+  rsr_nasdaq:  {n: 1026, train: 756,  val: 252, test: 252}
+  rsr_nyse:    {n: 1737, train: 756,  val: 252, test: 252}
+  rsr_pooled:  {n: 2763, train: 756,  val: 252, test: 252}
+  crsp_like:   {n: 3000, train: 1260, val: 252, test: 1260}
+
+effects_r2: [0.0, 0.00005, 0.0001, 0.0002, 0.0005, 0.001, 0.002]
+
+world:
+  block_size: 10          # industry blocks
+  intra_degree: 3.0       # expected neighbours inside own industry
+  inter_degree: 3.0       # expected neighbours outside
+  own_r2: 0.001           # own-feature signal
+  sector_shock_share: 0.15
+  vol_ar: 0.95            # log daily volatility AR(1)
+  vol_sd: 0.30            # stationary sd of log volatility
+  t_df: 4                 # idiosyncratic fat tails
+
+model:
+  ridge_alpha_grid: [1.0, 100.0, 10000.0, 1000000.0]
+
+inference:
+  block_length_days: 20
+  repetitions: 1000
+  ci: 0.95                # detection = lower CI bound > 0
+  power_target: 0.80

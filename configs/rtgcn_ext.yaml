@@ -1,0 +1,12 @@
+# RT-GCN re-test EXTENSION — machine-readable spec for PREREG_RTGCN_EXT.md.
+cells: [NYSE_U, NASDAQ_T, NYSE_T]   # the NASDAQ_U cell is the main study (PREREG_RTGCN.md), not repeated
+seed0: 20261111                     # same as the main study (model seed = seed0 + s; common random numbers)
+epochs: 100
+config: {lr: 0.001, wd: 0.0001}     # the main study's PRIMARY 'paper' config (paper §V-B4); no released-config arm
+batch_size: {NASDAQ: 64, NYSE: 32}  # released train.yaml per market (NYSE yaml: batch_size 32)
+seeds:     {NYSE_U: 20, NASDAQ_T: 10, NYSE_T: 10}   # val arm, real and none (H-A, H-B)
+placebos:  {NYSE_U: 19, NASDAQ_T: 19, NYSE_T: 19}   # within-industry permutations, seed 0, val arm (H-C)
+seeds_pub: {NYSE_U: 10, NASDAQ_T: 5,  NYSE_T: 5}    # published-protocol arm (R0, descriptive)
+threads:   {NYSE_U: 1,  NASDAQ_T: 4,  NYSE_T: 4}    # fixed per cell in confirm modes (results depend on it)
+alpha: 0.05
+output_dir: outputs/rtgcn_ext_v1

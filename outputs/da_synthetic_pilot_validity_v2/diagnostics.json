@@ -1,0 +1,453 @@
+{
+ "run": "da_synthetic_pilot_validity_v2",
+ "status": "post_hoc_diagnostic_not_primary_evidence",
+ "temperature_multipliers": [
+  0.05,
+  0.1,
+  0.25,
+  0.5,
+  1.0,
+  2.0,
+  5.0
+ ],
+ "summaries": {
+  "soft_minus_hard_risk": {
+   "n": 10,
+   "mean": -0.006909710948906736,
+   "sd": 0.01595058820123284,
+   "t_ci_low": -0.018320074373234782,
+   "t_ci_high": 0.0045006524754213125,
+   "boot_ci_low": -0.017360260012181036,
+   "boot_ci_high": 0.0006590981451212555,
+   "wilcoxon_p": 0.16015625,
+   "n_negative": 6,
+   "n_positive": 4
+  },
+  "ridge_all_minus_nonstruct_risk": {
+   "n": 10,
+   "mean": 0.009949609904788262,
+   "sd": 0.025439962109034066,
+   "t_ci_low": -0.008249042677990951,
+   "t_ci_high": 0.028148262487567473,
+   "boot_ci_low": 0.0010189969058153555,
+   "boot_ci_high": 0.026349018465565546,
+   "wilcoxon_p": 0.013671875,
+   "n_negative": 1,
+   "n_positive": 9
+  },
+  "ridge_all_minus_nonstruct_rmse": {
+   "n": 10,
+   "mean": 0.008747718618319075,
+   "sd": 0.015154750207133258,
+   "t_ci_low": -0.002093336600881927,
+   "t_ci_high": 0.019588773837520078,
+   "boot_ci_low": 0.0017103738878174101,
+   "boot_ci_high": 0.018671972669080675,
+   "wilcoxon_p": 0.048828125,
+   "n_negative": 3,
+   "n_positive": 7
+  }
+ },
+ "per_seed": [
+  {
+   "seed": 0,
+   "hard_risk": 0.23757173521964203,
+   "soft_risk": 0.2323373705090568,
+   "soft_minus_hard_risk": -0.005234364710585221,
+   "temperature": 0.08256088864626403,
+   "temperature_calibration_losses": [
+    9.234520334765758,
+    9.229326980306094,
+    9.21845851853415,
+    9.215757218530145,
+    9.223134176470328,
+    9.234301950258736,
+    9.244724040854187
+   ],
+   "ridge_nonstruct_risk": 0.2347287041419778,
+   "ridge_all_risk": 0.23609166752783273,
+   "ridge_all_minus_nonstruct_risk": 0.0013629633858549262,
+   "ridge_nonstruct_benefit_rmse": 0.1514326393148899,
+   "ridge_all_benefit_rmse": 0.15323341061195983,
+   "ridge_all_minus_nonstruct_rmse": 0.0018007712970699308,
+   "ridge_nonstruct_benefit_corr": 0.6746429895232191,
+   "ridge_all_benefit_corr": 0.6837739625965498,
+   "ridge_hyperparams": {
+    "nonstruct": {
+     "alpha": 1000.0,
+     "val_mse_std": 2.353823613558321,
+     "calib_a": -0.09362370336206992,
+     "calib_c": 1.6037432412620365,
+     "calib_mode": "affine"
+    },
+    "all": {
+     "alpha": 1000.0,
+     "val_mse_std": 2.3579966865557798,
+     "calib_a": -0.08683510702351184,
+     "calib_c": 1.4287146608047157,
+     "calib_mode": "affine"
+    }
+   }
+  },
+  {
+   "seed": 1,
+   "hard_risk": 0.25695675435718607,
+   "soft_risk": 0.25311943828166583,
+   "soft_minus_hard_risk": -0.0038373160755202362,
+   "temperature": 0.021737372146339556,
+   "temperature_calibration_losses": [
+    9.4122044494083,
+    9.4115234211077,
+    9.411198069746085,
+    9.411986886417939,
+    9.417206351299223,
+    9.425766938968728,
+    9.434778209972775
+   ],
+   "ridge_nonstruct_risk": 0.25349411573052677,
+   "ridge_all_risk": 0.2580889679173357,
+   "ridge_all_minus_nonstruct_risk": 0.00459485218680894,
+   "ridge_nonstruct_benefit_rmse": 0.08181999999681751,
+   "ridge_all_benefit_rmse": 0.08726008619093197,
+   "ridge_all_minus_nonstruct_rmse": 0.005440086194114457,
+   "ridge_nonstruct_benefit_corr": 0.5642487243577559,
+   "ridge_all_benefit_corr": 0.5303566162156889,
+   "ridge_hyperparams": {
+    "nonstruct": {
+     "alpha": 1000.0,
+     "val_mse_std": 1.0360109983765184,
+     "calib_a": 0.004360613528556655,
+     "calib_c": 1.3369069928145492,
+     "calib_mode": "affine"
+    },
+    "all": {
+     "alpha": 1000.0,
+     "val_mse_std": 1.016053677128576,
+     "calib_a": 0.020991973645244036,
+     "calib_c": 1.2083111805105247,
+     "calib_mode": "affine"
+    }
+   }
+  },
+  {
+   "seed": 2,
+   "hard_risk": 0.3907670856733335,
+   "soft_risk": 0.34214008761744585,
+   "soft_minus_hard_risk": -0.04862699805588766,
+   "temperature": 0.04403457168841765,
+   "temperature_calibration_losses": [
+    9.053776315097513,
+    9.053783716789061,
+    9.053900463364677,
+    9.05310253385807,
+    9.046694451794835,
+    9.035440460244425,
+    9.028232595934039
+   ],
+   "ridge_nonstruct_risk": 0.3362295018788908,
+   "ridge_all_risk": 0.4183814042497796,
+   "ridge_all_minus_nonstruct_risk": 0.08215190237088882,
+   "ridge_nonstruct_benefit_rmse": 0.22593214103044867,
+   "ridge_all_benefit_rmse": 0.27478507239478395,
+   "ridge_all_minus_nonstruct_rmse": 0.04885293136433527,
+   "ridge_nonstruct_benefit_corr": 0.5277684792706341,
+   "ridge_all_benefit_corr": 0.5073015827132732,
+   "ridge_hyperparams": {
+    "nonstruct": {
+     "alpha": 10.0,
+     "val_mse_std": 0.5728141900214695,
+     "calib_a": -0.061109520740789416,
+     "calib_c": 1.0,
+     "calib_mode": "shift_fallback"
+    },
+    "all": {
+     "alpha": 100.0,
+     "val_mse_std": 0.5787481122101138,
+     "calib_a": -0.02865512801932976,
+     "calib_c": 0.016676611555535237,
+     "calib_mode": "affine"
+    }
+   }
+  },
+  {
+   "seed": 3,
+   "hard_risk": 0.255914066991629,
+   "soft_risk": 0.256638697782387,
+   "soft_minus_hard_risk": 0.0007246307907580185,
+   "temperature": 0.05842989045314304,
+   "temperature_calibration_losses": [
+    9.495545944594618,
+    9.495774889876756,
+    9.495513302445477,
+    9.492979236491841,
+    9.48885130515989,
+    9.486927870832975,
+    9.488891409909797
+   ],
+   "ridge_nonstruct_risk": 0.25122515446144095,
+   "ridge_all_risk": 0.2515960596643775,
+   "ridge_all_minus_nonstruct_risk": 0.0003709052029365334,
+   "ridge_nonstruct_benefit_rmse": 0.14659710009911367,
+   "ridge_all_benefit_rmse": 0.14649369940290452,
+   "ridge_all_minus_nonstruct_rmse": -0.00010340069620914938,
+   "ridge_nonstruct_benefit_corr": 0.7085187935653093,
+   "ridge_all_benefit_corr": 0.6931388838119814,
+   "ridge_hyperparams": {
+    "nonstruct": {
+     "alpha": 100.0,
+     "val_mse_std": 0.6280040849011834,
+     "calib_a": -0.01625480704211521,
+     "calib_c": 1.0,
+     "calib_mode": "shift_fallback"
+    },
+    "all": {
+     "alpha": 100.0,
+     "val_mse_std": 0.6327478621140641,
+     "calib_a": -0.009149026955459752,
+     "calib_c": 1.0,
+     "calib_mode": "shift_fallback"
+    }
+   }
+  },
+  {
+   "seed": 4,
+   "hard_risk": 0.2995604553954061,
+   "soft_risk": 0.30448714734147714,
+   "soft_minus_hard_risk": 0.004926691946071038,
+   "temperature": 0.08400987360166835,
+   "temperature_calibration_losses": [
+    8.939890660226892,
+    8.938707585553706,
+    8.932308506202354,
+    8.925604178663036,
+    8.923210193592661,
+    8.925528571664527,
+    8.929428517950017
+   ],
+   "ridge_nonstruct_risk": 0.2999403894112353,
+   "ridge_all_risk": 0.30257733476428206,
+   "ridge_all_minus_nonstruct_risk": 0.00263694535304676,
+   "ridge_nonstruct_benefit_rmse": 0.23851505492969555,
+   "ridge_all_benefit_rmse": 0.24602938831419072,
+   "ridge_all_minus_nonstruct_rmse": 0.00751433338449517,
+   "ridge_nonstruct_benefit_corr": 0.5767320920764782,
+   "ridge_all_benefit_corr": 0.5860905764992582,
+   "ridge_hyperparams": {
+    "nonstruct": {
+     "alpha": 1000.0,
+     "val_mse_std": 0.5742372329406137,
+     "calib_a": -0.12302249624698586,
+     "calib_c": 1.2062104859280411,
+     "calib_mode": "affine"
+    },
+    "all": {
+     "alpha": 1000.0,
+     "val_mse_std": 0.5726581028016232,
+     "calib_a": -0.14306861596721024,
+     "calib_c": 1.1269559729888552,
+     "calib_mode": "affine"
+    }
+   }
+  },
+  {
+   "seed": 5,
+   "hard_risk": 0.33407839340407885,
+   "soft_risk": 0.3269707296796872,
+   "soft_minus_hard_risk": -0.007107663724391644,
+   "temperature": 0.01520405520825573,
+   "temperature_calibration_losses": [
+    9.514858535281176,
+    9.514180354776121,
+    9.515791011632793,
+    9.522143899788915,
+    9.534060785525382,
+    9.546609592621872,
+    9.557617818042647
+   ],
+   "ridge_nonstruct_risk": 0.32841636207010455,
+   "ridge_all_risk": 0.3301885835044848,
+   "ridge_all_minus_nonstruct_risk": 0.0017722214343802722,
+   "ridge_nonstruct_benefit_rmse": 0.16999726370593857,
+   "ridge_all_benefit_rmse": 0.16626744027475102,
+   "ridge_all_minus_nonstruct_rmse": -0.003729823431187551,
+   "ridge_nonstruct_benefit_corr": 0.6434423616154293,
+   "ridge_all_benefit_corr": 0.6626218542793596,
+   "ridge_hyperparams": {
+    "nonstruct": {
+     "alpha": 1000.0,
+     "val_mse_std": 0.6424248634846008,
+     "calib_a": -0.03374470494275212,
+     "calib_c": 1.4695727927653066,
+     "calib_mode": "affine"
+    },
+    "all": {
+     "alpha": 1000.0,
+     "val_mse_std": 0.6467975949510014,
+     "calib_a": -0.03598190250271816,
+     "calib_c": 1.432683427819699,
+     "calib_mode": "affine"
+    }
+   }
+  },
+  {
+   "seed": 6,
+   "hard_risk": 0.403166131572052,
+   "soft_risk": 0.4067130021076661,
+   "soft_minus_hard_risk": 0.0035468705356140884,
+   "temperature": 0.33690489798443773,
+   "temperature_calibration_losses": [
+    9.358579320065456,
+    9.35637104045965,
+    9.352770006998545,
+    9.348321019691218,
+    9.343048652387463,
+    9.339318122182474,
+    9.337290093038817
+   ],
+   "ridge_nonstruct_risk": 0.40453455444726677,
+   "ridge_all_risk": 0.4054467557361205,
+   "ridge_all_minus_nonstruct_risk": 0.0009122012888537201,
+   "ridge_nonstruct_benefit_rmse": 0.12593736668364136,
+   "ridge_all_benefit_rmse": 0.1256592517448675,
+   "ridge_all_minus_nonstruct_rmse": -0.0002781149387738602,
+   "ridge_nonstruct_benefit_corr": 0.5540111956575682,
+   "ridge_all_benefit_corr": 0.5659641409835506,
+   "ridge_hyperparams": {
+    "nonstruct": {
+     "alpha": 1000.0,
+     "val_mse_std": 0.8946255820069852,
+     "calib_a": -0.07262015038788265,
+     "calib_c": 1.0,
+     "calib_mode": "shift_fallback"
+    },
+    "all": {
+     "alpha": 1000.0,
+     "val_mse_std": 0.9063402978714168,
+     "calib_a": -0.07497483793198612,
+     "calib_c": 1.0,
+     "calib_mode": "shift_fallback"
+    }
+   }
+  },
+  {
+   "seed": 7,
+   "hard_risk": 0.26985688250000545,
+   "soft_risk": 0.26219666409434517,
+   "soft_minus_hard_risk": -0.0076602184056602796,
+   "temperature": 0.03445962624090635,
+   "temperature_calibration_losses": [
+    9.083062351927945,
+    9.080785652475228,
+    9.078238485772438,
+    9.078092457390202,
+    9.080070913070806,
+    9.083458194111717,
+    9.087090976176519
+   ],
+   "ridge_nonstruct_risk": 0.2653182317474137,
+   "ridge_all_risk": 0.2700021226150299,
+   "ridge_all_minus_nonstruct_risk": 0.004683890867616225,
+   "ridge_nonstruct_benefit_rmse": 0.1342922605889325,
+   "ridge_all_benefit_rmse": 0.13769665592231464,
+   "ridge_all_minus_nonstruct_rmse": 0.003404395333382132,
+   "ridge_nonstruct_benefit_corr": 0.55302827736345,
+   "ridge_all_benefit_corr": 0.5454186339383982,
+   "ridge_hyperparams": {
+    "nonstruct": {
+     "alpha": 1000.0,
+     "val_mse_std": 1.7970486070631702,
+     "calib_a": -0.04516747361900651,
+     "calib_c": 0.7908329619980707,
+     "calib_mode": "affine"
+    },
+    "all": {
+     "alpha": 1000.0,
+     "val_mse_std": 1.8345683828244506,
+     "calib_a": -0.05378118721787042,
+     "calib_c": 0.7635149770806838,
+     "calib_mode": "affine"
+    }
+   }
+  },
+  {
+   "seed": 8,
+   "hard_risk": 0.32166514264592316,
+   "soft_risk": 0.32867451353974075,
+   "soft_minus_hard_risk": 0.00700937089381759,
+   "temperature": 0.8683240420078879,
+   "temperature_calibration_losses": [
+    9.385067762466786,
+    9.383536316414329,
+    9.377712951152112,
+    9.370840747717894,
+    9.365125775030647,
+    9.361590492094006,
+    9.360132625975782
+   ],
+   "ridge_nonstruct_risk": 0.319389661903252,
+   "ridge_all_risk": 0.32204581528062803,
+   "ridge_all_minus_nonstruct_risk": 0.0026561533773760138,
+   "ridge_nonstruct_benefit_rmse": 0.1626080039668713,
+   "ridge_all_benefit_rmse": 0.17110570016751653,
+   "ridge_all_minus_nonstruct_rmse": 0.008497696200645222,
+   "ridge_nonstruct_benefit_corr": 0.7289588336903464,
+   "ridge_all_benefit_corr": 0.6916516409572603,
+   "ridge_hyperparams": {
+    "nonstruct": {
+     "alpha": 10.0,
+     "val_mse_std": 1.190059620089656,
+     "calib_a": -0.046048399988965025,
+     "calib_c": 1.0,
+     "calib_mode": "shift_fallback"
+    },
+    "all": {
+     "alpha": 100.0,
+     "val_mse_std": 1.195421059733607,
+     "calib_a": -0.06572169401035441,
+     "calib_c": 1.0,
+     "calib_mode": "shift_fallback"
+    }
+   }
+  },
+  {
+   "seed": 9,
+   "hard_risk": 0.250505156348653,
+   "soft_risk": 0.23766704366536995,
+   "soft_minus_hard_risk": -0.012838112683283054,
+   "temperature": 0.07528060998603733,
+   "temperature_calibration_losses": [
+    9.128767815924272,
+    9.124989598326518,
+    9.116457054629757,
+    9.108293731235047,
+    9.104013639595966,
+    9.105598445253515,
+    9.109860463829806
+   ],
+   "ridge_nonstruct_risk": 0.24836456956370082,
+   "ridge_all_risk": 0.24671863314382123,
+   "ridge_all_minus_nonstruct_risk": -0.00164593641987959,
+   "ridge_nonstruct_benefit_rmse": 0.18191638964838078,
+   "ridge_all_benefit_rmse": 0.1979947011236999,
+   "ridge_all_minus_nonstruct_rmse": 0.01607831147531913,
+   "ridge_nonstruct_benefit_corr": 0.703702489645021,
+   "ridge_all_benefit_corr": 0.6976865071506498,
+   "ridge_hyperparams": {
+    "nonstruct": {
+     "alpha": 1000.0,
+     "val_mse_std": 1.1298215167674321,
+     "calib_a": -0.03522907990092097,
+     "calib_c": 1.2032786698798716,
+     "calib_mode": "affine"
+    },
+    "all": {
+     "alpha": 1000.0,
+     "val_mse_std": 1.1282325847532646,
+     "calib_a": -0.038844258697671635,
+     "calib_c": 0.7966291551835106,
+     "calib_mode": "affine"
+    }
+   }
+  }
+ ]
+}

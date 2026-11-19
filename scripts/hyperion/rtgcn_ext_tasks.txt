@@ -1,0 +1,157 @@
+NYSE_T --market NYSE --variant T --mode val --graph real --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph none --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph real --seeds 1
+NYSE_T --market NYSE --variant T --mode val --graph none --seeds 1
+NYSE_T --market NYSE --variant T --mode val --graph real --seeds 2
+NYSE_T --market NYSE --variant T --mode val --graph none --seeds 2
+NYSE_T --market NYSE --variant T --mode val --graph real --seeds 3
+NYSE_T --market NYSE --variant T --mode val --graph none --seeds 3
+NYSE_T --market NYSE --variant T --mode val --graph real --seeds 4
+NYSE_T --market NYSE --variant T --mode val --graph none --seeds 4
+NYSE_T --market NYSE --variant T --mode val --graph real --seeds 5
+NYSE_T --market NYSE --variant T --mode val --graph none --seeds 5
+NYSE_T --market NYSE --variant T --mode val --graph real --seeds 6
+NYSE_T --market NYSE --variant T --mode val --graph none --seeds 6
+NYSE_T --market NYSE --variant T --mode val --graph real --seeds 7
+NYSE_T --market NYSE --variant T --mode val --graph none --seeds 7
+NYSE_T --market NYSE --variant T --mode val --graph real --seeds 8
+NYSE_T --market NYSE --variant T --mode val --graph none --seeds 8
+NYSE_T --market NYSE --variant T --mode val --graph real --seeds 9
+NYSE_T --market NYSE --variant T --mode val --graph none --seeds 9
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 0 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 1 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 2 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 3 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 4 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 5 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 6 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 7 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 8 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 9 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 10 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 11 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 12 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 13 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 14 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 15 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 16 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 17 --seeds 0
+NYSE_T --market NYSE --variant T --mode val --graph perm --k 18 --seeds 0
+NYSE_T --market NYSE --variant T --mode pub --graph real --seeds 0
+NYSE_T --market NYSE --variant T --mode pub --graph real --seeds 1
+NYSE_T --market NYSE --variant T --mode pub --graph real --seeds 2
+NYSE_T --market NYSE --variant T --mode pub --graph real --seeds 3
+NYSE_T --market NYSE --variant T --mode pub --graph real --seeds 4
+NASDAQ_T --market NASDAQ --variant T --mode val --graph real --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph none --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph real --seeds 1
+NASDAQ_T --market NASDAQ --variant T --mode val --graph none --seeds 1
+NASDAQ_T --market NASDAQ --variant T --mode val --graph real --seeds 2
+NASDAQ_T --market NASDAQ --variant T --mode val --graph none --seeds 2
+NASDAQ_T --market NASDAQ --variant T --mode val --graph real --seeds 3
+NASDAQ_T --market NASDAQ --variant T --mode val --graph none --seeds 3
+NASDAQ_T --market NASDAQ --variant T --mode val --graph real --seeds 4
+NASDAQ_T --market NASDAQ --variant T --mode val --graph none --seeds 4
+NASDAQ_T --market NASDAQ --variant T --mode val --graph real --seeds 5
+NASDAQ_T --market NASDAQ --variant T --mode val --graph none --seeds 5
+NASDAQ_T --market NASDAQ --variant T --mode val --graph real --seeds 6
+NASDAQ_T --market NASDAQ --variant T --mode val --graph none --seeds 6
+NASDAQ_T --market NASDAQ --variant T --mode val --graph real --seeds 7
+NASDAQ_T --market NASDAQ --variant T --mode val --graph none --seeds 7
+NASDAQ_T --market NASDAQ --variant T --mode val --graph real --seeds 8
+NASDAQ_T --market NASDAQ --variant T --mode val --graph none --seeds 8
+NASDAQ_T --market NASDAQ --variant T --mode val --graph real --seeds 9
+NASDAQ_T --market NASDAQ --variant T --mode val --graph none --seeds 9
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 0 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 1 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 2 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 3 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 4 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 5 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 6 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 7 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 8 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 9 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 10 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 11 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 12 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 13 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 14 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 15 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 16 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 17 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode val --graph perm --k 18 --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode pub --graph real --seeds 0
+NASDAQ_T --market NASDAQ --variant T --mode pub --graph real --seeds 1
+NASDAQ_T --market NASDAQ --variant T --mode pub --graph real --seeds 2
+NASDAQ_T --market NASDAQ --variant T --mode pub --graph real --seeds 3
+NASDAQ_T --market NASDAQ --variant T --mode pub --graph real --seeds 4
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 1
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 1
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 2
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 2
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 3
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 3
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 4
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 4
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 5
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 5
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 6
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 6
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 7
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 7
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 8
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 8
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 9
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 9
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 10
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 10
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 11
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 11
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 12
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 12
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 13
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 13
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 14
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 14
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 15
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 15
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 16
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 16
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 17
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 17
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 18
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 18
+NYSE_U --market NYSE --variant U --mode val --graph real --seeds 19
+NYSE_U --market NYSE --variant U --mode val --graph none --seeds 19
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 0 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 1 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 2 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 3 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 4 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 5 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 6 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 7 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 8 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 9 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 10 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 11 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 12 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 13 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 14 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 15 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 16 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 17 --seeds 0
+NYSE_U --market NYSE --variant U --mode val --graph perm --k 18 --seeds 0
+NYSE_U --market NYSE --variant U --mode pub --graph real --seeds 0
+NYSE_U --market NYSE --variant U --mode pub --graph real --seeds 1
+NYSE_U --market NYSE --variant U --mode pub --graph real --seeds 2
+NYSE_U --market NYSE --variant U --mode pub --graph real --seeds 3
+NYSE_U --market NYSE --variant U --mode pub --graph real --seeds 4
+NYSE_U --market NYSE --variant U --mode pub --graph real --seeds 5
+NYSE_U --market NYSE --variant U --mode pub --graph real --seeds 6
+NYSE_U --market NYSE --variant U --mode pub --graph real --seeds 7
+NYSE_U --market NYSE --variant U --mode pub --graph real --seeds 8
+NYSE_U --market NYSE --variant U --mode pub --graph real --seeds 9
