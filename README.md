@@ -76,8 +76,15 @@ see [`data/README.md`](data/README.md) for the exact sources, commits and checks
 python -m pytest -q tests
 ```
 
-With the upstream material in place, 90 tests run. The five NYSE tests in `tests/test_rtgcn_ext.py`
-need the RT-GCN NYSE tensors in `data/raw/rtgcn_dl/NYSE`.
+Without any upstream material, the method and statistics tests run on their own:
+
+```
+python -m pytest -q tests --ignore=tests/test_rtgcn_replica.py --ignore=tests/test_rtgcn_ext.py
+```
+
+(69 pass; the two RSR data-loading tests need `data/raw/rsr_repo`.) With all upstream code and data in
+place, the full suite has 90 tests. The tests themselves are part of the frozen material and are
+therefore not changed to skip when data is missing.
 
 ## Reproducing
 
