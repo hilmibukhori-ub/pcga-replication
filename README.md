@@ -40,7 +40,7 @@ The layout is the same as the working project, so that the freeze records verify
 
 | Paper section | Pre-registration / freeze | Results | Runner |
 |---|---|---|---|
-| Construct check (§3.6) | `BENCHMARK_FREEZE.md` | `outputs/da_synthetic_pilot_validity_v2/report.md` | `scripts/run_pilot.py` |
+| Construct check (§3.6) | `configs/pilot.yaml` | `outputs/da_synthetic_pilot_validity_v2/report.md` | `scripts/run_pilot.py` |
 | PCGA-L cross-model recovery (§3.6) | `PREREG_PCGA_L_MULTIMODEL.md`, `PCGA_L_MULTIMODEL_FREEZE.json` | `RESULTS_PCGA_L_MULTIMODEL.md` | `scripts/run_pcga_l_multimodel.py` |
 | RSR re-test (§4) | `PREREG_RSR_REPLICATION.md`, `PREREG_REPLICATION_FREEZE.md` | `RESULTS_RSR_REPLICATION.md`, `outputs/rsr_replica_v1/` | `scripts/run_rsr_replica.py` |
 | RT-GCN re-test (§5) | `PREREG_RTGCN.md`, `PREREG_RTGCN_FREEZE.md` | `RESULTS_RTGCN.md`, `outputs/rtgcn_v1/` | `scripts/run_rtgcn_replica.py` |
@@ -60,6 +60,10 @@ python scripts/verify_freezes.py
 Every frozen file that is shipped here must match its recorded hash. Files that are not shipped (upstream
 data and code, prediction arrays) are reported as absent. `PREREG_RTGCN_FREEZE_v0.1_superseded.md` is
 a superseded record, kept for transparency, and is expected not to match (see `DEVIATIONS.md`).
+
+`PREREG_RSR.md` refers to an earlier benchmark protocol, `BENCHMARK_FREEZE.md`, written for a
+CRSP/Compustat track that was not pursued. It is not part of this paper and is not included here; it
+is available on request, and its hash is recorded in `PREREG_RSR.md` and `PREREG_FREEZE.md`.
 
 ## Setup
 
