@@ -39,6 +39,22 @@ Agreement is weakest for whether a no-graph comparison is clean and, to a lesser
 selection used validation or test data. The central placebo-control classification has perfect
 agreement: both coders identify one partial case and no clean random/shuffled/placebo-graph control.
 
+## Same-architecture item: pattern of disagreement
+
+Computed on 19 November 2026 from the same two sheets and the same normalisation
+(`scripts/rq2_intercoder_reliability.py`: `normalise_coder1`). Rows: coder 1; columns: coder 2.
+
+| Coder 1 \ Coder 2 | clean | partial | no | Total |
+|---|---:|---:|---:|---:|
+| clean | 3 | 10 | 1 | 14 |
+| partial | 1 | 8 | 5 | 14 |
+| no | 1 | 4 | 3 | 8 |
+| Total | 5 | 22 | 9 | 36 |
+
+Coder 1 codes 14 ablations as clean and coder 2 codes 5. Of the 22 disagreements, 20 are between adjacent
+categories (11 clean/partial, 9 partial/no) and 2 are clean/no. Clean same-architecture ablations are a
+minority under either coder (14/36 or 5/36) and after adjudication (4/36).
+
 ## Adjudication status
 
 These remain the pre-reconciliation reliability statistics; neither original coding sheet was
